@@ -20,10 +20,9 @@ body {
 	overflow: hidden;
 	position: relative;
 	text-align: left;
+	margin-top: 20px;
 	padding-left: 20px;
 	margin-bottom: 15px;
-	border-bottom: 1px solid #cccccc;
-	
 }
 #menu{
 	position: absolute;
@@ -476,13 +475,13 @@ pre {
 
 
 #content a {
-color:#89B23F;
+color:#998675;
 padding: 2px;
 text-decoration:none;
 font-weight: bold;
 }
 #content a:visited {
-color:#89B23F;
+color:#998675;
 padding: 2px;
 text-decoration:none;
 font-weight: bold;
@@ -494,7 +493,7 @@ font-weight: bold;
 -moz-border-radius-topright:2px;
 padding: 2px;
 color:white;
-background:#89B23F;
+background:#998675;
 }
 
 

@@ -5,30 +5,13 @@
 <head>
 	<link href= "/stylesheets/application.css" rel="stylesheet" type="text/css"/>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>Our CO2</title>
+    <title>Greenalytics.org</title>
     <%= javascript_include_tag "prototype" %>
 </head>
 <body>
 <div id="wrapper">
 	<div id="header">
 		<a href="/"><img src="/images/logo.jpg" border='0' alt="our co2"/></a>
-		
-		<div id="menu-wrapper">
-			<% if session[:id] then%>
-			<ul id="main-menu">
-				<li><a href="/users/profile">My profile</a></li>
-				<li><a href="/users/configuration">Configuration</a></li>
-				<li><a href="/users">Users</a></li>
-				<li><a href="/groups">Groups</a></li>
-			</ul>
-			<% else %>
-			<ul id="main-menu">
-				<li><a href="/">Info</a></li>
-				<li><a href="/users/profile_example">Example</a></li>
-				<li><a href="/users/login">Login</a></li>
-			</ul>
-			<% end %>
-		</div>
 		
 	</div>
 	
@@ -37,75 +20,6 @@
 	<br/><br/>
 	</div>	
 </div>
-	
-<div id="footer">
-	<div class="footer-list">
-			<h4>Menu</h4>
-			<ul>
-			<li><a href="/users" >Users</a></li>
-			<li><a href="/groups" >Groups</a></li>
-			<li><a href="/sources" >Sources</a></li>					
-		    </ul>
-		</div>
-	<div class="footer-list">
-			<h4>More information</h4>
-			<ul>
-			<li><a href="mailto:info@ourco2.org" target="_blank">Email us</a></li>
-			<li><a href="http://twitter.com/ourco2" target="_blank">Twitter</a></li>				
-		    </ul>
-		</div>
-		<div class="footer-list">
-			<h4>A project of</h4>
-			<ul>
-			<li><a href="http://kth.se/" target="_blank">KTH</a></li>
-			<li><a href="http://sustainablecommunications.org/" target="_blank">Sustainable Communications</a></li>
-			<li><a href="http://persuasiveservices.org/" target="_blank">Persuasive Services</a></li>
-				
-		    </ul>
-		</div>
-		<div class="footer-list">
-			
-		    <% if session[:id] && User.find_by_id(session[:id]).id == 5 %>
-			<h4>Administration</h4>
-			<ul>
-			<li><a href="/users/new" >New User</a></li>
-			<li><a href="/groups" >Admin User</a></li>
-			<li><a href="/users/administration">Crontab functions</a></li>
-			</ul>
-			<%end%>					
-
-		</div>
-	</div>
-	
-
-	 
-	<script type="text/javascript" charset="utf-8">
-	  var is_ssl = ("https:" == document.location.protocol);
-	  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
-	  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-
-	<script type="text/javascript" charset="utf-8">
-	  var feedback_widget_options = {};
-
-	  feedback_widget_options.display = "overlay";  
-	  feedback_widget_options.company = "ourco2";
-	  feedback_widget_options.placement = "left";
-	  feedback_widget_options.color = "#222";
-	  feedback_widget_options.style = "idea";
-
-	  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
-	</script>
-	
-	<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	try {
-	var pageTracker = _gat._getTracker("UA-1465382-19");
-	pageTracker._trackPageview();
-	} catch(err) {}</script>
 
 </body>
 </html>

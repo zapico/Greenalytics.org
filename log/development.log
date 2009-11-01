@@ -1,0 +1,312 @@
+/!\ FAILSAFE /!\  Sun Nov 01 20:10:37 +0100 2009
+  Status: 500 Internal Server Error
+  Access denied for user 'greenaly_admin'@'%' to database 'myco2_ror'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `real_connect'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `connect'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/mysql_adapter.rb:204:in `initialize'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `new'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `mysql_connection'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (111.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:14:14) [GET]
+
+ActionView::MissingTemplate (Missing template users/info.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:14:41) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 132ms (View: 124, DB: 209) | 200 OK [http://localhost/]
+  [4;36;1mSQL (105.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:15:36) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 17ms (View: 9, DB: 209) | 200 OK [http://localhost/]
+  [4;36;1mSQL (104.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:16:36) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 21ms (View: 13, DB: 210) | 200 OK [http://localhost/]
+  [4;36;1mSQL (106.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:16:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (112.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (111.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:16:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/plane.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:16:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/train.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (111.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:17:02) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 11ms (View: 3, DB: 222) | 200 OK [http://localhost/]
+  [4;36;1mSQL (105.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (112.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (111.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:17:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/plane.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:17:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/train.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:18:05) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 29ms (View: 20, DB: 206) | 200 OK [http://localhost/]
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:18:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (112.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:19:12) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 11ms (View: 2, DB: 223) | 200 OK [http://localhost/]
+  [4;36;1mSQL (111.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (111.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:19:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (110.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:19:27) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 12ms (View: 3, DB: 220) | 200 OK [http://localhost/]
+  [4;36;1mSQL (113.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:19:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (104.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:22:39) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 17ms (View: 9, DB: 209) | 200 OK [http://localhost/]
+  [4;36;1mSQL (105.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:22:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:23:13) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 18ms (View: 9, DB: 206) | 200 OK [http://localhost/]
+  [4;36;1mSQL (111.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:23:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (112.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:23:29) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 17ms (View: 9, DB: 223) | 200 OK [http://localhost/]
+  [4;36;1mSQL (105.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:23:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (110.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:25:21) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 18ms (View: 10, DB: 220) | 200 OK [http://localhost/]
+  [4;36;1mSQL (112.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (113.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 20:25:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/icons/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (110.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:34:25) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 17ms (View: 9, DB: 221) | 200 OK [http://localhost/]
+  [4;36;1mSQL (111.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (112.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:34:57) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 18ms (View: 10, DB: 224) | 200 OK [http://localhost/]
+  [4;36;1mSQL (110.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:35:06) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 11ms (View: 2, DB: 221) | 200 OK [http://localhost/]
+  [4;36;1mSQL (107.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-01 20:35:13) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 19ms (View: 10, DB: 213) | 200 OK [http://localhost/]

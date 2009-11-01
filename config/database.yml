@@ -1,7 +1,7 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: myco2_ror
+  database: greenalytics
   username: greenaly_admin
   password: CpwPA4nFv9mV
   host: 70.32.99.240
@@ -9,7 +9,7 @@ development:
 production:
   adapter: mysql
   encoding: utf8
-  database: myco2_ror
+  database: greenalytics
   username: greenaly_admin
   password: CpwPA4nFv9mV
   host: 70.32.99.240
