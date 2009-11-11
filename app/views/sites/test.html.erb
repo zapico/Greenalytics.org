@@ -1,0 +1,16 @@
+<div id="column_left">
+<h1><%= @profile.name %></h1>
+<h2>Total pageviews: </h2>
+<p><%= @profile.pageviews %></p>
+<h2>Page size: </h2>
+<p>HTML size: <%= @length %> Bytes</p>
+<p>Image size: <%= @pictures_size %> Bytes</p>
+<p>Script + CSS size: <%= @scripts %> Bytes</p>
+<p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+<% @results.each do |point|%>
+	<%= point%>
+<% end %>
+
+
+<h2>Other websites in your account: </h2>
+</div>
