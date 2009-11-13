@@ -23,31 +23,31 @@ class SitesController < ApplicationController
      today = today.strftime("%Y-%m-%d")
      amonthago = amonthago.strftime("%Y-%m-%d")
      gs = Gattica.new({:email => 'jorgezapico@gmail.com', :password => 'rip2maQ1', :profile_id => 21441200})
-     @results = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'pagePath', :metrics => 'pageviews', :sort => '-pageviews'}).to_s
+     @results = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'pagePath', :metrics => 'pageviews'})
      
-    url = "http://carbon.to"
+     @main_url = "http://carbon.to"
     
     # Get HTML Size
-    @length = open(url).length
+    @length = open(@main_url).length
     
-    @hp = Hpricot(open(url))
+    @hp = Hpricot(open(@main_url))
     
     @pictures_size = 0
     # Get images size
     @hp.search("img").each do |p|
-      picurl = url+p.attributes['src']
+      picurl = @main_url+p.attributes['src']
       @pictures_size += open(picurl).length
     end
      
      @scripts = 0
      # Get CSS size
      @hp.search("link").each do |p|
-      cssurl = url+p.attributes['href']
+      cssurl = @main_url+p.attributes['href']
       @scripts += open(cssurl).length
     end
     # Get script size
     @hp.search("html/head//script").each do |p|
-      scripturl = url+p.attributes['src']
+      scripturl = @main_url+p.attributes['src']
       @scripts += open(scripturl).length
     end
     

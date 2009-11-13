@@ -6058,3 +6058,1832 @@ Processing SitesController#test (for 127.0.0.1 at 2009-11-11 16:56:14) [GET]
 Rendering template within layouts/application
 Rendering sites/test
 Completed in 5043ms (View: 296, DB: 252) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (101.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:19:17) [GET]
+
+ActiveSupport::JSON::ParseError (Invalid JSON string):
+  app/controllers/sites_controller.rb:27:in `test'
+
+Rendered rescues/_trace (82.4ms)
+Rendered rescues/_request_and_response (4.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:20:10) [GET]
+
+NoMethodError (undefined method `decoder' for ActiveSupport::JSON:Module):
+  app/controllers/sites_controller.rb:27:in `test'
+
+Rendered rescues/_trace (79.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (107.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:20:18) [GET]
+
+NoMethodError (undefined method `decoder' for ActiveSupport::JSON:Module):
+  app/controllers/sites_controller.rb:27:in `test'
+
+Rendered rescues/_trace (77.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:20:20) [GET]
+
+NoMethodError (undefined method `decoder' for ActiveSupport::JSON:Module):
+  app/controllers/sites_controller.rb:27:in `test'
+
+Rendered rescues/_trace (75.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (107.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:20:22) [GET]
+
+NoMethodError (undefined method `decoder' for ActiveSupport::JSON:Module):
+  app/controllers/sites_controller.rb:27:in `test'
+
+Rendered rescues/_trace (77.3ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:20:41) [GET]
+
+TypeError (can't convert Gattica::DataSet into String):
+  app/controllers/sites_controller.rb:27:in `test'
+
+Rendered rescues/_trace (104.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (113.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:20:57) [GET]
+
+ActiveSupport::JSON::ParseError (Invalid JSON string):
+  app/controllers/sites_controller.rb:27:in `test'
+
+Rendered rescues/_trace (191.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (112.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:23:33) [GET]
+
+ActiveSupport::JSON::ParseError (Invalid JSON string):
+  app/controllers/sites_controller.rb:27:in `test'
+
+Rendered rescues/_trace (80.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:23:46) [GET]
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/sites_controller.rb:26:in `to_s'
+  app/controllers/sites_controller.rb:26:in `test'
+
+Rendered rescues/_trace (159.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (107.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:24:04) [GET]
+
+NoMethodError (undefined method `to_cvs' for #<Gattica::DataSet:0x253fa8c>):
+  app/controllers/sites_controller.rb:26:in `test'
+
+Rendered rescues/_trace (72.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:24:19) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #10 of app/views/sites/test.html.erb:
+7: <p>Image size: <%= @pictures_size %> Bytes</p>
+8: <p>Script + CSS size: <%= @scripts %> Bytes</p>
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results["points"].each do |point|%>
+11: 	<%= point["id"] %>
+12: <% end %>
+13: 
+
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (99.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (106.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:25:16) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4790ms (View: 312, DB: 212) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:25:35) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4671ms (View: 295, DB: 201) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (103.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:26:11) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4605ms (View: 304, DB: 207) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:27:10) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (can't convert String into Integer) on line #11 of app/views/sites/test.html.erb:
+8: <p>Script + CSS size: <%= @scripts %> Bytes</p>
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.each do |point|%>
+11: 	<p><%= point["pagePath"] %></p>
+12: <% end %>
+13: <%= @results %>
+14: 
+
+    app/views/sites/test.html.erb:11:in `[]'
+    app/views/sites/test.html.erb:11
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (95.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (106.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:27:34) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (can't convert String into Integer) on line #11 of app/views/sites/test.html.erb:
+8: <p>Script + CSS size: <%= @scripts %> Bytes</p>
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.each do |point|%>
+11: 	<p><%= point["pagePath"].to_s %></p>
+12: <% end %>
+13: <%= @results %>
+14: 
+
+    app/views/sites/test.html.erb:11:in `[]'
+    app/views/sites/test.html.erb:11
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (97.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (102.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:28:29) [GET]
+
+ActiveSupport::JSON::ParseError (Invalid JSON string):
+  app/controllers/sites_controller.rb:28:in `test'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (105.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:28:39) [GET]
+
+ActiveSupport::JSON::ParseError (Invalid JSON string):
+  app/controllers/sites_controller.rb:28:in `test'
+
+Rendered rescues/_trace (171.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (101.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:28:42) [GET]
+
+ActiveSupport::JSON::ParseError (Invalid JSON string):
+  app/controllers/sites_controller.rb:28:in `test'
+
+Rendered rescues/_trace (81.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:28:44) [GET]
+
+ActiveSupport::JSON::ParseError (Invalid JSON string):
+  app/controllers/sites_controller.rb:28:in `test'
+
+Rendered rescues/_trace (184.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:33:08) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (undefined method `[]' for #<Gattica::DataPoint:0x254f93c>) on line #11 of app/views/sites/test.html.erb:
+8: <p>Script + CSS size: <%= @scripts %> Bytes</p>
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.points.each do |point|%>
+11: 	<p><%= point["pagePath"] %></p>
+12: <% end %>
+13: <%= @results %>
+14: 
+
+    app/views/sites/test.html.erb:11
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (192.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:33:29) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (undefined method `pagePath' for #<Gattica::DataPoint:0x254ffe0>) on line #11 of app/views/sites/test.html.erb:
+8: <p>Script + CSS size: <%= @scripts %> Bytes</p>
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.points.each do |point|%>
+11: 	<p><%= point.pagePath %></p>
+12: <% end %>
+13: 
+14: <h2>Other websites in your account: </h2>
+
+    app/views/sites/test.html.erb:11
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (178.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (126.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:33:42) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 7907ms (View: 305, DB: 227) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (103.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:34:55) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (can't convert Gattica::DataPoint into String) on line #11 of app/views/sites/test.html.erb:
+8: <p>Script + CSS size: <%= @scripts %> Bytes</p>
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.points.each do |point|%>
+11: 	<% point = ActiveSupport::JSON.decode(point) %>
+12: 	<p><%= point["title"] %></p>
+13: <% end %>
+14: 
+
+    app/views/sites/test.html.erb:11
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (99.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:35:10) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (Invalid JSON string) on line #11 of app/views/sites/test.html.erb:
+8: <p>Script + CSS size: <%= @scripts %> Bytes</p>
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.points.each do |point|%>
+11: 	<% point = ActiveSupport::JSON.decode(point.to_s) %>
+12: 	<p><%= point["title"] %></p>
+13: <% end %>
+14: 
+
+    app/views/sites/test.html.erb:11
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (99.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:35:26) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (undefined method `[]' for #<Gattica::DataPoint:0x263462c>) on line #11 of app/views/sites/test.html.erb:
+8: <p>Script + CSS size: <%= @scripts %> Bytes</p>
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.points.each do |point|%>
+11: 	<p><%= point["title"] %></p>
+12: <% end %>
+13: 
+14: <h2>Other websites in your account: </h2>
+
+    app/views/sites/test.html.erb:11
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (99.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (101.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:35:44) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4831ms (View: 324, DB: 202) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (101.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:35:53) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4655ms (View: 307, DB: 205) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (107.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:41:47) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+ERROR: compiling _run_erb_app47views47sites47test46html46erb RAISED compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:12: premature end of regular expression: /[{:pagePath=>\w/
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:14: premature end of regular expression: /[{:pageviews=>\w/
+Function body:           def _run_erb_app47views47sites47test46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"column_left\">\n<h1>"
+; @output_buffer.concat(( @profile.name ).to_s); @output_buffer.concat "</h1>\n<h2>Total pageviews: </h2>\n<p>"
+
+; @output_buffer.concat(( @profile.pageviews ).to_s); @output_buffer.concat "</p>\n<h2>Page size: </h2>\n<p>HTML size: "
+
+; @output_buffer.concat(( @length ).to_s); @output_buffer.concat " Bytes</p>\n<p>Image size: "
+; @output_buffer.concat(( @pictures_size ).to_s); @output_buffer.concat " Bytes</p>\n<p>Script + CSS size: "
+; @output_buffer.concat(( @scripts ).to_s); @output_buffer.concat " Bytes</p>\n<p>Total page size: "
+; @output_buffer.concat(( (@length+@pictures_size+@scripts)/1024 ).to_s); @output_buffer.concat " Kb</p>\n"
+;  @results.points.each do |point|; @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( point.to_s ).to_s); @output_buffer.concat "</p>\n\t"
+;  url_regexp = /[{:pagePath=>\w/; @output_buffer.concat "\n\t"
+;  url = point.to_s.split.grep(url_regexp); @output_buffer.concat "\n\t"
+;  visits_regexp = /[{:pageviews=>\w/; @output_buffer.concat "\n\t"
+;  visits = point.to_s.split.grep(visits_regexp); @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( url ).to_s); @output_buffer.concat " with "; @output_buffer.concat(( visits ).to_s); @output_buffer.concat " visitors</p>\n"
+;  end ; @output_buffer.concat "\n\n<h2>Other websites in your account: </h2>\n</div>"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:23:in `compile!'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:12: premature end of regular expression: /[{:pagePath=>\w/
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:14: premature end of regular expression: /[{:pageviews=>\w/) on line #12 of app/views/sites/test.html.erb:
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.points.each do |point|%>
+11: 	<p><%= point.to_s %></p>
+12: 	<% url_regexp = /[{:pagePath=>\w/%>
+13: 	<% url = point.to_s.split.grep(url_regexp)%>
+14: 	<% visits_regexp = /[{:pageviews=>\w/%>
+15: 	<% visits = point.to_s.split.grep(visits_regexp)%>
+
+    app/views/sites/test.html.erb:23:in `compile!'
+
+Rendered rescues/_trace (165.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:44:38) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4600ms (View: 334, DB: 200) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:46:28) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4819ms (View: 502, DB: 203) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:46:54) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4919ms (View: 358, DB: 202) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (108.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:49:23) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+ERROR: compiling _run_erb_app47views47sites47test46html46erb RAISED compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: unknown regexp options - pagvw
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: syntax error, unexpected tASSOC, expecting kEND
+;  visits_regexp = /pageviews=>^; @output_buffer.concat "\n\t"
+                               ^
+Function body:           def _run_erb_app47views47sites47test46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"column_left\">\n<h1>"
+; @output_buffer.concat(( @profile.name ).to_s); @output_buffer.concat "</h1>\n<h2>Total pageviews: </h2>\n<p>"
+
+; @output_buffer.concat(( @profile.pageviews ).to_s); @output_buffer.concat "</p>\n<h2>Page size: </h2>\n<p>HTML size: "
+
+; @output_buffer.concat(( @length ).to_s); @output_buffer.concat " Bytes</p>\n<p>Image size: "
+; @output_buffer.concat(( @pictures_size ).to_s); @output_buffer.concat " Bytes</p>\n<p>Script + CSS size: "
+; @output_buffer.concat(( @scripts ).to_s); @output_buffer.concat " Bytes</p>\n<p>Total page size: "
+; @output_buffer.concat(( (@length+@pictures_size+@scripts)/1024 ).to_s); @output_buffer.concat " Kb</p>\n"
+;  @results.points.each do |point|; @output_buffer.concat "\n\t"
+;  url_regexp = /pagePath=>^ ; @output_buffer.concat "\n\t"
+;  url = point.to_s.split.grep(url_regexp); @output_buffer.concat "\n\t"
+;  visits_regexp = /pageviews=>^; @output_buffer.concat "\n\t"
+;  visits = point.to_s.split.grep(visits_regexp); @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( url ).to_s); @output_buffer.concat " with "; @output_buffer.concat(( visits ).to_s); @output_buffer.concat " visitors</p>\n"
+;  end ; @output_buffer.concat "\n\n<h2>Other websites in your account: </h2>\n</div>"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:22:in `compile!'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: unknown regexp options - pagvw
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: syntax error, unexpected tASSOC, expecting kEND
+;  visits_regexp = /pageviews=>^; @output_buffer.concat "\n\t"
+                               ^) on line #13 of app/views/sites/test.html.erb:
+10: <% @results.points.each do |point|%>
+11: 	<% url_regexp = /pagePath=>^ %>
+12: 	<% url = point.to_s.split.grep(url_regexp)%>
+13: 	<% visits_regexp = /pageviews=>^%>
+14: 	<% visits = point.to_s.split.grep(visits_regexp)%>
+15: 	<p><%= url %> with <%= visits %> visitors</p>
+16: <% end %>
+
+    app/views/sites/test.html.erb:22:in `compile!'
+
+Rendered rescues/_trace (179.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (105.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:49:29) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+ERROR: compiling _run_erb_app47views47sites47test46html46erb RAISED compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: unknown regexp options - pagvw
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: syntax error, unexpected tASSOC, expecting kEND
+;  visits_regexp = /pageviews=>^; @output_buffer.concat "\n\t"
+                               ^
+Function body:           def _run_erb_app47views47sites47test46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"column_left\">\n<h1>"
+; @output_buffer.concat(( @profile.name ).to_s); @output_buffer.concat "</h1>\n<h2>Total pageviews: </h2>\n<p>"
+
+; @output_buffer.concat(( @profile.pageviews ).to_s); @output_buffer.concat "</p>\n<h2>Page size: </h2>\n<p>HTML size: "
+
+; @output_buffer.concat(( @length ).to_s); @output_buffer.concat " Bytes</p>\n<p>Image size: "
+; @output_buffer.concat(( @pictures_size ).to_s); @output_buffer.concat " Bytes</p>\n<p>Script + CSS size: "
+; @output_buffer.concat(( @scripts ).to_s); @output_buffer.concat " Bytes</p>\n<p>Total page size: "
+; @output_buffer.concat(( (@length+@pictures_size+@scripts)/1024 ).to_s); @output_buffer.concat " Kb</p>\n"
+;  @results.points.each do |point|; @output_buffer.concat "\n\t"
+;  url_regexp = /pagePath=>^ ; @output_buffer.concat "\n\t"
+;  url = point.to_s.split.grep(url_regexp); @output_buffer.concat "\n\t"
+;  visits_regexp = /pageviews=>^; @output_buffer.concat "\n\t"
+;  visits = point.to_s.split.grep(visits_regexp); @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( url ).to_s); @output_buffer.concat " with "; @output_buffer.concat(( visits ).to_s); @output_buffer.concat " visitors</p>\n"
+;  end ; @output_buffer.concat "\n\n<h2>Other websites in your account: </h2>\n</div>"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:22:in `compile!'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: unknown regexp options - pagvw
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: syntax error, unexpected tASSOC, expecting kEND
+;  visits_regexp = /pageviews=>^; @output_buffer.concat "\n\t"
+                               ^) on line #13 of app/views/sites/test.html.erb:
+10: <% @results.points.each do |point|%>
+11: 	<% url_regexp = /pagePath=>^ %>
+12: 	<% url = point.to_s.split.grep(url_regexp)%>
+13: 	<% visits_regexp = /pageviews=>^%>
+14: 	<% visits = point.to_s.split.grep(visits_regexp)%>
+15: 	<p><%= url %> with <%= visits %> visitors</p>
+16: <% end %>
+
+    app/views/sites/test.html.erb:22:in `compile!'
+
+Rendered rescues/_trace (92.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (106.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:49:46) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4776ms (View: 472, DB: 212) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (104.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:50:06) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4638ms (View: 316, DB: 208) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (102.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:50:20) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4477ms (View: 314, DB: 203) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (106.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:50:25) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4732ms (View: 299 | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (102.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:50:31) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4643ms (View: 325 | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:51:46) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4864ms (View: 347, DB: 202) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (103.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:52:29) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+ERROR: compiling _run_erb_app47views47sites47test46html46erb RAISED compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:12: syntax error, unexpected '('
+;  url = point.to_s.split.("pagePath=>")[1]; @output_buff...
+                           ^
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:12: syntax error, unexpected ')', expecting kEND
+...oint.to_s.split.("pagePath=>")[1]; @output_buffer.concat "\n...
+                              ^
+Function body:           def _run_erb_app47views47sites47test46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"column_left\">\n<h1>"
+; @output_buffer.concat(( @profile.name ).to_s); @output_buffer.concat "</h1>\n<h2>Total pageviews: </h2>\n<p>"
+
+; @output_buffer.concat(( @profile.pageviews ).to_s); @output_buffer.concat "</p>\n<h2>Page size: </h2>\n<p>HTML size: "
+
+; @output_buffer.concat(( @length ).to_s); @output_buffer.concat " Bytes</p>\n<p>Image size: "
+; @output_buffer.concat(( @pictures_size ).to_s); @output_buffer.concat " Bytes</p>\n<p>Script + CSS size: "
+; @output_buffer.concat(( @scripts ).to_s); @output_buffer.concat " Bytes</p>\n<p>Total page size: "
+; @output_buffer.concat(( (@length+@pictures_size+@scripts)/1024 ).to_s); @output_buffer.concat " Kb</p>\n"
+;  @results.points.each do |point|; @output_buffer.concat "\n\t"
+;  url_regexp = // ; @output_buffer.concat "\n\t"
+;  url = point.to_s.split.("pagePath=>")[1]; @output_buffer.concat "\n\t"
+;  visits_regexp = /pageviews=>/; @output_buffer.concat "\n\t"
+;  visits = point.to_s.split.grep(visits_regexp)[1]; @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( url ).to_s); @output_buffer.concat " with "; @output_buffer.concat(( visits ).to_s); @output_buffer.concat " visitors</p>\n"
+;  end ; @output_buffer.concat "\n\n<h2>Other websites in your account: </h2>\n</div>"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:22:in `compile!'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:12: syntax error, unexpected '('
+;  url = point.to_s.split.("pagePath=>")[1]; @output_buff...
+                           ^
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:12: syntax error, unexpected ')', expecting kEND
+...oint.to_s.split.("pagePath=>")[1]; @output_buffer.concat "\n...
+                              ^) on line #12 of app/views/sites/test.html.erb:
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.points.each do |point|%>
+11: 	<% url_regexp = // %>
+12: 	<% url = point.to_s.split.("pagePath=>")[1]%>
+13: 	<% visits_regexp = /pageviews=>/%>
+14: 	<% visits = point.to_s.split.grep(visits_regexp)[1]%>
+15: 	<p><%= url %> with <%= visits %> visitors</p>
+
+    app/views/sites/test.html.erb:22:in `compile!'
+
+Rendered rescues/_trace (91.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:52:45) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4887ms (View: 298, DB: 201) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (106.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:53:26) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4824ms (View: 382, DB: 213) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (103.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:53:43) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4591ms (View: 313, DB: 207) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:54:37) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 5118ms (View: 306, DB: 208) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (101.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:58:22) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (No such file or directory - "/") on line #16 of app/views/sites/test.html.erb:
+13: 	<% visits = point.to_s.split("pageviews=>")[1]%>
+14: 	<% visits = visits.to_s.split("}")[0]%>
+15: 	<p><%= url %> with <%= visits %> visitors</p>
+16: 	<p><%= pageSize(url) %></p>
+17: <% end %>
+18: 
+19: <h2>Other websites in your account: </h2>
+
+    /usr/local/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+    /usr/local/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+    /usr/local/lib/ruby/1.8/open-uri.rb:32:in `open'
+    app/helpers/sites_helper.rb:8:in `pageSize'
+    app/views/sites/test.html.erb:16
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (104.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 22:59:45) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (bad URI(is not URI?): http://carbon.to"/") on line #16 of app/views/sites/test.html.erb:
+13: 	<% visits = point.to_s.split("pageviews=>")[1]%>
+14: 	<% visits = visits.to_s.split("}")[0]%>
+15: 	<p><%= url %> with <%= visits %> visitors</p>
+16: 	<p><%= pageSize(@main_url+url) %></p>
+17: <% end %>
+18: 
+19: <h2>Other websites in your account: </h2>
+
+    /usr/local/lib/ruby/1.8/uri/common.rb:436:in `split'
+    /usr/local/lib/ruby/1.8/uri/common.rb:485:in `parse'
+    /usr/local/lib/ruby/1.8/open-uri.rb:29:in `open'
+    app/helpers/sites_helper.rb:8:in `pageSize'
+    app/views/sites/test.html.erb:16
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (94.8ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:00:39) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+ERROR: compiling _run_erb_app47views47sites47test46html46erb RAISED compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+;  url = url.to_s.split(""")[0]; @output_buffer.concat "\n\t"
+                                                         ^
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: syntax error, unexpected ')', expecting kEND
+;  url = url.to_s.split(""")[1]; @output_buffer.concat "\n\t"
+                            ^
+Function body:           def _run_erb_app47views47sites47test46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"column_left\">\n<h1>"
+; @output_buffer.concat(( @profile.name ).to_s); @output_buffer.concat "</h1>\n<h2>Total pageviews: </h2>\n<p>"
+
+; @output_buffer.concat(( @profile.pageviews ).to_s); @output_buffer.concat "</p>\n<h2>Page size: </h2>\n<p>HTML size: "
+
+; @output_buffer.concat(( @length ).to_s); @output_buffer.concat " Bytes</p>\n<p>Image size: "
+; @output_buffer.concat(( @pictures_size ).to_s); @output_buffer.concat " Bytes</p>\n<p>Script + CSS size: "
+; @output_buffer.concat(( @scripts ).to_s); @output_buffer.concat " Bytes</p>\n<p>Total page size: "
+; @output_buffer.concat(( (@length+@pictures_size+@scripts)/1024 ).to_s); @output_buffer.concat " Kb</p>\n"
+;  @results.points.each do |point|; @output_buffer.concat "\n\t"
+;  url = point.to_s.split("pagePath=>")[1]; @output_buffer.concat "\n\t"
+;  url = url.to_s.split(""")[0]; @output_buffer.concat "\n\t"
+;  url = url.to_s.split(""")[1]; @output_buffer.concat "\n\t"
+;  visits = point.to_s.split("pageviews=>")[1]; @output_buffer.concat "\n\t"
+;  visits = visits.to_s.split("}")[0]; @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( url ).to_s); @output_buffer.concat " with "; @output_buffer.concat(( visits ).to_s); @output_buffer.concat " visitors</p>\n\t<p>"
+; @output_buffer.concat(( pageSize(@main_url+url) ).to_s); @output_buffer.concat "</p>\n"
+;  end ; @output_buffer.concat "\n\n<h2>Other websites in your account: </h2>\n</div>"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:24:in `compile!'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+;  url = url.to_s.split(""")[0]; @output_buffer.concat "\n\t"
+                                                         ^
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:13: syntax error, unexpected ')', expecting kEND
+;  url = url.to_s.split(""")[1]; @output_buffer.concat "\n\t"
+                            ^) on line #12 of app/views/sites/test.html.erb:
+9: <p>Total page size: <%= (@length+@pictures_size+@scripts)/1024 %> Kb</p>
+10: <% @results.points.each do |point|%>
+11: 	<% url = point.to_s.split("pagePath=>")[1]%>
+12: 	<% url = url.to_s.split(""")[0]%>
+13: 	<% url = url.to_s.split(""")[1]%>
+14: 	<% visits = point.to_s.split("pageviews=>")[1]%>
+15: 	<% visits = visits.to_s.split("}")[0]%>
+
+    app/views/sites/test.html.erb:24:in `compile!'
+
+Rendered rescues/_trace (91.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:00:57) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (can't convert nil into String) on line #17 of app/views/sites/test.html.erb:
+14: 	<% visits = point.to_s.split("pageviews=>")[1]%>
+15: 	<% visits = visits.to_s.split("}")[0]%>
+16: 	<p><%= url %> with <%= visits %> visitors</p>
+17: 	<p><%= pageSize(@main_url+url) %></p>
+18: <% end %>
+19: 
+20: <h2>Other websites in your account: </h2>
+
+    app/views/sites/test.html.erb:17:in `+'
+    app/views/sites/test.html.erb:17
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (102.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (106.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:01:28) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4966ms (View: 331, DB: 212) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (104.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:02:18) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (404 Not Found) on line #18 of app/views/sites/test.html.erb:
+15: 	<% visits = point.to_s.split("pageviews=>")[1]%>
+16: 	<% visits = visits.to_s.split("}")[0]%>
+17: 	<p><%= url %> with <%= visits %> visitors</p>
+18: 	<p><%= pageSize(@main_url+url) %></p>
+19: <% end %>
+20: 
+21: <h2>Other websites in your account: </h2>
+
+    /usr/local/lib/ruby/1.8/open-uri.rb:277:in `open_http'
+    /usr/local/lib/ruby/1.8/open-uri.rb:616:in `buffer_open'
+    /usr/local/lib/ruby/1.8/open-uri.rb:164:in `open_loop'
+    /usr/local/lib/ruby/1.8/open-uri.rb:162:in `catch'
+    /usr/local/lib/ruby/1.8/open-uri.rb:162:in `open_loop'
+    /usr/local/lib/ruby/1.8/open-uri.rb:132:in `open_uri'
+    /usr/local/lib/ruby/1.8/open-uri.rb:518:in `open'
+    /usr/local/lib/ruby/1.8/open-uri.rb:30:in `open'
+    app/helpers/sites_helper.rb:16:in `pageSize'
+    app/helpers/sites_helper.rb:14:in `each'
+    app/helpers/sites_helper.rb:14:in `pageSize'
+    app/views/sites/test.html.erb:18
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (102.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:02:49) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 4510ms (View: 304, DB: 204) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (108.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:03:43) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (404 Not Found) on line #18 of app/views/sites/test.html.erb:
+15: 	<% visits = point.to_s.split("pageviews=>")[1]%>
+16: 	<% visits = visits.to_s.split("}")[0]%>
+17: 	<p><%= url %> with <%= visits %> visitors</p>
+18: 	<p><%= pageSize(@main_url+url) %></p>
+19: <% end %>
+20: 
+21: <h2>Other websites in your account: </h2>
+
+    /usr/local/lib/ruby/1.8/open-uri.rb:277:in `open_http'
+    /usr/local/lib/ruby/1.8/open-uri.rb:616:in `buffer_open'
+    /usr/local/lib/ruby/1.8/open-uri.rb:164:in `open_loop'
+    /usr/local/lib/ruby/1.8/open-uri.rb:162:in `catch'
+    /usr/local/lib/ruby/1.8/open-uri.rb:162:in `open_loop'
+    /usr/local/lib/ruby/1.8/open-uri.rb:132:in `open_uri'
+    /usr/local/lib/ruby/1.8/open-uri.rb:518:in `open'
+    /usr/local/lib/ruby/1.8/open-uri.rb:30:in `open'
+    app/helpers/sites_helper.rb:16:in `pageSize'
+    app/helpers/sites_helper.rb:14:in `each'
+    app/helpers/sites_helper.rb:14:in `pageSize'
+    app/views/sites/test.html.erb:18
+    app/views/sites/test.html.erb:10:in `each'
+    app/views/sites/test.html.erb:10
+
+Rendered rescues/_trace (100.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (101.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Fri Nov 13 23:04:57 +0100 2009
+  Status: 500 Internal Server Error
+  /Users/zapico/Developing/greenalytics/app/helpers/sites_helper.rb:37: syntax error, unexpected $end, expecting kEND
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:126:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/Developing/greenalytics/app/controllers/application_controller.rb:5
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (102.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Fri Nov 13 23:05:02 +0100 2009
+  Status: 500 Internal Server Error
+  /Users/zapico/Developing/greenalytics/app/helpers/sites_helper.rb:37: syntax error, unexpected $end, expecting kEND
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:126:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/Developing/greenalytics/app/controllers/application_controller.rb:5
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (101.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Fri Nov 13 23:05:02 +0100 2009
+  Status: 500 Internal Server Error
+  /Users/zapico/Developing/greenalytics/app/helpers/sites_helper.rb:37: syntax error, unexpected $end, expecting kEND
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:126:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/Developing/greenalytics/app/controllers/application_controller.rb:5
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (104.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Fri Nov 13 23:05:03 +0100 2009
+  Status: 500 Internal Server Error
+  /Users/zapico/Developing/greenalytics/app/helpers/sites_helper.rb:37: syntax error, unexpected $end, expecting kEND
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:126:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/Developing/greenalytics/app/controllers/application_controller.rb:5
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (102.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Fri Nov 13 23:05:04 +0100 2009
+  Status: 500 Internal Server Error
+  /Users/zapico/Developing/greenalytics/app/helpers/sites_helper.rb:37: syntax error, unexpected $end, expecting kEND
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:126:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/Developing/greenalytics/app/controllers/application_controller.rb:5
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Fri Nov 13 23:05:22 +0100 2009
+  Status: 500 Internal Server Error
+  /Users/zapico/Developing/greenalytics/app/helpers/sites_helper.rb:37: syntax error, unexpected $end, expecting kEND
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:126:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/zapico/Developing/greenalytics/app/controllers/application_controller.rb:5
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:05:38) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 8791ms (View: 4352, DB: 201) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:06:44) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 8865ms (View: 4477, DB: 209) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:07:49) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 9099ms (View: 4376, DB: 207) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:09:13) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (String can't be coerced into Fixnum) on line #17 of app/views/sites/test.html.erb:
+14: 	<p><%= url %> with <%= visits %> visitors</p>
+15: 	<% pagesize = pageSize(@main_url+url)/1024 %>
+16: 	<p><%= pagesize %> Kb</p>
+17: 	<% total += pagesize*visits %>
+18: <% end %>
+19: <%= total%>
+20: <h2>Other websites in your account: </h2>
+
+    app/views/sites/test.html.erb:17:in `*'
+    app/views/sites/test.html.erb:17
+    app/views/sites/test.html.erb:7:in `each'
+    app/views/sites/test.html.erb:7
+
+Rendered rescues/_trace (95.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:09:32) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 9019ms (View: 4632, DB: 201) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (106.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:12:54) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 8998ms (View: 4492, DB: 212) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (101.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:18:33) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 8851ms (View: 4463, DB: 202) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (106.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:20:46) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 9241ms (View: 4583, DB: 212) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (106.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (111.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:21:07) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 8804ms (View: 4429, DB: 218) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:21:41) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 9152ms (View: 4629, DB: 201) | 200 OK [http://localhost/sites/test]
