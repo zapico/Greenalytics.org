@@ -1,4 +1,6 @@
-<div id="column_left">
+<div id="content_left">
+<h1><b>Server and infrastructure</b></h1>
+<p><i>Carbon impact from the electricity of the server and internet infrastructure.</i></p>
 <h1><%= @profile.name %></h1>
 <h2>Total pageviews: </h2>
 <p><%= @profile.pageviews %></p>
@@ -11,7 +13,7 @@
 	<% url = url.to_s.split('"')[0]%>
 	<% visits = point.to_s.split("pageviews=>")[1]%>
 	<% visits = visits.to_s.split("}")[0]%>
-	<p><%= url %> with <%= visits %> visitors</p>
+	<p><%= truncate(url,100) %> with <%= visits %> visitors</p>
 	<% pagesize = pageSize(@main_url+url)/1024 %>
 	<p><%= pagesize %> Kb</p>
 	<% total += pagesize*visits.to_i %>
@@ -21,3 +23,14 @@
 <h3><%= total %> Kb.</h3>
 <h3><%= (total*0.001*0.5017400).round(2) %> kg CO2</h3>
 </div>
+
+<div id="content_right">
+<h1><b>Visitors</b></h1>
+<p><i>The impact from the electricity used by the visitors.</i></p>
+<h2>Visitors: </h2>
+<p><%= @visitors_text %></p>
+<h2>Total: </h2>
+<h3><%= @time %> minutes</h3>
+<h3><%= (@totalco2/1000).round(2) %> kg CO2</h3>
+</div>
+	

@@ -7887,3 +7887,1314 @@ Processing SitesController#test (for 127.0.0.1 at 2009-11-13 23:21:41) [GET]
 Rendering template within layouts/application
 Rendering sites/test
 Completed in 9152ms (View: 4629, DB: 201) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (107.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-14 13:34:22) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 11757ms (View: 4899, DB: 216) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-11-20 19:30:09) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 122ms (View: 113, DB: 200) | 200 OK [http://localhost/]
+  [4;36;1mSQL (99.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-20 19:30:17) [GET]
+
+ActionController::RoutingError (No route matches "/test" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (98.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-11-20 19:30:25) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 9870ms (View: 4638, DB: 197) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (101.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2009-12-04 15:59:16) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 180ms (View: 172, DB: 204) | 200 OK [http://localhost/]
+  [4;36;1mSQL (102.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2009-12-04 15:59:29) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 12254ms (View: 4473, DB: 204) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (133.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-01 16:54:45) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 136ms (View: 127, DB: 264) | 200 OK [http://localhost/]
+  [4;36;1mSQL (129.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (131.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 16:55:00) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 13466ms (View: 6344, DB: 261) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (129.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (133.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:05:07) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 14486ms (View: 7009, DB: 262) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (132.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (133.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:06:52) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 12067ms (View: 6158, DB: 266) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (132.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (134.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:09:13) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 12527ms (View: 6522, DB: 267) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (134.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (134.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:09:58) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 12234ms (View: 6194, DB: 269) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (137.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (131.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:12:02) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 12563ms (View: 6094, DB: 269) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (130.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (134.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:15:38) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 12118ms (View: 6282, DB: 265) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (131.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (131.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:17:28) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 12087ms (View: 6113, DB: 264) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (129.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (131.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:24:46) [GET]
+
+GatticaError::AnalyticsError (No such dimension(s): ga:visits (status code: 400)):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:248:in `do_http_get'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:205:in `results'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:27:in `test'
+
+Rendered rescues/_trace (79.3ms)
+Rendered rescues/_request_and_response (18.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (133.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:26:21) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+
+ActionView::TemplateError (undefined method `timeOnSite' for #<Gattica::DataSet:0x22fc3ec>) on line #31 of app/views/sites/test.html.erb:
+28: <h1><b>Visitors</b></h1>
+29: <p><i>The impact from the electricity used by the visitors.</i></p>
+30: <h2>Total pageviews: </h2>
+31: <p><%= @time.timeOnSite %></p>
+32: </div>
+33: 	
+
+    app/views/sites/test.html.erb:31
+
+Rendered rescues/_trace (100.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (130.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:26:55) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 19984ms (View: 6332, DB: 260) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (134.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (135.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:37:23) [GET]
+
+GatticaError::AnalyticsError (Illegal combination of dimensions and metrics (status code: 400)):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:248:in `do_http_get'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:205:in `results'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:28:in `test'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (133.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:39:08) [GET]
+
+GatticaError::AnalyticsError (Illegal combination of dimensions and metrics (status code: 400)):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:248:in `do_http_get'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:205:in `results'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:28:in `test'
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (131.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (132.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:39:20) [GET]
+
+GatticaError::AnalyticsError (Illegal combination of dimensions and metrics (status code: 400)):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:248:in `do_http_get'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:205:in `results'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:28:in `test'
+
+Rendered rescues/_trace (76.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (132.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (131.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-01 17:40:07) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 14411ms (View: 6037, DB: 263) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (99.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:03:32) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 14341ms (View: 5290, DB: 199) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (99.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-15 17:23:04) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 97ms (View: 84, DB: 199) | 200 OK [http://localhost/]
+  [4;36;1mSQL (99.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-15 17:23:27) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 91ms (View: 4, DB: 199) | 200 OK [http://localhost/]
+  [4;36;1mSQL (97.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:26:37) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 11668ms (View: 4833, DB: 195) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (98.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#test (for 127.0.0.1 at 2010-01-15 17:35:19) [GET]
+
+SyntaxError (/Users/zapico/Developing/greenalytics/app/controllers/sites_controller.rb:37: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'):
+  
+
+Rendered rescues/_trace (112.2ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:35:44) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.split):
+  app/controllers/sites_controller.rb:31:in `test'
+  app/controllers/sites_controller.rb:29:in `each'
+  app/controllers/sites_controller.rb:29:in `test'
+
+Rendered rescues/_trace (75.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:35:48) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.split):
+  app/controllers/sites_controller.rb:31:in `test'
+  app/controllers/sites_controller.rb:29:in `each'
+  app/controllers/sites_controller.rb:29:in `test'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:36:37) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/sites_controller.rb:35:in `test'
+  app/controllers/sites_controller.rb:29:in `each'
+  app/controllers/sites_controller.rb:29:in `test'
+
+Rendered rescues/_trace (79.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:36:44) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/sites_controller.rb:35:in `test'
+  app/controllers/sites_controller.rb:29:in `each'
+  app/controllers/sites_controller.rb:29:in `test'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (114.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:37:00) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/sites_controller.rb:36:in `test'
+  app/controllers/sites_controller.rb:29:in `each'
+  app/controllers/sites_controller.rb:29:in `test'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (97.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:37:26) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 10974ms (View: 4815, DB: 196) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (98.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:39:13) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 10971ms (View: 4646, DB: 198) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (154.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (146.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:39:27) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 11978ms (View: 5370, DB: 301) | 200 OK [http://localhost/sites/test]
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-15 17:39:39) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 21ms (View: 4 | 200 OK [http://localhost/]
+  [4;36;1mSQL (98.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:41:02) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 11309ms (View: 4897, DB: 196) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (105.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:44:01) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 9965ms (View: 4780, DB: 204) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (102.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:46:50) [GET]
+
+NoMethodError (undefined method `distance_of_time_in_words' for #<SitesController:0x24d42a0>):
+  app/controllers/sites_controller.rb:37:in `test'
+  app/controllers/sites_controller.rb:31:in `each'
+  app/controllers/sites_controller.rb:31:in `test'
+
+Rendered rescues/_trace (76.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#test (for 127.0.0.1 at 2010-01-15 17:48:05) [GET]
+
+SyntaxError (/Users/zapico/Developing/greenalytics/app/controllers/sites_controller.rb:38: syntax error, unexpected tIDENTIFIER, expecting kEND
+       text = "<b>" name.to_s + "</b> " + time.to_s + " min <br/>"
+                        ^):
+  
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:48:13) [GET]
+
+NoMethodError (undefined method `/' for "0":String):
+  app/controllers/sites_controller.rb:37:in `test'
+  app/controllers/sites_controller.rb:31:in `each'
+  app/controllers/sites_controller.rb:31:in `test'
+
+Rendered rescues/_trace (78.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (126.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:49:44) [GET]
+
+NoMethodError (undefined method `to_float' for "0":String):
+  app/controllers/sites_controller.rb:37:in `test'
+  app/controllers/sites_controller.rb:31:in `each'
+  app/controllers/sites_controller.rb:31:in `test'
+
+Rendered rescues/_trace (80.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (102.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:50:05) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 12901ms (View: 4786, DB: 203) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (98.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:52:50) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 14174ms (View: 4975, DB: 205) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:53:15) [GET]
+
+Timeout::Error (execution expired):
+  /usr/local/lib/ruby/1.8/timeout.rb:60:in `ask_the_socket'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:77:in `query_the_socket'
+  whois (0.8.1) lib/whois/server/adapters/standard.rb:34:in `request'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:52:in `query'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:66:in `with_buffer'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:51:in `query'
+  whois (0.8.1) lib/whois/client.rb:72:in `query'
+  whois (0.8.1) lib/whois/client.rb:70:in `query'
+  app/controllers/sites_controller.rb:73:in `test'
+
+Rendered rescues/_trace (90.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (97.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 17:53:35) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 13357ms (View: 4622, DB: 195) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:28:26) [GET]
+
+URI::InvalidURIError (bad URI(is not URI?): http://carma.org/api/1.1/searchLocations?region_type=2&name=(not set)&format=json):
+  /usr/local/lib/ruby/1.8/uri/common.rb:436:in `split'
+  /usr/local/lib/ruby/1.8/uri/common.rb:485:in `parse'
+  app/controllers/sites_controller.rb:37:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (95.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:29:22) [GET]
+
+TypeError (can't convert nil into String):
+  app/controllers/sites_controller.rb:48:in `+'
+  app/controllers/sites_controller.rb:48:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (88.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (105.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:29:40) [GET]
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:40:in `[]'
+  app/controllers/sites_controller.rb:40:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (91.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:32:16) [GET]
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:40:in `[]'
+  app/controllers/sites_controller.rb:40:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (100.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (102.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:32:21) [GET]
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:40:in `[]'
+  app/controllers/sites_controller.rb:40:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (186.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:32:39) [GET]
+
+TypeError (can't convert nil into String):
+  app/controllers/sites_controller.rb:47:in `+'
+  app/controllers/sites_controller.rb:47:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (86.3ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (102.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:33:20) [GET]
+
+TypeError (can't convert nil into String):
+  app/controllers/sites_controller.rb:48:in `+'
+  app/controllers/sites_controller.rb:48:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (105.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:33:27) [GET]
+
+TypeError (can't convert nil into String):
+  app/controllers/sites_controller.rb:48:in `+'
+  app/controllers/sites_controller.rb:48:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (94.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:33:57) [GET]
+
+URI::InvalidURIError (bad URI(is not URI?): http://carma.org/api/1.1/searchLocations?region_type=2&name=Costa Rica&format=json):
+  /usr/local/lib/ruby/1.8/uri/common.rb:436:in `split'
+  /usr/local/lib/ruby/1.8/uri/common.rb:485:in `parse'
+  app/controllers/sites_controller.rb:38:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (84.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:39:17) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 27275ms (View: 5123, DB: 196) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:41:28) [GET]
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:41:in `[]'
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (199.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (102.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:43:28) [GET]
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:41:in `[]'
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (81.6ms)
+Rendered rescues/_request_and_response (112.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:46:41) [GET]
+
+NoMethodError (undefined method `intensity' for #<Array:0x236b774>):
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (88.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:47:06) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 30800ms (View: 4617, DB: 202) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (98.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:52:57) [GET]
+
+NoMethodError (undefined method `items' for <UNDEFINED> ... </>:REXML::Document):
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (81.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (110.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:53:09) [GET]
+
+NoMethodError (undefined method `item' for <UNDEFINED> ... </>:REXML::Document):
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (86.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (97.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:53:34) [GET]
+
+NoMethodError (undefined method `intensity' for <UNDEFINED> ... </>:REXML::Document):
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (199.4ms)
+Rendered rescues/_request_and_response (3.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:54:02) [GET]
+
+NoMethodError (undefined method `items' for <items> ... </>:REXML::Element):
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (82.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:54:44) [GET]
+
+TypeError (can't convert String into Integer):
+  /usr/local/lib/ruby/1.8/rexml/parent.rb:58:in `[]'
+  /usr/local/lib/ruby/1.8/rexml/parent.rb:58:in `[]'
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (79.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:54:50) [GET]
+
+TypeError (can't convert String into Integer):
+  /usr/local/lib/ruby/1.8/rexml/parent.rb:58:in `[]'
+  /usr/local/lib/ruby/1.8/rexml/parent.rb:58:in `[]'
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:57:42) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.elements):
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (74.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:58:11) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.elements):
+  app/controllers/sites_controller.rb:42:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (79.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:58:28) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.elements):
+  app/controllers/sites_controller.rb:43:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (86.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 18:59:06) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.elements):
+  app/controllers/sites_controller.rb:41:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (85.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:00:45) [GET]
+
+NameError (undefined local variable or method `time' for #<SitesController:0x230512c>):
+  app/controllers/sites_controller.rb:42:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (78.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:00:59) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 27316ms (View: 5090, DB: 198) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (101.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:02:22) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 16846ms (View: 4475, DB: 199) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:03:22) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 17040ms (View: 4580, DB: 200) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (98.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:04:04) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 18399ms (View: 5292, DB: 198) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (107.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:04:41) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 16856ms (View: 4571, DB: 209) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (98.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:05:08) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 16856ms (View: 4606, DB: 197) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (99.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:05:47) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 17014ms (View: 4575, DB: 199) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:14:49) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.*):
+  app/controllers/sites_controller.rb:51:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (158.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (107.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:15:28) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.*):
+  app/controllers/sites_controller.rb:54:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (167.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:15:48) [GET]
+
+NoMethodError (undefined method `/' for "":String):
+  app/controllers/sites_controller.rb:54:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (75.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:16:09) [GET]
+
+NoMethodError (undefined method `/' for "":String):
+  app/controllers/sites_controller.rb:55:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (91.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:16:33) [GET]
+
+NoMethodError (undefined method `to_float' for "0":String):
+  app/controllers/sites_controller.rb:55:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (81.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (97.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:16:40) [GET]
+
+NoMethodError (undefined method `to_float' for "0":String):
+  app/controllers/sites_controller.rb:55:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (74.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:18:17) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 27837ms (View: 4695, DB: 198) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (102.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:22:16) [GET]
+
+NoMethodError (undefined method `truncate' for #<SitesController:0x2590374>):
+  app/controllers/sites_controller.rb:59:in `test'
+  app/controllers/sites_controller.rb:32:in `each'
+  app/controllers/sites_controller.rb:32:in `test'
+
+Rendered rescues/_trace (91.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:22:53) [GET]
+
+Timeout::Error (execution expired):
+  /usr/local/lib/ruby/1.8/timeout.rb:60:in `ask_the_socket'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:77:in `query_the_socket'
+  whois (0.8.1) lib/whois/server/adapters/standard.rb:34:in `request'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:52:in `query'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:66:in `with_buffer'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:51:in `query'
+  whois (0.8.1) lib/whois/client.rb:72:in `query'
+  whois (0.8.1) lib/whois/client.rb:70:in `query'
+  app/controllers/sites_controller.rb:94:in `test'
+
+Rendered rescues/_trace (108.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:23:11) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 21275ms (View: 4843 | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (100.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:29:36) [GET]
+
+NoMethodError (undefined method `truncate' for #<SitesController:0x23b692c>):
+  app/controllers/sites_controller.rb:62:in `test'
+  app/controllers/sites_controller.rb:33:in `each'
+  app/controllers/sites_controller.rb:33:in `test'
+
+Rendered rescues/_trace (102.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:29:48) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil./) on line #34 of app/views/sites/test.html.erb:
+31: <p><%= @visitors_text %></p>
+32: <h2>Total: </h2>
+33: <h3><%= @time %> minutes</h3>
+34: <h3><%= @totalCO2/1000 %> kg CO2</h3>
+35: </div>
+36: 	
+
+    app/views/sites/test.html.erb:34
+
+Rendered rescues/_trace (102.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:30:51) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 19374ms (View: 4675, DB: 209) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (98.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:33:00) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+ERROR: compiling _run_erb_app47views47sites47test46html46erb RAISED compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:34: syntax error, unexpected ')', expecting kEND
+...otalco2/1000).round(2) ).to_s); @output_buffer.concat " kg C...
+                              ^
+Function body:           def _run_erb_app47views47sites47test46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"content_left\">\n<h1><b>Server and infrastructure</b></h1>\n<p><i>Carbon impact from the electricity of the server and internet infrastructure.</i></p>\n<h1>"
+
+
+; @output_buffer.concat(( @profile.name ).to_s); @output_buffer.concat "</h1>\n<h2>Total pageviews: </h2>\n<p>"
+
+; @output_buffer.concat(( @profile.pageviews ).to_s); @output_buffer.concat "</p>\n<h2>Pages</h2>\n"
+
+;  total = 0 ; @output_buffer.concat "\n"
+;  @results.points.each do |point|; @output_buffer.concat "\n\t"
+;  url = point.to_s.split("pagePath=>")[1]; @output_buffer.concat "\n\t"
+;  url = url.to_s.split("}")[0]; @output_buffer.concat "\n\t"
+;  url = url.to_s.split('"')[1]; @output_buffer.concat "\n\t"
+;  url = url.to_s.split('"')[0]; @output_buffer.concat "\n\t"
+;  visits = point.to_s.split("pageviews=>")[1]; @output_buffer.concat "\n\t"
+;  visits = visits.to_s.split("}")[0]; @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( truncate(url,100) ).to_s); @output_buffer.concat " with "; @output_buffer.concat(( visits ).to_s); @output_buffer.concat " visitors</p>\n\t"
+;  pagesize = pageSize(@main_url+url)/1024 ; @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( pagesize ).to_s); @output_buffer.concat " Kb</p>\n\t"
+;  total += pagesize*visits.to_i ; @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n\n<h2>Total </h2>\n<h3>"
+
+
+; @output_buffer.concat(( total ).to_s); @output_buffer.concat " Kb.</h3>\n<h3>"
+; @output_buffer.concat(( (total*0.001*0.5017400).round(2) ).to_s); @output_buffer.concat " kg CO2</h3>\n</div>\n\n<div id=\"content_right\">\n<h1><b>Visitors</b></h1>\n<p><i>The impact from the electricity used by the visitors.</i></p>\n<h2>Visitors: </h2>\n<p>"
+
+
+
+
+
+
+; @output_buffer.concat(( @visitors_text ).to_s); @output_buffer.concat "</p>\n<h2>Total: </h2>\n<h3>"
+
+; @output_buffer.concat(( @time ).to_s); @output_buffer.concat " minutes</h3>\n<h3>"
+; @output_buffer.concat(( @totalco2/1000).round(2) ).to_s); @output_buffer.concat " kg CO2</h3>\n</div>\n\t"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:39:in `compile!'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:34: syntax error, unexpected ')', expecting kEND
+...otalco2/1000).round(2) ).to_s); @output_buffer.concat " kg C...
+                              ^) on line #34 of app/views/sites/test.html.erb:
+31: <p><%= @visitors_text %></p>
+32: <h2>Total: </h2>
+33: <h3><%= @time %> minutes</h3>
+34: <h3><%= @totalco2/1000).round(2) %> kg CO2</h3>
+35: </div>
+36: 	
+
+    app/views/sites/test.html.erb:39:in `compile!'
+
+Rendered rescues/_trace (137.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-15 19:33:38) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
+Completed in 17188ms (View: 4797, DB: 210) | 200 OK [http://localhost/sites/test]

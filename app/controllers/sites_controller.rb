@@ -7,8 +7,6 @@ class SitesController < ApplicationController
  require 'hpricot'
  require 'open-uri'
  require 'gattica'
-
-
  
  def test
     #Garb::Session.login('jorgezapico@gmail.com', 'rip2maQ1')
@@ -24,6 +22,50 @@ class SitesController < ApplicationController
      amonthago = amonthago.strftime("%Y-%m-%d")
      gs = Gattica.new({:email => 'jorgezapico@gmail.com', :password => 'rip2maQ1', :profile_id => 21441200})
      @results = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'pagePath', :metrics => 'pageviews'})
+     # Get the time on site by country
+     visitors = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'country', :metrics => 'timeOnSite', :aggregates => 'country'})
+     
+   
+     # Parse the time on site by country 
+     @visitors_text = " "
+     @time = 0 
+     @totalco2 = 0
+     visitors.points.each do |country|
+       # Parse country
+       name = country.to_s.split('ga:country=')[1]
+       name = name.to_s.split('"')[0]
+       # Get carbon factor
+       factor = ""
+       if name != "(not set)" then
+         h_name = name.sub(" ", "%20")
+         carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
+         # Parse the factor from Json string
+         factor = carma.to_s.split("intensity")[1]
+         factor = factor.to_s.split('present" : "')[1] 
+         factor = factor.to_s.split('",')[0]
+       end
+       if factor == "" then
+         factor = "0.501"
+       end
+       # Parse time
+       time = country.to_s.split(":timeOnSite=>")[1]
+       time = time.to_s.split("}")[0]
+       @time += time.to_i
+       
+       # Calculate the impact
+       carbonimpact = factor.to_f * time.to_i * 20 / 3600000
+       @totalco2 += carbonimpact
+       
+       # Aggregate
+       time = (time.to_f/60).round(1)
+       grams = carbonimpact.round(2)
+       if grams != 0
+         text = "<b>" + name.to_s + "</b> " + time.to_s + " min "+ grams.to_s + " grams CO2. <br/>"
+         @visitors_text += text
+       end
+     end     
+     
+     @time = @time/60
      
      @main_url = "http://carbon.to"
     

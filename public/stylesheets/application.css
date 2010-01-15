@@ -10,7 +10,7 @@ body {
 	color: black; 
 	text-align: center;
 	margin: 0 auto;
-	width: 984px;
+	width: 900px;
 	overflow: hidden;
 }
 
@@ -67,107 +67,6 @@ text-align: center;
 	font-family:"Arial Rounded MT Bold",Arial;
 	margin:0;
 	padding:0 0 5px;
-}
-
-/* Main content divs */
-	
-#content{
-	position: relative;
-	width:100%;
-	height: auto;
-	padding-bottom: 10px;
-	top: 8px;
-	text-align:left;
-	margin-bottom: 30px;
-}
-#content_left {
-	width:480px;
-	float:left;
-    background:#fff;
-    padding-left: 35px;
-	margin-bottom: 30px;
-}
-	
-#content_right {
-	width:250px;
-	padding-right: 40px;
-	float:right;
-	background:#fff;
-	text-align: center;
-	margin-bottom: 30px;
-}
-#column_one {
-	position: relative;
-	width:260px;
-	height: auto;
-	margin-top: 8px;
-	float:left;
-    background:#fff;
-    padding-left: 35px;
-	margin-bottom: 30px;
-}
-	
-#column_two {
-	position: relative;
-	width:260px;
-	margin-top: 8px;
-	float:left;
-    background:#fff;
-    padding-left: 40px;
-	margin-bottom: 30px;
-}
-
-#column_three {
-	height: auto;
-	width:260px;
-	margin-top: 8px;
-	float:left;
-	text-align: center;
-    background:#fff;
-    padding-left: 40px;
-	margin-bottom: 30px;
-}
-#user_index {
-	float: left;
-	height: auto;
-	width: 500px;  
-	left: 0px;
-	top: 5px;
-  	padding-top: 0px;
-}
-#user_index ul li {
-  font-size: 12px;
-  width: 100px;
-  list-style: none;
-  float: left;
-  padding-right: 20px;
-}
-
-/* Divs for emissions */
-
-.emission {
-	position: relative;
-	width: 500px;
-	height: 110px;
-
-	margin-bottom: 12px;
-}
-.emission .picture {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	
-}
-
-.emission .co2 {
-	position: absolute;
-	left: 110px;
-	top: 0px;
-}
-.emission .info {
-	position: absolute;
-	left: 240px;
-	top: 0px;
 }
 
 /* Body */
@@ -324,7 +223,7 @@ text-align: center;
 	
 #content{
 	position: relative;
-	width:100%;
+	width:800px;
 	height: auto;
 	padding-bottom: 10px;
 	top: 8px;
@@ -332,7 +231,7 @@ text-align: center;
 	margin-bottom: 30px;
 }
 #content_left {
-	width:480px;
+	width:350px;
 	float:left;
     background:#fff;
     padding-left: 35px;
@@ -340,11 +239,11 @@ text-align: center;
 }
 	
 #content_right {
-	width:250px;
-	padding-right: 40px;
+	width:350px;
+	padding-right: 0px;
 	float:right;
 	background:#fff;
-	text-align: right;
+	text-align: left;
 	margin-bottom: 30px;
 }
 #column_one {
