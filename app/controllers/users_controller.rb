@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   
   def info
   end
-
+  def about
+  end
+  def data
+  end
+  
   # render new.rhtml
   def new
     @user = User.new

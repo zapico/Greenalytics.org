@@ -23,6 +23,7 @@ body {
 	margin-top: 20px;
 	padding-left: 20px;
 	margin-bottom: 15px;
+	border-bottom: 1px solid #cccccc;
 }
 #menu{
 	position: absolute;
@@ -30,43 +31,6 @@ body {
 	width: 400px;
 	left: 400px;
 	top: 40px;
-}
-
-/* Footer */
-
-#footer {
-	padding: 25px 10px 15px 5px;
- 	width : 984px;
-	height: 110px;
-  	margin: 0px auto;
-	border-top: 1px solid #cccccc;
-	border-bottom: 2px solid #cccccc;
-	margin-bottom: 25px;
-}
-
-#footer .footer-list {
-float:left;
-font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-margin:8px 0 30px 10px;
-text-align: center;
-}
-#footer .footer-list ul {
-	line-height:18px;
-	list-style-image:none;
-	list-style-position:outside;
-	list-style-type:none;
-	margin:0;
-	max-width:210px;
-	padding:0;
-	width:210px;
-}
-#footer .footer-list ul a {
-	color:#969696;
-}
-#footer h4 {
-	font-family:"Arial Rounded MT Bold",Arial;
-	margin:0;
-	padding:0 0 5px;
 }
 
 /* Body */
@@ -185,6 +149,9 @@ a:hover { color: #333; background: #fff;}
 /* Footer */
 
 #footer {
+	position:relative;
+	float: left;
+	left:0px;
 	padding: 25px 10px 15px 5px;
  	width : 984px;
 	height: 110px;
@@ -222,7 +189,9 @@ text-align: center;
 /* Main content divs */
 	
 #content{
-	position: relative;
+	position:relative;
+	float: left;
+	left:0px;
 	width:800px;
 	height: auto;
 	padding-bottom: 10px;
@@ -259,7 +228,7 @@ text-align: center;
 	
 #column_two {
 	position: relative;
-	width:260px;
+	width:220px;
 	margin-top: 8px;
 	float:left;
     background:#fff;
@@ -268,13 +237,14 @@ text-align: center;
 }
 
 #column_three {
+	position: relative;
 	height: auto;
-	width:260px;
+	width:230px;
 	margin-top: 8px;
-	float:left;
-	text-align: center;
+	float:right;
+	right: 0px;
+	text-align: left;
     background:#fff;
-    padding-left: 40px;
 	margin-bottom: 30px;
 }
 #user_index {
@@ -445,7 +415,7 @@ background:#998675;
 
 #header #menu-wrapper {
 margin:0 auto;
-width:900px;
+width:800px;
 }
 #header ul#main-menu {
 float:left;
@@ -466,7 +436,7 @@ margin-right: 20px;
 text-align:left;
 }
 #header ul#main-menu li a {
-color:#85C443;
+color:#D9E021;
 display:block;
 padding: 5px;
 text-decoration:none
@@ -478,5 +448,5 @@ text-decoration:none
 -moz-border-radius-topright:2px;
 padding: 5px;
 color:white;
-background:#85C443;
+background:#D9E021;
 }

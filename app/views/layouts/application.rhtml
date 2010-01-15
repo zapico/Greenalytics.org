@@ -12,13 +12,61 @@
 <div id="wrapper">
 	<div id="header">
 		<a href="/"><img src="/images/logo.png" border='0' alt="our co2"/></a>
-		
+		<div id="menu-wrapper">
+			<ul id="main-menu">
+				<li><a href="/sites/test">Calculate</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/data">Data</a></li>
+			</ul>
+		</div>
 	</div>
 	
 	<div id="content">
 	<%= yield  %>
 	<br/><br/>
-	</div>	
+	</div>
+	
+	
+	<div id="footer">
+		<div class="footer-list">
+				<h4>Menu</h4>
+				<ul>
+				<li><a href="/" >Home</a></li>
+				<li><a href="/groups" >Calculate</a></li>
+				<li><a href="/sources" >About</a></li>
+				<li><a href="/sources" >Data</a></li>					
+			    </ul>
+			</div>
+		<div class="footer-list">
+				<h4>More information</h4>
+				<ul>
+				<li><a href="mailto:info@greenalytics.org" target="_blank">Email us</a></li>
+				<li><a href="http://twitter.com/greenalytics" target="_blank">Twitter</a></li>				
+			    </ul>
+			</div>
+			<div class="footer-list">
+				<h4>A project of</h4>
+				<ul>
+				<li><a href="http://kth.se/" target="_blank">KTH</a></li>
+				<li><a href="http://sustainablecommunications.org/" target="_blank">Sustainable Communications</a></li>
+				<li><a href="http://jorgezapico.com/" target="_blank">Jorge Zapico</a></li>
+
+			    </ul>
+			</div>
+			<div class="footer-list">
+
+			    <% if session[:id] && User.find_by_id(session[:id]).id == 5 %>
+				<h4>Administration</h4>
+				<ul>
+				<li><a href="/users/new" >New User</a></li>
+				<li><a href="/groups" >Admin User</a></li>
+				<li><a href="/users/administration">Crontab functions</a></li>
+				</ul>
+				<%end%>					
+
+			</div>
+		</div>
+		
 </div>
 
 </body>
