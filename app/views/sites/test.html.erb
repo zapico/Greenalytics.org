@@ -1,10 +1,10 @@
 <div id="content_top">
-<h1 class="name"><%= @profile.name %></h1>
+<h1 class="name"><%= @address%></h1>
 <h2><co2><%= @total_co2.round(2) %></co2> kg CO<sub>2</sub></h1>
 <p>The site emissions are equivalent to: <p/><h2><co2><%= @caramount %></co2> km driving a car</h2>
 <h2>Or <co2><%= @beeramount %></co2> bottles of beer</h2>
 <p>Conversions thanks to <a href="http://carbon.to">carbon.to</a></p>
-
+<%= image_tag @grafico, :alt => 'foo' %><br>
 </div>
 <div id="content_left">
 <h1><b>Server and infrastructure</b></h1>

@@ -8,24 +8,45 @@ class SitesController < ApplicationController
  require 'open-uri'
  require 'gattica'
  
- def test
-    #Garb::Session.login('jorgezapico@gmail.com', 'rip2maQ1')
-    #Garb::Account.all.first
-    #@profile = Garb::Profile.all
+ def login
+   if request.post?
+       e = "jorgezapico@gmail.com"
+       p = "rip2maQ1"
+       @gattica = Gattica.new({:email => e, :password => p})
+       if @gattica 
+           redirect_to(:action => "select")
+       else
+          flash[:notice] = "Invalid user/password combination"
+       end
+     end
+ end
+ def select
+    e = "jorgezapico@gmail.com"
+    p = "rip2maQ1"
+    @gattica = Gattica.new({:email => e, :password => p})
+    @accounts =  @gattica.accounts
     
-    Rugalytics.login 'jorgezapico@gmail.com', 'rip2maQ1'
-    @profile = Rugalytics.find_profile('Verde media','carbon.to')
-     
+ end
+ 
+ def test
+         
      # GET DATA FROM GOOGLE ANALYTICS
      today= DateTime.now-1.days
      amonthago = today-30.days
      today = today.strftime("%Y-%m-%d")
      amonthago = amonthago.strftime("%Y-%m-%d")
-     gs = Gattica.new({:email => 'jorgezapico@gmail.com', :password => 'rip2maQ1', :profile_id => 21441200})
+     
+     gs = Gattica.new({:email => 'jorgezapico@gmail.com', :password => 'rip2maQ1'})
+     gs.profile_id = params[:site_id]
      # Get the pageview of all apges
      allpages = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'pagePath', :metrics => 'pageviews'})
      # Get the time on site by country
      visitors = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'country', :metrics => 'timeOnSite', :aggregates => 'country'})
+     # Get address (Not as easy as it should be!)
+     address = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'hostname', :metrics => 'pageviews',:sort => '-pageviews', :aggregates => 'hostame'})
+     @address = address.points.first.dimensions
+     @address = @address.to_s.split('hostname')[1]
+     @address = "http://"+@address.to_s
      
      # CALCULATE VISITORS IMPACT
      # Parse the time on site by country 
@@ -39,7 +60,7 @@ class SitesController < ApplicationController
        # Get carbon factor
        factor = ""
        if name != "(not set)" then
-         h_name = name.sub(" ", "%20")
+         h_name = name.gsub(" ", "%20")
          carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
          # Parse the factor from Json string
          factor = carma.to_s.split("intensity")[1]
@@ -70,8 +91,7 @@ class SitesController < ApplicationController
      @co2_visitors = @co2_visitors/1000
      @time = @time/60
      
-     @main_url = "http://carbon.to"
-    
+
 
     # CALCULATE TOTAL TRAFFIC
     # Initialiate variables
@@ -88,7 +108,7 @@ class SitesController < ApplicationController
     	visits = point.to_s.split("pageviews=>")[1]
     	visits = visits.to_s.split("}")[0]
     	# 3. Aggregate text
-    	pagesize = pageSize(@main_url+url)/1024
+    	pagesize = pageSize(@address+url)/1024
     	@page_text += "<p><b>" + url  + "</b></p>"
     	@page_text += "<p>" + pagesize.to_s + " kb. " +visits.to_s+ " visitors</p>"
     	@total_size += pagesize*visits.to_i
@@ -97,7 +117,7 @@ class SitesController < ApplicationController
     # CALCULATE SERVER AND INFRA IMPACT
     @co2_server = 0
     @co2_infrastructure = 0
-    @co2_server = @total_size*0.001*0.5017400
+    @co2_server = @total_size*0.000001*8*16*0.501
     
     @w = Whois::Client.new
     @w.query('70.32.99.240')
@@ -105,6 +125,11 @@ class SitesController < ApplicationController
     # Aggregate total CO2
     @total_co2= 0
     @total_co2 = @co2_visitors + @co2_server
+ 
+    # CREATE PIE GRAPHIC
+    per_visitors = @co2_visitors*100/@total_co2
+    per_server = @co2_server*100/@total_co2
+    @grafico="http://chart.apis.google.com/chart?chs=250x100&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
  
     # TRANSLATE USING CARBON.TO
     beer = Net::HTTP.get(URI.parse("http://carbon.to/beers.json?co2="+@total_co2.round.to_s))

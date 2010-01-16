@@ -9198,3 +9198,1347 @@ DEPRECATION WARNING: truncate takes an option hash instead of separate length an
 DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
 DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47sites47test46html46erb at /Users/zapico/Developing/greenalytics/app/views/sites/test.html.erb:16)
 Completed in 17188ms (View: 4797, DB: 210) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (101.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 19:54:09) [GET]
+
+Timeout::Error (execution expired):
+  /usr/local/lib/ruby/1.8/timeout.rb:60:in `ask_the_socket'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:77:in `query_the_socket'
+  whois (0.8.1) lib/whois/server/adapters/standard.rb:34:in `request'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:52:in `query'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:66:in `with_buffer'
+  whois (0.8.1) lib/whois/server/adapters/base.rb:51:in `query'
+  whois (0.8.1) lib/whois/client.rb:72:in `query'
+  whois (0.8.1) lib/whois/client.rb:70:in `query'
+  app/controllers/sites_controller.rb:103:in `test'
+
+Rendered rescues/_trace (224.1ms)
+Rendered rescues/_request_and_response (6.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 19:55:56) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 18706ms (View: 125, DB: 219) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (126.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-16 20:05:50) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 92ms (View: 80, DB: 256) | 200 OK [http://localhost/]
+
+
+Processing UsersController#data (for 127.0.0.1 at 2010-01-16 20:05:50) [GET]
+Rendering template within layouts/application
+Rendering users/data
+Completed in 35ms (View: 33 | 200 OK [http://localhost/data]
+  [4;36;1mSQL (108.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#about (for 127.0.0.1 at 2010-01-16 20:05:56) [GET]
+Rendering template within layouts/application
+Rendering users/about
+Completed in 26ms (View: 16, DB: 213) | 200 OK [http://localhost/about]
+  [4;36;1mSQL (107.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-16 20:06:00) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 26ms (View: 3, DB: 212) | 200 OK [http://localhost/]
+  [4;36;1mSQL (128.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (132.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 20:06:07) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 17003ms (View: 4, DB: 260) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (104.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 20:18:59) [GET]
+
+NameError (undefined local variable or method `pervisitor' for #<SitesController:0x252e73c>):
+  app/controllers/sites_controller.rb:112:in `test'
+
+Rendered rescues/_trace (89.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (114.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 20:19:50) [GET]
+
+NameError (undefined local variable or method `per_visitor' for #<SitesController:0x23be028>):
+  app/controllers/sites_controller.rb:112:in `test'
+
+Rendered rescues/_trace (201.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (106.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 20:20:34) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 19308ms (View: 12, DB: 211) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 20:21:44) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 19538ms (View: 3, DB: 210) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (99.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 20:28:22) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 19357ms (View: 4, DB: 201) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (99.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 20:33:17) [GET]
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 18555ms (View: 66, DB: 200) | 200 OK [http://localhost/sites/test]
+  [4;36;1mSQL (101.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 20:33:54) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 113ms (View: 103, DB: 204) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (130.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (168.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 20:34:08) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 23ms (View: 12, DB: 298) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (103.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 20:59:36) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 84ms (View: 63, DB: 209) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (99.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (112.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-16 20:59:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ1"}
+  [4;36;1mUser Columns (129.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (135.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'jorgezapico@gmail.com') LIMIT 1[0m
+Failed login for 'jorgezapico@gmail.com' from 127.0.0.1 at Sat Jan 16 19:59:46 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 432ms (View: 25, DB: 477) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (99.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:00:10) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+
+ActionView::TemplateError (undefined local variable or method `create' for #<ActionView::Base:0x221e948>) on line #3 of app/views/sites/login.html.erb:
+1: <div id="content_left">
+2: <h1>Login in your Google Analytics</h1>
+3: <% form_tag create do -%>
+4: <p><%= label_tag 'login' %><br />
+5: <%= text_field_tag 'login', params[:email]%></p>
+6: <p><%= label_tag 'password' %><br/>
+
+    app/views/sites/login.html.erb:3
+
+Rendered rescues/_trace (123.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:00:36) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+
+ActionView::TemplateError (undefined local variable or method `create_path' for #<ActionView::Base:0x242276c>) on line #3 of app/views/sites/login.html.erb:
+1: <div id="content_left">
+2: <h1>Login in your Google Analytics</h1>
+3: <% form_tag create_path do -%>
+4: <p><%= label_tag 'login' %><br />
+5: <%= text_field_tag 'login', params[:email]%></p>
+6: <p><%= label_tag 'password' %><br/>
+
+    app/views/sites/login.html.erb:3
+
+Rendered rescues/_trace (133.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:01:59) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 137ms (View: 18, DB: 209) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (105.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (122.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#create (for 127.0.0.1 at 2010-01-16 21:02:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ4"}
+
+ActionController::UnknownAction (No action responded to create. Actions: login, pageSize, select, and test):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (117.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:02:27) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 22ms (View: 12, DB: 221) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (99.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 21:02:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ4"}
+
+GatticaError::NoLoginOrToken (You must provide an email and password, or authentication token):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:97:in `initialize'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  app/controllers/sites_controller.rb:17:in `select'
+
+Rendered rescues/_trace (92.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 21:03:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ4"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 23ms (View: 13, DB: 208) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (105.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (134.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 21:03:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ1"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 16ms (View: 2, DB: 239) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (101.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:06:02) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 35ms (View: 16, DB: 204) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (128.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:06:11) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ1"}
+
+GatticaError::NoLoginOrToken (You must provide an email and password, or authentication token):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:97:in `initialize'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  app/controllers/sites_controller.rb:13:in `login'
+
+Rendered rescues/_trace (125.4ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:10:00) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 33ms (View: 19, DB: 200) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (102.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:10:10) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "pass"=>"rip2maQ1", "login"=>"jorgezapico@gmail.com"}
+
+GatticaError::NoLoginOrToken (You must provide an email and password, or authentication token):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:97:in `initialize'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  app/controllers/sites_controller.rb:13:in `login'
+
+Rendered rescues/_trace (95.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (112.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (112.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:10:59) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 15ms (View: 5, DB: 226) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:11:08) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "pass"=>"rip2maQ1", "login"=>"jorgezapico@gmail.com"}
+
+GatticaError::NoLoginOrToken (You must provide an email and password, or authentication token):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:97:in `initialize'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  app/controllers/sites_controller.rb:15:in `login'
+
+Rendered rescues/_trace (93.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:11:52) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 15ms (View: 5, DB: 208) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (129.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:11:58) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "pass"=>"rip2maQ1", "login"=>"jorgezapico@gmail.com"}
+
+GatticaError::InvalidEmail (The email address '' is not valid):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica/user.rb:26:in `validate'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica/user.rb:14:in `initialize'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:91:in `new'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:91:in `initialize'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  app/controllers/sites_controller.rb:15:in `login'
+
+Rendered rescues/_trace (106.7ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:13:10) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 22ms (View: 12, DB: 200) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (101.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:13:13) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ1"}
+
+GatticaError::InvalidEmail (The email address '' is not valid):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica/user.rb:26:in `validate'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica/user.rb:14:in `initialize'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:91:in `new'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:91:in `initialize'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:36:in `new'
+  app/controllers/sites_controller.rb:15:in `login'
+
+Rendered rescues/_trace (94.6ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (111.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (128.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:14:06) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ1"}
+
+NameError (undefined local variable or method `ga' for #<SitesController:0x237f1ac>):
+  app/controllers/sites_controller.rb:16:in `login'
+
+Rendered rescues/_trace (97.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (128.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:14:22) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ1"}
+
+NameError (undefined local variable or method `ga' for #<SitesController:0x221abcc>):
+  app/controllers/sites_controller.rb:16:in `login'
+
+Rendered rescues/_trace (103.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (125.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:14:27) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ1"}
+
+NameError (undefined local variable or method `ga' for #<SitesController:0x24d9660>):
+  app/controllers/sites_controller.rb:16:in `login'
+
+Rendered rescues/_trace (92.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (111.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:14:53) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 14ms (View: 5, DB: 214) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (100.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-16 21:14:56) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ1"}
+Redirected to http://localhost:3000/sites/select
+Completed in 244ms (DB: 200) | 302 Found [http://localhost/sites/login]
+  [4;36;1mSQL (104.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (113.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 21:14:57) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 13ms (View: 3, DB: 217) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (100.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:50:12) [GET]
+
+NameError (undefined local variable or method `gs' for #<SitesController:0x25bc618>):
+  app/controllers/sites_controller.rb:27:in `select'
+
+Rendered rescues/_trace (116.6ms)
+Rendered rescues/_request_and_response (15.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (117.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:50:26) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1750ms (View: 128, DB: 218) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (106.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:51:36) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+
+ActionView::TemplateError (undefined method `[]' for #<Gattica::Account:0x22392c0>) on line #5 of app/views/sites/select.html.erb:
+2: <h1>Select the site to analyze</h1>
+3: <%= @email %>
+4: <% @accounts.each do |a| %>
+5: 	<%= a["title"] %>
+6: <%end%>
+7: </div>
+8: 
+
+    app/views/sites/select.html.erb:5
+    app/views/sites/select.html.erb:4:in `each'
+    app/views/sites/select.html.erb:4
+
+Rendered rescues/_trace (106.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:51:38) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+
+ActionView::TemplateError (undefined method `[]' for #<Gattica::Account:0x248dc38>) on line #5 of app/views/sites/select.html.erb:
+2: <h1>Select the site to analyze</h1>
+3: <%= @email %>
+4: <% @accounts.each do |a| %>
+5: 	<%= a["title"] %>
+6: <%end%>
+7: </div>
+8: 
+
+    app/views/sites/select.html.erb:5
+    app/views/sites/select.html.erb:4:in `each'
+    app/views/sites/select.html.erb:4
+
+Rendered rescues/_trace (99.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:51:50) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1241ms (View: 10, DB: 208) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (111.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:52:19) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 906ms (View: 11, DB: 215) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (98.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:52:35) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+
+ActionView::TemplateError (undefined method `address' for #<Gattica::Account:0x22ec438>) on line #5 of app/views/sites/select.html.erb:
+2: <h1>Select the site to analyze</h1>
+3: <%= @email %>
+4: <% @accounts.each do |a| %>
+5: 	<h2><%= a.address %></h2>
+6: <%end%>
+7: </div>
+8: 
+
+    app/views/sites/select.html.erb:5
+    app/views/sites/select.html.erb:4:in `each'
+    app/views/sites/select.html.erb:4
+
+Rendered rescues/_trace (292.4ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (130.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:52:45) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1343ms (View: 11, DB: 260) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (98.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:53:24) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1224ms (View: 16, DB: 197) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (128.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:55:49) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+ERROR: compiling _run_erb_app47views47sites47select46html46erb RAISED compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/select.html.erb:5: syntax error, unexpected ':', expecting ')'
+...o a.title :action => 'test,' :site_id => a.profile_id ).to_s...
+                              ^
+Function body:           def _run_erb_app47views47sites47select46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"content_left\">\n<h1>Select the site to analyze</h1>\n"
+
+; @output_buffer.concat(( @email ).to_s); @output_buffer.concat "\n"
+;  @accounts.each do |a| ; @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( link_to a.title :action => 'test,' :site_id => a.profile_id ).to_s); @output_buffer.concat "</p>\n"
+; end; @output_buffer.concat "\n</div>\n\n<div id=\"content_right\">\n</div>"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zapico/Developing/greenalytics/app/views/sites/select.html.erb:13:in `compile!'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/select.html.erb:5: syntax error, unexpected ':', expecting ')'
+...o a.title :action => 'test,' :site_id => a.profile_id ).to_s...
+                              ^) on line #5 of app/views/sites/select.html.erb:
+2: <h1>Select the site to analyze</h1>
+3: <%= @email %>
+4: <% @accounts.each do |a| %>
+5: 	<p><%= link_to a.title :action => 'test,' :site_id => a.profile_id %></p>
+6: <%end%>
+7: </div>
+8: 
+
+    app/views/sites/select.html.erb:13:in `compile!'
+
+Rendered rescues/_trace (98.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:56:00) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+ERROR: compiling _run_erb_app47views47sites47select46html46erb RAISED compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/select.html.erb:5: syntax error, unexpected ':', expecting ')'
+...to a.title :action => 'test' :site_id => a.profile_id ).to_s...
+                              ^
+Function body:           def _run_erb_app47views47sites47select46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"content_left\">\n<h1>Select the site to analyze</h1>\n"
+
+; @output_buffer.concat(( @email ).to_s); @output_buffer.concat "\n"
+;  @accounts.each do |a| ; @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( link_to a.title :action => 'test' :site_id => a.profile_id ).to_s); @output_buffer.concat "</p>\n"
+; end; @output_buffer.concat "\n</div>\n\n<div id=\"content_right\">\n</div>"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zapico/Developing/greenalytics/app/views/sites/select.html.erb:13:in `compile!'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/select.html.erb:5: syntax error, unexpected ':', expecting ')'
+...to a.title :action => 'test' :site_id => a.profile_id ).to_s...
+                              ^) on line #5 of app/views/sites/select.html.erb:
+2: <h1>Select the site to analyze</h1>
+3: <%= @email %>
+4: <% @accounts.each do |a| %>
+5: 	<p><%= link_to a.title :action => 'test' :site_id => a.profile_id %></p>
+6: <%end%>
+7: </div>
+8: 
+
+    app/views/sites/select.html.erb:13:in `compile!'
+
+Rendered rescues/_trace (192.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (101.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:56:03) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+ERROR: compiling _run_erb_app47views47sites47select46html46erb RAISED compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/select.html.erb:5: syntax error, unexpected ':', expecting ')'
+...to a.title :action => 'test' :site_id => a.profile_id ).to_s...
+                              ^
+Function body:           def _run_erb_app47views47sites47select46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"content_left\">\n<h1>Select the site to analyze</h1>\n"
+
+; @output_buffer.concat(( @email ).to_s); @output_buffer.concat "\n"
+;  @accounts.each do |a| ; @output_buffer.concat "\n\t<p>"
+; @output_buffer.concat(( link_to a.title :action => 'test' :site_id => a.profile_id ).to_s); @output_buffer.concat "</p>\n"
+; end; @output_buffer.concat "\n</div>\n\n<div id=\"content_right\">\n</div>"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zapico/Developing/greenalytics/app/views/sites/select.html.erb:13:in `compile!'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/zapico/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/zapico/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zapico/Developing/greenalytics/app/views/sites/select.html.erb:5: syntax error, unexpected ':', expecting ')'
+...to a.title :action => 'test' :site_id => a.profile_id ).to_s...
+                              ^) on line #5 of app/views/sites/select.html.erb:
+2: <h1>Select the site to analyze</h1>
+3: <%= @email %>
+4: <% @accounts.each do |a| %>
+5: 	<p><%= link_to a.title :action => 'test' :site_id => a.profile_id %></p>
+6: <%end%>
+7: </div>
+8: 
+
+    app/views/sites/select.html.erb:13:in `compile!'
+
+Rendered rescues/_trace (96.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:56:15) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1392ms (View: 18, DB: 209) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (99.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-16 23:57:02) [GET]
+  Parameters: {"site_id"=>"5878792"}
+
+FloatDomainError (NaN):
+  app/controllers/sites_controller.rb:131:in `test'
+
+Rendered rescues/_trace (88.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (102.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-16 23:58:21) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 916ms (View: 45, DB: 205) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (112.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:14:09) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `domain' for #<Gattica::Engine:0x25bec4c>):
+  app/controllers/sites_controller.rb:93:in `test'
+
+Rendered rescues/_trace (188.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:15:55) [GET]
+  Parameters: {"site_id"=>"21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 17312ms (View: 12, DB: 207) | 200 OK [http://localhost/sites/test?site_id=21441200]
+  [4;36;1mSQL (103.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:16:32) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `address' for #<Gattica::Engine:0x2493db8>):
+  app/controllers/sites_controller.rb:93:in `test'
+
+Rendered rescues/_trace (101.6ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:16:42) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `address' for #<Gattica::Engine:0x245cfc0>):
+  app/controllers/sites_controller.rb:93:in `test'
+
+Rendered rescues/_trace (103.6ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:16:53) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `address' for #<Gattica::Engine:0x23ff7f8>):
+  app/controllers/sites_controller.rb:93:in `test'
+
+Rendered rescues/_trace (91.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:17:04) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `address' for #<Gattica::Engine:0x23bf644>):
+  app/controllers/sites_controller.rb:93:in `test'
+
+Rendered rescues/_trace (112.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (105.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:25:57) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `hostname' for #<Gattica::Engine:0x2377dd0>):
+  app/controllers/sites_controller.rb:93:in `test'
+
+Rendered rescues/_trace (111.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#test (for 127.0.0.1 at 2010-01-17 00:27:52) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+SyntaxError (/Users/zapico/Developing/greenalytics/app/controllers/sites_controller.rb:49: syntax error, unexpected '('
+     address = gs.({:start_date => amonthago, :en...
+                   ^
+/Users/zapico/Developing/greenalytics/app/controllers/sites_controller.rb:49: syntax error, unexpected ')', expecting kEND):
+  
+
+Rendered rescues/_trace (77.9ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (100.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:28:00) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `address' for #<Gattica::Engine:0x265c1a4>):
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (120.3ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (107.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:28:05) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `address' for #<Gattica::Engine:0x229677c>):
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (85.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:28:25) [GET]
+  Parameters: {"site_id"=>"21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 16771ms (View: 11, DB: 198) | 200 OK [http://localhost/sites/test?site_id=21441200]
+  [4;36;1mSQL (99.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:30:11) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `hostname' for [{:hostname=>"carbon.to"}]:Array):
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (124.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (128.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:30:38) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `attribute' for [{:hostname=>"carbon.to"}]:Array):
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (95.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (132.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#test (for 127.0.0.1 at 2010-01-17 00:31:02) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+SyntaxError (/Users/zapico/Developing/greenalytics/app/controllers/sites_controller.rb:51: syntax error, unexpected '['
+     @address = address.points.first.dimensions.["hostname"]
+                                                 ^
+/Users/zapico/Developing/greenalytics/app/controllers/sites_controller.rb:51: syntax error, unexpected ']', expecting kEND):
+  
+
+Rendered rescues/_trace (89.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:31:10) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:51:in `[]'
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (93.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (98.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:31:25) [GET]
+  Parameters: {"site_id"=>"21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 16348ms (View: 3, DB: 198) | 200 OK [http://localhost/sites/test?site_id=21441200]
+  [4;36;1mSQL (128.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (129.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:32:41) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `hostname' for [{:hostname=>"carbon.to"}]:Array):
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (87.7ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (106.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:35:01) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+NoMethodError (undefined method `hostname' for [{:hostname=>"carbon.to"}]:Array):
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:35:16) [GET]
+  Parameters: {"site_id"=>"21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 13840ms (View: 4, DB: 207) | 200 OK [http://localhost/sites/test?site_id=21441200]
+  [4;36;1mSQL (102.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:35:58) [GET]
+  Parameters: {"site_id"=>"20321536"}
+
+TypeError (can't convert nil into String):
+  app/controllers/sites_controller.rb:54:in `+'
+  app/controllers/sites_controller.rb:54:in `test'
+
+Rendered rescues/_trace (93.7ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (118.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:36:22) [GET]
+  Parameters: {"site_id"=>"20321536"}
+
+URI::InvalidURIError (bad URI(is not URI?): http://carma.org/api/1.1/searchLocations?region_type=2&name=United%20Arab Emirates&format=json):
+  /usr/local/lib/ruby/1.8/uri/common.rb:436:in `split'
+  /usr/local/lib/ruby/1.8/uri/common.rb:485:in `parse'
+  app/controllers/sites_controller.rb:69:in `test'
+  app/controllers/sites_controller.rb:61:in `each'
+  app/controllers/sites_controller.rb:61:in `test'
+
+Rendered rescues/_trace (97.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (124.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (112.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:38:51) [GET]
+  Parameters: {"site_id"=>"20321536"}
+
+URI::InvalidURIError (bad URI(is not URI?): http://carma.org/api/1.1/searchLocations?region_type=2&name=United%20Arab Emirates&format=json):
+  /usr/local/lib/ruby/1.8/uri/common.rb:436:in `split'
+  /usr/local/lib/ruby/1.8/uri/common.rb:485:in `parse'
+  app/controllers/sites_controller.rb:68:in `test'
+  app/controllers/sites_controller.rb:60:in `each'
+  app/controllers/sites_controller.rb:60:in `test'
+
+Rendered rescues/_trace (125.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (116.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (132.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:39:11) [GET]
+  Parameters: {"site_id"=>"20321536"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 19510ms (View: 9 | 200 OK [http://localhost/sites/test?site_id=20321536]
+  [4;36;1mSQL (103.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:42:47) [GET]
+  Parameters: {"site_id"=>"20321536"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/sites_controller.rb:112:in `test'
+  app/controllers/sites_controller.rb:102:in `each'
+  app/controllers/sites_controller.rb:102:in `test'
+
+Rendered rescues/_trace (109.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:43:30) [GET]
+  Parameters: {"site_id"=>"20321536"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 26462ms (View: 12, DB: 207) | 200 OK [http://localhost/sites/test?site_id=20321536]
+  [4;36;1mSQL (114.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:44:18) [GET]
+  Parameters: {"site_id"=>"21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 15267ms (View: 4, DB: 223) | 200 OK [http://localhost/sites/test?site_id=21441200]
+  [4;36;1mSQL (107.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:45:26) [GET]
+  Parameters: {"site_id"=>"21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 20250ms (View: 4, DB: 210) | 200 OK [http://localhost/sites/test?site_id=21441200]
+  [4;36;1mSQL (99.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:46:07) [GET]
+  Parameters: {"site_id"=>"21441200"}
+
+GatticaError::AnalyticsError (Invalid value for metrics parameter: ga:-pageviews (status code: 400)):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:248:in `do_http_get'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:205:in `results'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:46:in `test'
+
+Rendered rescues/_trace (108.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (107.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:46:28) [GET]
+  Parameters: {"site_id"=>"21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 15336ms (View: 3, DB: 219) | 200 OK [http://localhost/sites/test?site_id=21441200]
+  [4;36;1mSQL (103.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#se (for 127.0.0.1 at 2010-01-17 00:46:58) [GET]
+
+ActionController::UnknownAction (No action responded to se. Actions: login, pageSize, select, and test):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (124.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-17 00:47:04) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1162ms (View: 19, DB: 230) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (99.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:47:10) [GET]
+  Parameters: {"site_id"=>"20321536"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 310083ms (View: 3, DB: 200) | 200 OK [http://localhost/sites/test?site_id=20321536]
+  [4;36;1mSQL (108.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:52:21) [GET]
+  Parameters: {"site_id"=>"9988589"}

@@ -17,6 +17,7 @@ body {
 #header {
 	/* background: white url(/img/header-shadow-top.png) repeat-x; */
 	color: #0b499e;
+	width: 900px;
 	overflow: hidden;
 	position: relative;
 	text-align: left;
@@ -56,7 +57,7 @@ h1.big{
 	margin:0;
 }
 h1.name{
-	font-size: 1.5em;
+	font-size: 2.1em;
 	margin:0;
 	color: #D9E021;
 }
