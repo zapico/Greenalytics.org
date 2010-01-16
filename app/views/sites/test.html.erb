@@ -1,27 +1,21 @@
+<div id="content_top">
+<h1 class="name"><%= @profile.name %></h1>
+<h2><co2><%= @total_co2.round(2) %></co2> kg CO<sub>2</sub></h1>
+<p>The site emissions are equivalent to: <p/><h2><co2><%= @caramount %></co2> km driving a car</h2>
+<h2>Or <co2><%= @beeramount %></co2> bottles of beer</h2>
+<p>Conversions thanks to <a href="http://carbon.to">carbon.to</a></p>
+
+</div>
 <div id="content_left">
 <h1><b>Server and infrastructure</b></h1>
 <p><i>Carbon impact from the electricity of the server and internet infrastructure.</i></p>
-<h1><%= @profile.name %></h1>
-<h2>Total pageviews: </h2>
-<p><%= @profile.pageviews %></p>
+
 <h2>Pages</h2>
-<% total = 0 %>
-<% @results.points.each do |point|%>
-	<% url = point.to_s.split("pagePath=>")[1]%>
-	<% url = url.to_s.split("}")[0]%>
-	<% url = url.to_s.split('"')[1]%>
-	<% url = url.to_s.split('"')[0]%>
-	<% visits = point.to_s.split("pageviews=>")[1]%>
-	<% visits = visits.to_s.split("}")[0]%>
-	<p><%= truncate(url,100) %> with <%= visits %> visitors</p>
-	<% pagesize = pageSize(@main_url+url)/1024 %>
-	<p><%= pagesize %> Kb</p>
-	<% total += pagesize*visits.to_i %>
-<% end %>
+<%= @page_text %>
 
 <h2>Total </h2>
-<h3><%= total %> Kb.</h3>
-<h3><%= (total*0.001*0.5017400).round(2) %> kg CO2</h3>
+<h3><%= @total_size %> Kb.</h3>
+<h3><%= @co2_server.round(2) %> kg CO2</h3>
 </div>
 
 <div id="content_right">
@@ -31,6 +25,6 @@
 <p><%= @visitors_text %></p>
 <h2>Total: </h2>
 <h3><%= @time %> minutes</h3>
-<h3><%= (@totalco2/1000).round(2) %> kg CO2</h3>
+<h3><%= @co2_visitors.round(2) %> kg CO2</h3>
 </div>
 	

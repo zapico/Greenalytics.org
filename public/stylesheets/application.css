@@ -1,4 +1,4 @@
-	html {
+html {
 	color: black;
 	background: #fff; 
 }
@@ -55,8 +55,18 @@ h1.big{
 	font-size: 2.5em;
 	margin:0;
 }
+h1.name{
+	font-size: 1.5em;
+	margin:0;
+	color: #D9E021;
+}
+h1.co2{
+	font-size: 2.5em;
+	margin:0;
+	color: #998675;
+}
 h2 { 
-	color: #ccc;
+	color: #333;
 	font-size: 1.2em; 
 	margin: 0.1em 0 1em 0; 
 	padding: 0;
@@ -68,10 +78,9 @@ h2.day {
 	padding: 0;
 }
 
-
 co2{
 	font-size: 3em;
-	color: #4D89F9;
+	color: #998675;
 }
 p { 
 	color: #000;
@@ -199,6 +208,16 @@ text-align: center;
 	text-align:left;
 	margin-bottom: 30px;
 }
+#content_top{
+	position:relative;
+	width:800px;
+	padding-left: 35px;
+	margin-top: 10px;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #cccccc;
+}
+
 #content_left {
 	width:350px;
 	float:left;
@@ -290,58 +309,6 @@ text-align: center;
 	top: 0px;
 }
 
-/* Body */
-
-body, p, ol, ul, td {
-	font: 100%/1.2 Gill-sans,Arial, Helvetica, sans-serif;
-}
-body { 
-	font-size: 76%;
-}
-h1 { 
-	color: #000;
-	font-size: 1.2em; 
-	margin: 0.1em 0 1em 0; 
-	padding: 0;
-}
-h1.welcome{
-	font-size: 3em;
-	margin:0;
-}
-h1.big{
-	font-size: 2.5em;
-	margin:0;
-}
-h2 { 
-	color: #ccc;
-	font-size: 1.2em; 
-	margin: 0.1em 0 1em 0; 
-	padding: 0;
-}
-h2.day { 
-	color: #998675;
-	font-size: 2.2em; 
-	margin: 0.2em 0 1em 0; 
-	padding: 0;
-}
-
-
-co2{
-	font-size: 2.2em;
-	color: #4D89F9;
-}
-p { 
-	color: #000;
-	font-size: 1em; 
-	margin: 1em 0 0.5em 0; 
-	padding: 0;
-}
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
 
 #content a {
 color:#998675;
@@ -363,42 +330,6 @@ font-weight: bold;
 padding: 2px;
 color:white;
 background:#998675;
-}
-
-
-.fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-}
-
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
 }
 
 #column_two ul {
