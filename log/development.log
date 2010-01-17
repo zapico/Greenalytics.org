@@ -10542,3 +10542,150 @@ Completed in 310083ms (View: 3, DB: 200) | 200 OK [http://localhost/sites/test?s
 
 Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:52:21) [GET]
   Parameters: {"site_id"=>"9988589"}
+  [4;36;1mSQL (110.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (130.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:54:00) [GET]
+  Parameters: {"site_id"=>"21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 15943ms (View: 30, DB: 242) | 200 OK [http://localhost/sites/test?site_id=21441200]
+  [4;36;1mSQL (104.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-17 00:54:26) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1100ms (View: 19, DB: 208) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (129.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (128.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:54:32) [GET]
+  Parameters: {"site_id"=>"20321536"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 309093ms (View: 4, DB: 259) | 200 OK [http://localhost/sites/test?site_id=20321536]
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:59:41) [GET]
+  Parameters: {"site_id"=>"8169954"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 11380ms (View: 4 | 200 OK [http://localhost/sites/test?site_id=8169954]
+  [4;36;1mSQL (103.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 00:59:54) [GET]
+  Parameters: {"site_id"=>"5974843"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 42898ms (View: 4 | 200 OK [http://localhost/sites/test?site_id=5974843]
+  [4;36;1mSQL (104.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 01:01:11) [GET]
+  Parameters: {"site_id"=>"20321536"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 294435ms (View: 10, DB: 208) | 200 OK [http://localhost/sites/test?site_id=20321536]
+  [4;36;1mSQL (100.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 01:06:06) [GET]
+
+GatticaError::AnalyticsError (Invalid value for ids parameter: ga: (status code: 400)):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:248:in `do_http_get'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:205:in `results'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:42:in `test'
+
+Rendered rescues/_trace (94.2ms)
+Rendered rescues/_request_and_response (2.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (99.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 01:13:44) [GET]
+  Parameters: {"site_id"=>"20321536"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 295644ms (View: 4, DB: 198) | 200 OK [http://localhost/sites/test?site_id=20321536]
+  [4;36;1mSQL (105.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-17 21:13:45) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 14671ms (View: 14411, DB: 210) | 200 OK [http://localhost/]
+  [4;36;1mSQL (105.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#about (for 127.0.0.1 at 2010-01-17 21:14:14) [GET]
+Rendering template within layouts/application
+Rendering users/about
+Completed in 103ms (View: 93, DB: 213) | 200 OK [http://localhost/about]
+  [4;36;1mSQL (100.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#data (for 127.0.0.1 at 2010-01-17 21:14:17) [GET]
+Rendering template within layouts/application
+Rendering users/data
+Completed in 52ms (View: 42, DB: 203) | 200 OK [http://localhost/data]
+  [4;36;1mSQL (103.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (113.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 21:14:21) [GET]
+
+GatticaError::AnalyticsError (Invalid value for ids parameter: ga: (status code: 400)):
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:248:in `do_http_get'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:205:in `results'
+  /Users/zapico/.gem/ruby/1.8/gems/cannikin-gattica-0.4.0/lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:42:in `test'
+
+Rendered rescues/_trace (214.5ms)
+Rendered rescues/_request_and_response (17.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-17 21:14:41) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 94ms (View: 83, DB: 209) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (111.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-17 21:14:48) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"bVvHMV8MsMjBwa+YPH0pw0USQqbNTauc9YiTozw0+AM=", "login"=>"jorgezapico@gmail.com", "password"=>"rip2maQ1"}
+Redirected to http://localhost:3000/sites/select
+Completed in 349ms (DB: 215) | 302 Found [http://localhost/sites/login]
+  [4;36;1mSQL (105.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (130.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-17 21:14:50) [GET]
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1833ms (View: 12, DB: 236) | 200 OK [http://localhost/sites/select]
+  [4;36;1mSQL (115.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-17 21:15:21) [GET]
+  Parameters: {"site_id"=>"7858078"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 37177ms (View: 4, DB: 220) | 200 OK [http://localhost/sites/test?site_id=7858078]
