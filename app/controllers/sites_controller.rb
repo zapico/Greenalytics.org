@@ -1,31 +1,27 @@
 class SitesController < ApplicationController
  require 'rubygems'
- require 'rugalytics'
- require 'universal_ruby_whois' 
+ #require 'universal_ruby_whois' 
  require 'whois'
  require 'garb'
  require 'hpricot'
  require 'open-uri'
  require 'gattica'
+ require 'gdata'
  
  def login
-   if request.post?
-       e = "jorgezapico@gmail.com"
-       p = "rip2maQ1"
-       @gattica = Gattica.new({:email => e, :password => p})
-       if @gattica 
-           redirect_to(:action => "select")
-       else
-          flash[:notice] = "Invalid user/password combination"
-       end
-     end
+   scope = 'https://www.google.com/analytics/feeds/'
+   next_url = 'http://localhost:3000/sites/select'
+   secure = false  # set secure = true for signed AuthSub requests
+   sess = true
+   @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
  end
  def select
-    e = "jorgezapico@gmail.com"
-    p = "rip2maQ1"
-    @gattica = Gattica.new({:email => e, :password => p})
-    @accounts =  @gattica.accounts
-    
+   client = GData::Client::GBase.new
+   client.authsub_token = params[:token] # extract the single-use token from the URL query params
+   session[:token] = client.auth_handler.upgrade()
+   client.authsub_token = session[:token] if session[:token]
+   @feed = client.get('https://www.google.com/analytics/feeds/accounts/default').to_xml
+       
  end
  
  def test
