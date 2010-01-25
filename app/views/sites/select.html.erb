@@ -1,0 +1,10 @@
+<div id="content_left">
+<h1>Select the site to analyze</h1>
+<%= @email %>
+<% @accounts.each do |a| %>
+	<p><%= link_to a.title, :action => 'test', :site_id => a.profile_id %></p>
+<%end%>
+</div>
+
+<div id="content_right">
+</div>
