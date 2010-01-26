@@ -12365,3 +12365,1213 @@ Processing SitesController#select (for 127.0.0.1 at 2010-01-25 17:25:51) [GET]
 Rendering template within layouts/application
 Rendering sites/select
 Completed in 1324ms (View: 139, DB: 254) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRCa17aU_f____8B]
+  [4;36;1mSQL (108.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (102.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-25 17:39:27) [GET]
+  Parameters: {"site_id"=>"1465382"}
+
+GatticaError::InvalidToken (Your authorization token is invalid or has expired (status code: 401)):
+  gattica (0.4.0) lib/gattica.rb:250:in `do_http_get'
+  gattica (0.4.0) lib/gattica.rb:205:in `results'
+  gattica (0.4.0) lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:38:in `test'
+
+Rendered rescues/_trace (83.5ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-25 17:39:55) [GET]
+  Parameters: {"site_id"=>"1465382"}
+
+GatticaError::InvalidToken (Your authorization token is invalid or has expired (status code: 401)):
+  gattica (0.4.0) lib/gattica.rb:250:in `do_http_get'
+  gattica (0.4.0) lib/gattica.rb:205:in `results'
+  gattica (0.4.0) lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:38:in `test'
+
+Rendered rescues/_trace (76.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-26 11:04:19) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 142ms (View: 133, DB: 209) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (104.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 11:05:14) [GET]
+  Parameters: {"token"=>"CJW2xprcHBCP_anoAw"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1215ms (View: 33, DB: 209) | 200 OK [http://localhost/sites/select?token=CJW2xprcHBCP_anoAw]
+  [4;36;1mSQL (104.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:05:28) [GET]
+  Parameters: {"site_id"=>"1465382"}
+
+GatticaError::InvalidToken (Your authorization token is invalid or has expired (status code: 401)):
+  gattica (0.4.0) lib/gattica.rb:250:in `do_http_get'
+  gattica (0.4.0) lib/gattica.rb:205:in `results'
+  gattica (0.4.0) lib/gattica.rb:189:in `get'
+  app/controllers/sites_controller.rb:38:in `test'
+
+Rendered rescues/_trace (70.7ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 11:28:09) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDahsO4AQ"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1714ms (View: 114, DB: 207) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDahsO4AQ]
+  [4;36;1mSQL (106.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:28:14) [GET]
+  Parameters: {"site_id"=>"1465382"}
+
+GData::Client::BadRequestError (request error 400: <errors xmlns='http://schemas.google.com/g/2005'>
+<error>
+<domain>GData</domain>
+<code>invalidParameterValue</code>
+<internalReason>Invalid value for ids parameter: 1465382</internalReason>
+</error>
+</errors>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:89:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:41:in `test'
+
+Rendered rescues/_trace (67.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (107.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:29:15) [GET]
+  Parameters: {"site_id"=>"1465382"}
+
+GData::Client::BadRequestError (request error 400: <errors xmlns='http://schemas.google.com/g/2005'>
+<error>
+<domain>GData</domain>
+<code>UnrecognizedColumnsException</code>
+<internalReason>No such metric(s): ga:pagePath</internalReason>
+</error>
+</errors>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:89:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:41:in `test'
+
+Rendered rescues/_trace (68.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:29:37) [GET]
+  Parameters: {"site_id"=>"1465382"}
+
+GData::Client::AuthorizationError (request error 401: <errors xmlns='http://schemas.google.com/g/2005'>
+<error>
+<domain>GData</domain>
+<code>AuthenticationException</code>
+<internalReason>The request URL contained the account ID 1465382 instead of a profile ID.</internalReason>
+</error>
+</errors>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:87:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:41:in `test'
+
+Rendered rescues/_trace (142.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 11:31:07) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDahsO4AQ"}
+
+GData::Client::AuthorizationError (request error 403: <HTML>
+<HEAD>
+<TITLE>Invalid AuthSub token.</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Invalid AuthSub token.</H1>
+<H2>Error 403</H2>
+</BODY>
+</HTML>
+):
+  gdata (1.1.1) lib/gdata/auth/authsub.rb:103:in `upgrade'
+  app/controllers/sites_controller.rb:21:in `select'
+
+Rendered rescues/_trace (65.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 11:31:18) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDV2fjR_f____8B"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1312ms (View: 116, DB: 219) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDV2fjR_f____8B]
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:31:22) [GET]
+  Parameters: {"site_id"=>"1465382"}
+
+GData::Client::AuthorizationError (request error 401: <errors xmlns='http://schemas.google.com/g/2005'>
+<error>
+<domain>GData</domain>
+<code>AuthenticationException</code>
+<internalReason>The request URL contained the account ID 1465382 instead of a profile ID.</internalReason>
+</error>
+</errors>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:87:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:41:in `test'
+
+Rendered rescues/_trace (67.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (107.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:33:03) [GET]
+  Parameters: {"site_id"=>"1465382"}
+
+GData::Client::AuthorizationError (request error 401: <errors xmlns='http://schemas.google.com/g/2005'>
+<error>
+<domain>GData</domain>
+<code>AuthenticationException</code>
+<internalReason>The request URL contained the account ID 1465382 instead of a profile ID.</internalReason>
+</error>
+</errors>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:87:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:46:in `test'
+
+Rendered rescues/_trace (66.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 11:33:09) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDV2fjR_f____8B"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 709ms (View: 116, DB: 208) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDV2fjR_f____8B]
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:33:13) [GET]
+  Parameters: {"site_id"=>"1465382"}
+
+GData::Client::AuthorizationError (request error 401: <errors xmlns='http://schemas.google.com/g/2005'>
+<error>
+<domain>GData</domain>
+<code>AuthenticationException</code>
+<internalReason>The request URL contained the account ID 1465382 instead of a profile ID.</internalReason>
+</error>
+</errors>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:87:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:46:in `test'
+
+Rendered rescues/_trace (67.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 11:35:10) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDV2fjR_f____8B"}
+Rendering template within layouts/application
+Rendering sites/select
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.value) on line #4 of app/views/sites/select.html.erb:
+1: <div id="content_left">
+2: <h1>Select the site to analyze</h1>
+3: <% @feed.elements.each('entry') do |entry| %>
+4: 	<p><%= link_to entry.elements["title"].text, :action => 'test', :site_id => entry.elements["dxp:tableId"].attribute("value").value %></p>
+5: <% end%>
+6: 
+7: </div>
+
+    app/views/sites/select.html.erb:4
+    /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+    /usr/local/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+    /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+    app/views/sites/select.html.erb:3
+
+Rendered rescues/_trace (82.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 11:35:32) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDV2fjR_f____8B"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 667ms (View: 107, DB: 208) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDV2fjR_f____8B]
+  [4;36;1mSQL (103.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:35:51) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 1747ms (View: 38, DB: 209) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:43:49) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1387ms (View: 5, DB: 219) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:44:24) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+GData::Client::AuthorizationError (request error 401: <HTML>
+<HEAD>
+<TITLE>Authorization required</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Authorization required</H1>
+<H2>Error 401</H2>
+</BODY>
+</HTML>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:87:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:48:in `test'
+
+Rendered rescues/_trace (71.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-26 11:44:32) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 66ms (View: 58, DB: 217) | 200 OK [http://localhost/]
+  [4;36;1mSQL (109.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-26 11:44:39) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 14ms (View: 6, DB: 218) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (103.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 11:44:51) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDdo4KY-v____8B"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1287ms (View: 99, DB: 208) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDdo4KY-v____8B]
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:44:56) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1292ms (View: 6, DB: 208) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (104.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:44:58) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+GData::Client::AuthorizationError (request error 401: <HTML>
+<HEAD>
+<TITLE>Authorization required</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Authorization required</H1>
+<H2>Error 401</H2>
+</BODY>
+</HTML>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:87:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:48:in `test'
+
+Rendered rescues/_trace (67.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 11:45:06) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDdo4KY-v____8B"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 775ms (View: 99, DB: 216) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDdo4KY-v____8B]
+  [4;36;1mSQL (109.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:45:57) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1528ms (View: 6, DB: 219) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:46:21) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1254ms (View: 6, DB: 208) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:52:58) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NameError (undefined local variable or method `address' for #<SitesController:0x25a3438>):
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (137.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:53:10) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:55:in `first'
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (64.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (123.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (126.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:53:13) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:55:in `first'
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (139.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:54:26) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:55:in `first'
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (64.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:54:46) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:55:in `first'
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (65.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:55:03) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1508ms (View: 1, DB: 207) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:55:21) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+RuntimeError (Not all elements respond to to_xml):
+  app/controllers/sites_controller.rb:60:in `test'
+
+Rendered rescues/_trace (72.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:55:59) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NoMethodError (undefined method `elements' for #<Array:0x25ee938>):
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (64.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:56:12) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.attribute):
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (65.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:56:25) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.attribute):
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:56:47) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1357ms (View: 6, DB: 219) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:57:53) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NoMethodError (undefined method `entry' for #<REXML::Element:0x25459dc>):
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (64.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:58:04) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1331ms (View: 1, DB: 216) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (110.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 11:59:42) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1503ms (View: 1, DB: 221) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:00:20) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1277ms (View: 1, DB: 210) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:00:25) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1473ms (View: 1, DB: 219) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:00:36) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1798ms (View: 2, DB: 208) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (105.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:00:54) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering sites/test
+Completed in 1407ms (View: 25, DB: 209) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:01:35) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1423ms (View: 20, DB: 219) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (106.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:02:48) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+ActionView::MissingTemplate (Missing template rexml/elements/_element.erb in view path app/views):
+  app/controllers/sites_controller.rb:56:in `test'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (110.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:04:17) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+LocalJumpError (no block given):
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  /usr/local/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (145.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (124.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:04:22) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+LocalJumpError (no block given):
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  /usr/local/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (66.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:04:29) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/sites_controller.rb:55:in `elements'
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (65.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (104.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:04:32) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/sites_controller.rb:55:in `elements'
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (65.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:04:39) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/sites_controller.rb:55:in `elements'
+  app/controllers/sites_controller.rb:55:in `test'
+
+Rendered rescues/_trace (65.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (251.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (123.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:08:44) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/sites_controller.rb:61:in `each'
+  app/controllers/sites_controller.rb:61:in `test'
+
+Rendered rescues/_trace (64.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:08:54) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/sites_controller.rb:61:in `each'
+  app/controllers/sites_controller.rb:61:in `test'
+
+Rendered rescues/_trace (63.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:09:31) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+URI::InvalidURIError (bad URI(is not URI?): http://carma.org/api/1.1/searchLocations?region_type=2&name=Argentina&amp;start-date=2009-12-26&amp;end-date=2010-01-25</id><updated>2010-01-24T16:00:00.001-08:00</updated><title>&format=json):
+  /usr/local/lib/ruby/1.8/uri/common.rb:436:in `split'
+  /usr/local/lib/ruby/1.8/uri/common.rb:485:in `parse'
+  app/controllers/sites_controller.rb:69:in `test'
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  /usr/local/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  app/controllers/sites_controller.rb:61:in `test'
+
+Rendered rescues/_trace (144.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:11:05) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 1315ms (View: 38, DB: 216) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (107.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:11:34) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Completed in 1360ms (View: 20, DB: 216) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (108.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:15:24) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NameError (undefined local variable or method `visitors' for #<SitesController:0x24142d4>):
+  app/controllers/sites_controller.rb:62:in `test'
+
+Rendered rescues/_trace (64.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:15:37) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 16441ms (View: 92, DB: 208) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:16:30) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 7881ms (View: 11, DB: 207) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (105.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (111.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:17:14) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 7966ms (View: 3, DB: 217) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:17:42) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NoMethodError (undefined method `put' for #<SitesController:0x270162c>):
+  app/controllers/sites_controller.rb:64:in `test'
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  /usr/local/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  app/controllers/sites_controller.rb:62:in `test'
+
+Rendered rescues/_trace (80.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (105.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:17:55) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 7972ms (View: 3, DB: 209) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:18:33) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 7901ms (View: 3, DB: 219) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:19:46) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 15514ms (View: 3, DB: 208) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:20:43) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 7803ms (View: 4, DB: 219) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (105.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:22:34) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 8023ms (View: 3, DB: 208) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 12:23:10) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 8030ms (View: 3, DB: 207) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (110.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:45:19) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 1509ms (View: 161, DB: 220) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (111.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (111.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:47:05) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 6572ms (View: 7, DB: 222) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (110.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:48:31) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NoMethodError (undefined method `put' for #<SitesController:0x27930e0>):
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (73.5ms)
+Rendered rescues/_request_and_response (19.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:48:40) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 439ms (View: 16, DB: 207) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:51:35) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+TypeError (can't convert String into Integer):
+  app/controllers/sites_controller.rb:51:in `first'
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (322.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:52:07) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+LocalJumpError (no block given):
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  /usr/local/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (70.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:52:16) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+LocalJumpError (no block given):
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  /usr/local/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+  /usr/local/lib/ruby/1.8/rexml/element.rb:891:in `each'
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (122.4ms)
+Rendered rescues/_request_and_response (12.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (103.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:53:39) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/sites_controller.rb:51:in `elements'
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (73.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:53:50) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/sites_controller.rb:51:in `elements'
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (71.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:54:13) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 420ms (View: 7, DB: 217) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:55:16) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 403ms (View: 10, DB: 207) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (105.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:56:04) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 511ms (View: 8, DB: 209) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (112.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:56:10) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 417ms (View: 8, DB: 223) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (108.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:56:24) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.attribute):
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (71.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (109.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:58:28) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 504ms (View: 8, DB: 214) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:58:50) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.attribute):
+  app/controllers/sites_controller.rb:51:in `test'
+
+Rendered rescues/_trace (76.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 13:59:49) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 448ms (View: 8, DB: 218) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (107.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:00:30) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 428ms (View: 10, DB: 217) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (106.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:00:37) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 491ms (View: 7, DB: 209) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (108.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:01:14) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 422ms (View: 9, DB: 216) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (104.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:01:20) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 452ms (View: 8, DB: 209) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (111.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:01:22) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 474ms (View: 8, DB: 222) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (109.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:02:06) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 383ms (View: 3, DB: 219) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (104.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:02:39) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 384ms (View: 4, DB: 209) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (107.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (108.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:02:42) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 407ms (View: 3, DB: 217) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:02:55) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 420ms (View: 3, DB: 208) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (104.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#test (for 127.0.0.1 at 2010-01-26 14:03:30) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/test
+Completed in 441ms (View: 3, DB: 208) | 200 OK [http://localhost/sites/test?site_id=ga%3A21441200]
+  [4;36;1mSQL (103.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-26 14:07:21) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 12ms (View: 4, DB: 207) | 200 OK [http://localhost/]
+  [4;36;1mSQL (103.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (103.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-26 14:07:27) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 14ms (View: 6, DB: 207) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (110.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-26 14:07:34) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDS1cJ4"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 852ms (View: 139, DB: 222) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDS1cJ4]
+  [4;36;1mSQL (108.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-01-26 14:07:39) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+GData::Client::BadRequestError (request error 400: <errors xmlns='http://schemas.google.com/g/2005'>
+<error>
+<domain>GData</domain>
+<code>UnrecognizedColumnsException</code>
+<internalReason>No such metric(s): ga:pagePath</internalReason>
+</error>
+</errors>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:89:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:73:in `calculate'
+
+Rendered rescues/_trace (71.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (110.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (110.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-01-26 14:08:31) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/calculate
+Completed in 23630ms (View: 35, DB: 221) | 200 OK [http://localhost/sites/calculate?site_id=ga%3A21441200]
+  [4;36;1mSQL (104.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-01-26 14:09:07) [GET]
+  Parameters: {"site_id"=>"ga:20321536"}

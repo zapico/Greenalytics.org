@@ -16,104 +16,133 @@ class SitesController < ApplicationController
    @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
  end
  def select
+   
    client = GData::Client::GBase.new
-   client.authsub_token = params[:token] # extract the single-use token from the URL query params
-   session[:token] = client.auth_handler.upgrade()
-   client.authsub_token = session[:token] if session[:token]
+   if session[:token]
+     client.authsub_token = session[:token]
+   else
+     client.authsub_token = params[:token] # extract the single-use token from the URL query params
+     session[:token] = client.auth_handler.upgrade()
+     client.authsub_token = session[:token] if session[:token]
+   end
    @feed = client.get('https://www.google.com/analytics/feeds/accounts/default').to_xml
        
  end
  
  def test
-         
+   
+   # Create a client and login using session
+   client = GData::Client::GBase.new
+   client.authsub_token = session[:token] if session[:token]
+   profile_id = params[:site_id]
+   
+   # GET DATA FROM GOOGLE ANALYTICS
+   today= DateTime.now-1.days
+   amonthago = today-30.days
+   today = today.strftime("%Y-%m-%d")
+   amonthago = amonthago.strftime("%Y-%m-%d")
+   
+   profile_id = params[:site_id]
+ 
+  # Get address (Not as easy as it should be!)
+   #address = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'hostname', :metrics => 'pageviews',:sort => '-pageviews', :aggregates => 'hostame'})
+   address = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:hostname&metrics=ga:pageviews&start-date='+amonthago+'&end-date='+today+'&sort=-ga:pageviews&aggregates=ga:hostname').to_xml
+   address = address.to_s.split("dxp:dimension name='ga:hostname' value='")[1]
+   address = address.to_s.split("'")[0]
+   @address = "http://"+address.to_s
+
+ end
+ 
+ 
+ def calculate
+     
+     # Create a client and login using session   
+     client = GData::Client::GBase.new
+     client.authsub_token = session[:token] if session[:token]
+     profile_id = params[:site_id]
+     
      # GET DATA FROM GOOGLE ANALYTICS
      today= DateTime.now-1.days
      amonthago = today-30.days
      today = today.strftime("%Y-%m-%d")
      amonthago = amonthago.strftime("%Y-%m-%d")
      
-     gs = Gattica.new({:email => 'jorgezapico@gmail.com', :password => 'rip2maQ1'})
-     gs.profile_id = params[:site_id]
+     profile_id = params[:site_id]
      # Get the pageview of all apges
-     allpages = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'pagePath', :metrics => 'pageviews'})
+     #allpages = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'pagePath', :metrics => 'pageviews'})
+     allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&start-date='+amonthago+'&end-date='+today).to_xml
      # Get the time on site by country
-     visitors = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'country', :metrics => 'timeOnSite', :aggregates => 'country'})
+     #visitors = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'country', :metrics => 'timeOnSite', :aggregates => 'country'})
+     visitors = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:country&metrics=ga:timeOnSite&start-date='+amonthago+'&end-date='+today+'&aggregates=ga:country').to_xml
      # Get address (Not as easy as it should be!)
-     address = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'hostname', :metrics => 'pageviews',:sort => '-pageviews', :aggregates => 'hostame'})
-     @address = address.points.first.dimensions
-     @address = @address.to_s.split('hostname')[1]
-     @address = "http://"+@address.to_s
+     #address = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'hostname', :metrics => 'pageviews',:sort => '-pageviews', :aggregates => 'hostame'})
+     address = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:hostname&metrics=ga:pageviews&start-date='+amonthago+'&end-date='+today+'&sort=-ga:pageviews&aggregates=ga:hostname').to_xml
+     address = address.to_s.split("dxp:dimension name='ga:hostname' value='")[1]
+     address = address.to_s.split("'")[0]
+     @address = "http://"+address.to_s
      
      # CALCULATE VISITORS IMPACT
-     # Parse the time on site by country 
-     @visitors_text = " "
-     @time = 0 
-     @co2_visitors = 0
-     visitors.points.each do |country|
-       # Parse country
-       name = country.to_s.split('ga:country=')[1]
-       name = name.to_s.split('"')[0]
-       # Get carbon factor
-       factor = ""
-       if name != "(not set)" then
-         h_name = name.gsub(" ", "%20")
-         carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
-         # Parse the factor from Json string
-         factor = carma.to_s.split("intensity")[1]
-         factor = factor.to_s.split('present" : "')[1] 
-         factor = factor.to_s.split('",')[0]
-       end
-       if factor == "" then
-         factor = "0.501"
-       end
-       # Parse time
-       time = country.to_s.split(":timeOnSite=>")[1]
-       time = time.to_s.split("}")[0]
-       @time += time.to_i
-       
-       # Calculate the impact
-       carbonimpact = factor.to_f * time.to_i * 20 / 3600000
-       @co2_visitors += carbonimpact
-       
-       # Aggregate
-       time = (time.to_f/60).round(1)
-       grams = carbonimpact.round(2)
-       if grams != 0
-         text = "<b>" + name.to_s + "</b> " + time.to_s + " min "+ grams.to_s + " grams CO2. <br/>"
-         @visitors_text += text
-       end
-     end     
-     
-     @co2_visitors = @co2_visitors/1000
-     @time = @time/60
+      # Parse the time on site by country 
+      @visitors_text = " "
+      @time = 0 
+      @co2_visitors = 0
+      visitors.elements.each('entry') do |country|
+        # Parse country
+        name = country.elements["dxp:dimension name='ga:country'"].attribute("value").value
+        # Get carbon factor
+        factor = ""
+        if name then
+          h_name = name.gsub(" ", "%20")
+          carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
+          # Parse the factor from Json string
+          factor = carma.to_s.split("intensity")[1]
+          factor = factor.to_s.split('present" : "')[1] 
+          factor = factor.to_s.split('",')[0]
+        end
+        if factor == "" then
+          factor = "0.501"
+        end
+        # Parse time
+        time = country.elements["dxp:metric name=ga:'timeOnSite'"].attribute("value").value
+        @time += time.to_i
+
+        # Calculate the impact
+        carbonimpact = factor.to_f * time.to_i * 20 / 3600000
+        @co2_visitors += carbonimpact
+
+        # Aggregate
+        time = (time.to_f/60).round(1)
+        grams = carbonimpact.round(2)
+        if grams != 0
+          text = "<b>" + name.to_s + "</b> " + time.to_s + " min "+ grams.to_s + " grams CO2. <br/>"
+          @visitors_text += text
+        end
+      end     
+
+      @co2_visitors = @co2_visitors/1000
+      @time = @time/60
      
 
+      # CALCULATE TOTAL TRAFFIC
+      # Initialiate variables
+      @total_size = 0
+      @page_text = ""
+      # Iterate through the different pages
+      allpages.elements.each('entry') do |point|
+      	# 1. Get the URL
+      	url = point.elements["dxp:dimension name='ga:pagePath'"].attribute("value").value
+      	# 2. Get the number of visitors
+      	visits = point.elements["dxp:metric name='ga:pageviews'"].attribute("value").value
+      	# 3. Aggregate text
+      	pagesize = pageSize(@address+url)/1024
+      	@page_text += "<p><b>" + url  + "</b></p>"
+      	@page_text += "<p>" + pagesize.to_s + " kb. " +visits.to_s+ " visitors</p>"
+      	@total_size += pagesize*visits.to_i
+      end
 
-    # CALCULATE TOTAL TRAFFIC
-    # Initialiate variables
-    @total_size = 0
-    @page_text = ""
-    # Iterate through the different pages
-    allpages.points.each do |point|
-    	# 1. Get the URL
-    	url = point.to_s.split("pagePath=>")[1]
-    	url = url.to_s.split("}")[0]
-    	url = url.to_s.split('"')[1]
-    	url = url.to_s.split('"')[0]
-    	# 2. Get the number of visitors
-    	visits = point.to_s.split("pageviews=>")[1]
-    	visits = visits.to_s.split("}")[0]
-    	# 3. Aggregate text
-    	pagesize = pageSize(@address+url)/1024
-    	@page_text += "<p><b>" + url  + "</b></p>"
-    	@page_text += "<p>" + pagesize.to_s + " kb. " +visits.to_s+ " visitors</p>"
-    	@total_size += pagesize*visits.to_i
-    end
-   
-    # CALCULATE SERVER AND INFRA IMPACT
-    @co2_server = 0
-    @co2_infrastructure = 0
-    @co2_server = @total_size*0.000001*8*16*0.501
+      # CALCULATE SERVER AND INFRA IMPACT
+      @co2_server = 0
+      @co2_server = @total_size*0.000001*8*16*0.501
     
     @w = Whois::Client.new
     @w.query('70.32.99.240')
