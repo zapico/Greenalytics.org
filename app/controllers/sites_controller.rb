@@ -1,14 +1,15 @@
 class SitesController < ApplicationController
  require 'rubygems'
- #require 'universal_ruby_whois' 
  require 'whois'
  require 'garb'
  require 'hpricot'
  require 'open-uri'
- require 'gattica'
  require 'gdata'
  
  def login
+   if session[:token]
+     reset_session 
+   end
    scope = 'https://www.google.com/analytics/feeds/'
    next_url = 'http://localhost:3000/sites/select'
    secure = false  # set secure = true for signed AuthSub requests
@@ -29,31 +30,7 @@ class SitesController < ApplicationController
        
  end
  
- def test
-   
-   # Create a client and login using session
-   client = GData::Client::GBase.new
-   client.authsub_token = session[:token] if session[:token]
-   profile_id = params[:site_id]
-   
-   # GET DATA FROM GOOGLE ANALYTICS
-   today= DateTime.now-1.days
-   amonthago = today-30.days
-   today = today.strftime("%Y-%m-%d")
-   amonthago = amonthago.strftime("%Y-%m-%d")
-   
-   profile_id = params[:site_id]
- 
-  # Get address (Not as easy as it should be!)
-   #address = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'hostname', :metrics => 'pageviews',:sort => '-pageviews', :aggregates => 'hostame'})
-   address = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:hostname&metrics=ga:pageviews&start-date='+amonthago+'&end-date='+today+'&sort=-ga:pageviews&aggregates=ga:hostname').to_xml
-   address = address.to_s.split("dxp:dimension name='ga:hostname' value='")[1]
-   address = address.to_s.split("'")[0]
-   @address = "http://"+address.to_s
-
- end
- 
- 
+ # MAIN FUNCTION THAT CALCULATES THE FOOTPRINT
  def calculate
      
      # Create a client and login using session   
@@ -114,7 +91,7 @@ class SitesController < ApplicationController
         time = (time.to_f/60).round(1)
         grams = carbonimpact.round(2)
         if grams != 0
-          text = "<b>" + name.to_s + "</b> " + time.to_s + " min "+ grams.to_s + " grams CO2. <br/>"
+          text = "<b>" + name.to_s + "</b> " + time.to_s + " min "+ grams.to_s + " grams CO2. With a factor of"+factor+"<br/>"
           @visitors_text += text
         end
       end     
@@ -177,17 +154,30 @@ class SitesController < ApplicationController
    
    # Get images size
    hp.search("img").each do |p|
-     picurl = url+p.attributes['src']
+     picurl = picurl = p.attributes['src'].to_s
+     if picurl[0..3] != "http"
+       picurl = url+picurl
+     end
+     puts picurl
+     puts open(picurl).length
      total += open(picurl).length
    end
     # Get CSS size
     hp.search("link").each do |p|
-     cssurl = url+p.attributes['href']
-     total += open(cssurl).length
+      cssurl = p.attributes['href'].to_s
+      if cssurl[0..3] != "http"
+           cssurl = url+cssurl
+        end
+        puts cssurl
+        total += open(cssurl).length
    end
    # Get script size
      hp.search("html/head//script").each do |p|
-     scripturl = url+p.attributes['src']
+       scripturl = p.attributes['src'].to_s
+       if scripturl[0..3] != "http"
+             scripturl = url+scripturl
+         end
+     puts scripturl
      total += open(scripturl).length
    end
    ensure
