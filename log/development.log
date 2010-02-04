@@ -11107,3 +11107,11 @@ Processing SitesController#calculate (for 127.0.0.1 at 2010-02-04 12:03:14) [GET
 Rendering template within layouts/application
 Rendering sites/calculate
 Completed in 25604ms (View: 38, DB: 203) | 200 OK [http://localhost/sites/calculate?site_id=ga%3A21441200]
+  [4;36;1mSQL (100.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (98.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-02-04 17:49:50) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 476ms (View: 468, DB: 199) | 200 OK [http://localhost/]
