@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream:log/development.log
-=======
 /!\ FAILSAFE /!\  Sun Nov 01 20:10:37 +0100 2009
   Status: 500 Internal Server Error
   Access denied for user 'greenaly_admin'@'%' to database 'myco2_ror'
@@ -10931,5 +10929,181 @@ Completed in 18ms (View: 15 | 200 OK [http://localhost/]
 Processing SitesController#login (for 127.0.0.1 at 2010-01-27 12:23:03) [GET]
 Rendering template within layouts/application
 Rendering sites/login
-Completed in 107ms (View: 96, DB: 201) | 200 OK [http://localhost/sites/login]
->>>>>>> Stashed changes:log/development.log
+Completed in 107ms (View: 96, DB: 201) | 200 OK [http://localhost/sites/login]  [4;36;1mSQL (105.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-01-27 12:48:03) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 119ms (View: 107, DB: 212) | 200 OK [http://localhost/]
+  [4;36;1mSQL (128.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (130.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-01-27 12:48:10) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 265ms (View: 245, DB: 259) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (127.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (100.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-01-27 12:48:28) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDLzKHcAQ"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 2128ms (View: 148, DB: 228) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDLzKHcAQ]
+  [4;36;1mSQL (120.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (112.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-01-27 12:48:37) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+
+ActionView::MissingTemplate (Missing template sites/calculate.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (108.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-02-03 12:40:55) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 124ms (View: 115, DB: 214) | 200 OK [http://localhost/]
+  [4;36;1mSQL (107.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (106.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-02-03 12:41:00) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 27ms (View: 17, DB: 214) | 200 OK [http://localhost/sites/login]
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-02-03 12:41:00) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 6ms (View: 2 | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (114.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-02-03 12:41:06) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDEy9vu_v____8B"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 2043ms (View: 235, DB: 222) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDEy9vu_v____8B]
+  [4;36;1mSQL (105.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-02-03 12:41:17) [GET]
+  Parameters: {"site_id"=>"ga:2615875"}
+
+ActionView::MissingTemplate (Missing template sites/calculate.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (111.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-02-03 12:44:09) [GET]
+  Parameters: {"site_id"=>"ga:2615875"}
+Rendering template within layouts/application
+Rendering sites/calculate
+Completed in 29201ms (View: 164, DB: 219) | 200 OK [http://localhost/sites/calculate?site_id=ga%3A2615875]
+  [4;36;1mSQL (106.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-02-03 12:45:00) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 30ms (View: 18, DB: 212) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (106.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (105.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-02-03 12:45:13) [GET]
+  Parameters: {"site_id"=>"ga:9988589"}
+
+GData::Client::AuthorizationError (request error 401: <HTML>
+<HEAD>
+<TITLE>Authorization required</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Authorization required</H1>
+<H2>Error 401</H2>
+</BODY>
+</HTML>
+):
+  gdata (1.1.1) lib/gdata/client/base.rb:87:in `make_request'
+  gdata (1.1.1) lib/gdata/client/base.rb:103:in `get'
+  app/controllers/sites_controller.rb:50:in `calculate'
+
+Rendered rescues/_trace (97.4ms)
+Rendered rescues/_request_and_response (36.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (105.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (109.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-02-03 12:49:10) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRDCx6ar______8B"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 1544ms (View: 139, DB: 215) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRDCx6ar______8B]
+  [4;36;1mSQL (108.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (107.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-02-03 12:49:14) [GET]
+  Parameters: {"site_id"=>"ga:2615875"}
+Rendering template within layouts/application
+Rendering sites/calculate
+Completed in 29191ms (View: 10, DB: 216) | 200 OK [http://localhost/sites/calculate?site_id=ga%3A2615875]
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-02-03 12:49:43) [GET]
+  Parameters: {"site_id"=>"ga:9988589"}
+Rendering template within layouts/application
+Rendering sites/calculate
+Completed in 310578ms (View: 3 | 200 OK [http://localhost/sites/calculate?site_id=ga%3A9988589]
+  [4;36;1mSQL (105.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (148.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#info (for 127.0.0.1 at 2010-02-04 12:02:38) [GET]
+Rendering template within layouts/application
+Rendering users/info
+Completed in 100ms (View: 92, DB: 254) | 200 OK [http://localhost/]
+  [4;36;1mSQL (100.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#login (for 127.0.0.1 at 2010-02-04 12:02:56) [GET]
+Rendering template within layouts/application
+Rendering sites/login
+Completed in 34ms (View: 24, DB: 201) | 200 OK [http://localhost/sites/login]
+  [4;36;1mSQL (104.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (104.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#select (for 127.0.0.1 at 2010-02-04 12:03:03) [GET]
+  Parameters: {"token"=>"CLu5p5C5BRD8pI6dBQ"}
+Rendering template within layouts/application
+Rendering sites/select
+Completed in 2159ms (View: 217, DB: 209) | 200 OK [http://localhost/sites/select?token=CLu5p5C5BRD8pI6dBQ]
+  [4;36;1mSQL (102.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (101.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SitesController#calculate (for 127.0.0.1 at 2010-02-04 12:03:14) [GET]
+  Parameters: {"site_id"=>"ga:21441200"}
+Rendering template within layouts/application
+Rendering sites/calculate
+Completed in 25604ms (View: 38, DB: 203) | 200 OK [http://localhost/sites/calculate?site_id=ga%3A21441200]
