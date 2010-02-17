@@ -28,7 +28,7 @@
 <p>Only the frontpage is used for calculating the size due to performance issues.</p>
 <h2>Total </h2>
 <h3><%= @total_size %> kB.</h3>
-<h3><%= @co2_server %> kg CO2</h3>
+<h3><%= @co2_server.round(2) %> kg CO2</h3>
 </div>
 
 <div id="content_right">
