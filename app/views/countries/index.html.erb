@@ -1,0 +1,18 @@
+<h1>Listing countries</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @countries.each do |countries| %>
+  <tr>
+    <td><%= link_to 'Show', countries %></td>
+    <td><%= link_to 'Edit', edit_countries_path(countries) %></td>
+    <td><%= link_to 'Destroy', countries, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New countries', new_countries_path %>
