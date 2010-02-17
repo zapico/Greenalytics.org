@@ -1,4 +1,3 @@
 config/initializers/site_keys.rb
 log
 config/environment.rb
-config/database.yml
