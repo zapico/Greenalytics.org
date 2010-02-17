@@ -14,7 +14,12 @@
 		<a href="/"><img src="/images/logo.png" border='0' alt="our co2"/></a>
 		<div id="menu-wrapper">
 			<ul id="main-menu">
+				<% if session[:token] %>
+				<li><a href="/sites/select">Calculate</a></li>
+				<li><a href="/sites/login">Logout</a></li>     
+			     <%else%>
 				<li><a href="/sites/login">Calculate</a></li>
+			   <%end%>
 				<li><a href="/about">About</a></li>
 				<li><a href="/data">Data</a></li>
 			</ul>
@@ -32,9 +37,14 @@
 				<h4>Menu</h4>
 				<ul>
 				<li><a href="/" >Home</a></li>
-				<li><a href="/groups" >Calculate</a></li>
-				<li><a href="/sources" >About</a></li>
-				<li><a href="/sources" >Data</a></li>					
+				<% if session[:token] %>
+			     	<li><a href="/sites/login">Calculate</a></li>
+			     <%else%>
+					<li><a href="/sites/select">Calculate</a></li>
+					<li><a href="/sites/login">Logout</a></li>
+			   <%end%>
+				<li><a href="/about" >About</a></li>
+				<li><a href="/data" >Data</a></li>					
 			    </ul>
 			</div>
 		<div class="footer-list">

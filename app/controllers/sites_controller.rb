@@ -11,7 +11,8 @@ class SitesController < ApplicationController
      reset_session 
    end
    scope = 'https://www.google.com/analytics/feeds/'
-   next_url = 'http://greenalytics.org/sites/select'
+   next_url = 'http://localhost:3000/sites/select'
+   # next_url = 'http://greenalytics.org/sites/select'
    secure = false  # set secure = true for signed AuthSub requests
    sess = true
    @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
@@ -39,35 +40,66 @@ class SitesController < ApplicationController
      profile_id = params[:site_id]
      
      # GET DATA FROM GOOGLE ANALYTICS
-     today= DateTime.now-1.days
-     amonthago = today-30.days
-     today = today.strftime("%Y-%m-%d")
-     amonthago = amonthago.strftime("%Y-%m-%d")
+     @today= DateTime.now-1.days
+     @amonthago = @today-30.days
+     @today = @today.strftime("%Y-%m-%d")
+     @amonthago = @amonthago.strftime("%Y-%m-%d")
      
      profile_id = params[:site_id]
      # Get the pageview of all apges
      #allpages = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'pagePath', :metrics => 'pageviews'})
-     allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&start-date='+amonthago+'&end-date='+today).to_xml
+     #allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&start-date='+@amonthago+'&end-date='+@today).to_xml
+     allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&metrics=ga:visits&start-date='+@amonthago+'&end-date='+@today).to_xml
      # Get the time on site by country
      #visitors = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'country', :metrics => 'timeOnSite', :aggregates => 'country'})
-     visitors = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:country&metrics=ga:timeOnSite&start-date='+amonthago+'&end-date='+today+'&aggregates=ga:country').to_xml
+     visitors = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:country&metrics=ga:timeOnSite&start-date='+@amonthago+'&end-date='+@today+'&aggregates=ga:country').to_xml
      # Get address (Not as easy as it should be!)
      #address = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'hostname', :metrics => 'pageviews',:sort => '-pageviews', :aggregates => 'hostame'})
-     address = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:hostname&metrics=ga:pageviews&start-date='+amonthago+'&end-date='+today+'&sort=-ga:pageviews&aggregates=ga:hostname').to_xml
+     address = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:hostname&metrics=ga:pageviews&start-date='+@amonthago+'&end-date='+@today+'&sort=-ga:pageviews&aggregates=ga:hostname').to_xml
      address = address.to_s.split("dxp:dimension name='ga:hostname' value='")[1]
      address = address.to_s.split("'")[0]
      @address = "http://"+address.to_s
+      
+      
+     # CALCULATE TOTAL TRAFFIC
+     # Initialiate variables
+     @total_size = 0
+     totalvisits = 0
+     @page_text = ""
+     # Iterate through the different pages
+   	 pagesize = pageSize(@address)/1024
+     totalvisits = allpages.elements["dxp:aggregates"].elements["dxp:metric name='ga:visits'"].attribute("value").value
      
+     #allpages.elements.each('entry') do |point|
+     # 1. Get the URL
+     #	url = point.elements["dxp:dimension name='ga:pagePath'"].attribute("value").value
+     # 2. Get the number of visitors
+     #	visits = point.elements["dxp:metric name='ga:pageviews'"].attribute("value").value
+     # 3. Aggregate text
+     #if visits.to_i > 1 then
+     # pagesize = pageSize(@address+url)/1024
+   	 # end
+   	 # totalvisits += visits.to_i
+     # end
+   	 @page_text += "<p> Pages size " + pagesize.to_s + " kB. " +totalvisits.to_s+ " visitors</p>"
+     @total_size = pagesize*totalvisits.to_i  
+      
+            
      # CALCULATE VISITORS IMPACT
       # Parse the time on site by country 
       @visitors_text = " "
       @time = 0 
       @co2_visitors = 0
-      visitors.elements.each('entry') do |country|
+      @totalvisitors = 0
+      visitors.elements.each('entry') do |land|
         # Parse country
-        name = country.elements["dxp:dimension name='ga:country'"].attribute("value").value
+        name = land.elements["dxp:dimension name='ga:country'"].attribute("value").value
         # Get carbon factor
         factor = ""
+        # See if it exists in our database
+        if Country.find(:first,:conditions => [ "name = ?", name ]) then
+          factor=Country.find(:first,:conditions => [ "name = ?", name ]).factor
+        else
         if name then
           h_name = name.gsub(" ", "%20")
           carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
@@ -76,53 +108,42 @@ class SitesController < ApplicationController
           factor = factor.to_s.split('present" : "')[1] 
           factor = factor.to_s.split('",')[0]
         end
+        #Save in our database
+        c = Country.new()
+        c.name = name
+        c.factor = factor
+        c.save
+        end
         if factor == "" then
           factor = "0.501"
         end
         # Parse time
-        time = country.elements["dxp:metric name=ga:'timeOnSite'"].attribute("value").value
+        time = land.elements["dxp:metric name=ga:'timeOnSite'"].attribute("value").value
         @time += time.to_i
 
         # Calculate the impact
-        carbonimpact = factor.to_f * time.to_i * 20 / 3600000
+        carbonimpact = factor.to_f * time.to_i * 35.55 / 3600000
         @co2_visitors += carbonimpact
-
+        
         # Aggregate
         time = (time.to_f/60).round(1)
         grams = carbonimpact.round(2)
         if grams != 0
-          text = "<b>" + name.to_s + "</b> " + time.to_s + " min "+ grams.to_s + " grams CO2. With a factor of"+factor+"<br/>"
+          text = "<b>" + name.to_s + "</b> " + time.to_s + " min "+ grams.to_s + " grams CO2. With a factor of "+factor.to_f.round(2).to_s+"<br/>"
           @visitors_text += text
         end
       end     
 
       @co2_visitors = @co2_visitors/1000
       @time = @time/60
-     
 
-      # CALCULATE TOTAL TRAFFIC
-      # Initialiate variables
-      @total_size = 0
-      @page_text = ""
-      # Iterate through the different pages
-      allpages.elements.each('entry') do |point|
-      	# 1. Get the URL
-      	url = point.elements["dxp:dimension name='ga:pagePath'"].attribute("value").value
-      	# 2. Get the number of visitors
-      	visits = point.elements["dxp:metric name='ga:pageviews'"].attribute("value").value
-      	# 3. Aggregate text
-      	pagesize = pageSize(@address+url)/1024
-      	@page_text += "<p><b>" + url  + "</b></p>"
-      	@page_text += "<p>" + pagesize.to_s + " kb. " +visits.to_s+ " visitors</p>"
-      	@total_size += pagesize*visits.to_i
-      end
-
-      # CALCULATE SERVER AND INFRA IMPACT
-      @co2_server = 0
-      @co2_server = @total_size*0.000001*8*16*0.501
+    # CALCULATE SERVER AND INFRA IMPACT
+    @co2_server = 0
+    @co2_server = @total_size * 9 * 0.501
+    @co2_server = @co2_server /  1048576
     
-    @w = Whois::Client.new
-    @w.query('70.32.99.240')
+    # @w = Whois::Client.new
+    # @w.query('70.32.99.240')
     
     # Aggregate total CO2
     @total_co2= 0
@@ -158,8 +179,6 @@ class SitesController < ApplicationController
      if picurl[0..3] != "http"
        picurl = url+picurl
      end
-     puts picurl
-     puts open(picurl).length
      total += open(picurl).length
    end
     # Get CSS size
@@ -168,7 +187,6 @@ class SitesController < ApplicationController
       if cssurl[0..3] != "http"
            cssurl = url+cssurl
         end
-        puts cssurl
         total += open(cssurl).length
    end
    # Get script size
@@ -177,7 +195,6 @@ class SitesController < ApplicationController
        if scripturl[0..3] != "http"
              scripturl = url+scripturl
          end
-     puts scripturl
      total += open(scripturl).length
    end
    ensure
