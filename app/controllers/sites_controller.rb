@@ -112,11 +112,15 @@ class SitesController < ApplicationController
         else
         if name then
           h_name = name.gsub(" ", "%20")
+          begin
           carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
           # Parse the factor from Json string
           factor = carma.to_s.split("intensity")[1]
           factor = factor.to_s.split('present" : "')[1] 
           factor = factor.to_s.split('",')[0]
+          rescue Exception => exc
+            factor = "0.501"
+          end
         end
         #Save in our database
         c = Country.new()
