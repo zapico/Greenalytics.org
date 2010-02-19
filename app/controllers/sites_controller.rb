@@ -23,12 +23,22 @@ class SitesController < ApplicationController
    if session[:token]
      client.authsub_token = session[:token]
    else
-     client.authsub_token = params[:token] # extract the single-use token from the URL query params
-     session[:token] = client.auth_handler.upgrade()
-     client.authsub_token = session[:token] if session[:token]
+     if params[:token]
+       client.authsub_token = params[:token] # extract the single-use token from the URL query params
+       session[:token] = client.auth_handler.upgrade()
+       client.authsub_token = session[:token] if session[:token]
+     else
+       redirect_to :action => "login"
+     end
    end
-   @feed = client.get('https://www.google.com/analytics/feeds/accounts/default').to_xml
-       
+   begin
+     @feed = client.get('https://www.google.com/analytics/feeds/accounts/default').to_xml
+   rescue Exception => exc
+      logger.error("Message for the log file #{exc.message}")
+      flash[:notice] = "No google analytics connected to this account"
+      redirect_to :action => "login"
+   end
+   
  end
  
  # MAIN FUNCTION THAT CALCULATES THE FOOTPRINT
