@@ -1,6 +1,6 @@
 <div id="content_top">
 	<div id="content_top_left">
-		<h2><co2><%= @total_co2.round(2) %></co2> kg CO<sub>2 (eq)</sub></h1>
+		<h2><co2><%= @total_co2.round(2) %></co2> kg CO<sub>2</sub> (or <%= @grampervisitor.round(2) %> gram per visitor)</h1>
 			<p>Emissions from last month: <%= @amonthago %> until <%= @today %></p>
 			<p><%= link_to "Analyze other site", :action => "select" %></p>
 		<p>The site emissions are equivalent to: <p/><h2><co2><%= @caramount %></co2> km driving a car</h2>

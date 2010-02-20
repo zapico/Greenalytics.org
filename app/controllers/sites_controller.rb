@@ -11,8 +11,8 @@ class SitesController < ApplicationController
      reset_session 
    end
    scope = 'https://www.google.com/analytics/feeds/'
-   next_url = 'http://localhost:3000/sites/select'
-   #next_url = 'http://greenalytics.org/sites/select'
+   #next_url = 'http://localhost:3000/sites/select'
+   next_url = 'http://greenalytics.org/sites/select'
    secure = false  # set secure = true for signed AuthSub requests
    sess = true
    @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
@@ -203,6 +203,7 @@ class SitesController < ApplicationController
      @page_text = ""
      @visitors_text = ""
      @caramount = 0.00
+     @grampervisitor = 0.00
       
  end
  
@@ -295,13 +296,19 @@ class SitesController < ApplicationController
       end
     end     
 
-    @co2_visitors = @co2_visitors/1000
-    @time = @time/60
+   @co2_visitors = @co2_visitors/1000
+   @time = @time/60
     
    # Aggregate total CO2
    @total_co2= 0.00
    @total_co2 = @co2_visitors + @co2_server
-
+   
+   @grampervisitor = 0.00
+   if totalvisits.to_i != 0
+    @grampervisitor = @total_co2.to_f / totalvisits.to_i
+    @grampervisitor = @grampervisitor*1000
+   end
+   
    # CREATE PIE GRAPHIC
    per_visitors = @co2_visitors*100/@total_co2
    per_server = @co2_server*100/@total_co2
@@ -314,10 +321,11 @@ class SitesController < ApplicationController
    car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+@total_co2.round.to_s))
    car = ActiveSupport::JSON.decode(car)
    @caramount = car["conversion"]["amount"]
-   render(:partial => "calculate") 
+    
     rescue Exception => exc
        redirect_to :action => "select"
      end
+     render(:partial => "calculate")
 end
  
  
