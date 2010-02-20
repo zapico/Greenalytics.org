@@ -1,0 +1,42 @@
+<div id="content_top">
+	<div id="content_top_left">
+		<h2><co2><%= @total_co2.round(2) %></co2> kg CO<sub>2 (eq)</sub></h1>
+			<p>Emissions from last month: <%= @amonthago %> until <%= @today %></p>
+			<p><%= link_to "Analyze other site", :action => "select" %></p>
+		<p>The site emissions are equivalent to: <p/><h2><co2><%= @caramount %></co2> km driving a car</h2>
+		<h2>Or <co2><%= @beeramount %></co2> bottles of beer</h2>
+		<p>Conversions thanks to <a href="http://carbon.to">carbon.to</a></p>
+
+	</div>
+	<div id="content_top_right">
+		<p><b>Beta version</b></p>
+		<p>This application is still under development, the calculation shown is not accurate. The purpose of this number is to 
+			show that websites do have an impact in climate change, even if it's hidden to us. The calculation of this impact
+			is very challenging due to the distributed nature of internet. This application is a first effort towards
+			making calculating websites carbon footprint more accurate and available to the public.</p>
+		<p><b>Impact Distribution</b></p>
+		<%= image_tag @grafico, :alt => 'foo' %><br>
+	</div>
+</div>
+<div id="content_left">
+<h1><b>Server and infrastructure</b></h1>
+<p><i>Carbon impact from the electricity of the server and internet infrastructure.</i></p>
+
+<h2>Pages</h2>
+<%= @page_text %>
+<p>Only the frontpage is used for calculating the size due to performance issues.</p>
+<h2>Total </h2>
+<h3><%= @total_size %> kB.</h3>
+<h3><%= @co2_server.round(2) %> kg CO2</h3>
+</div>
+
+<div id="content_right">
+<h1><b>Visitors</b></h1>
+<p><i>The impact from the electricity used by the visitors.</i></p>
+<h2>Visitors: </h2>
+<p><%= @visitors_text %></p>
+<h2>Total: </h2>
+<h3><%= @time %> minutes</h3>
+<h3><%= @co2_visitors.round(2) %> kg CO2</h3>
+</div>
+	
