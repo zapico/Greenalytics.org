@@ -1,0 +1,17 @@
+<div id="content_left">
+<h1>Your account</h1>
+<p>Name: <%= current_user.name %></p>
+<p>Email: <%= current_user.email %></p>
+<p>
+<% if current_user.gtoken then %>
+	Your Google Analytics account is connected.
+<%else%>
+	<%= link_to "Connect your Google Analytics account", :action => "connect" %>
+<%end%>
+</div>
+<div id="content_left">
+<h1>Your sites</h1>
+<% current_user.sites.each do |si| %>
+	<p><%= si.name %></p>
+<% end %>
+</div>

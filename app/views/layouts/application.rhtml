@@ -66,14 +66,6 @@
 			</div>
 			<div class="footer-list">
 
-			    <% if session[:id] && User.find_by_id(session[:id]).id == 5 %>
-				<h4>Administration</h4>
-				<ul>
-				<li><a href="/users/new" >New User</a></li>
-				<li><a href="/groups" >Admin User</a></li>
-				<li><a href="/users/administration">Crontab functions</a></li>
-				</ul>
-				<%end%>					
 
 			</div>
 		</div>

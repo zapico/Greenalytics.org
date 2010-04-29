@@ -17,6 +17,7 @@ class SitesController < ApplicationController
    sess = true
    @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
  end
+ 
  def select
    
    client = GData::Client::GBase.new
@@ -207,10 +208,9 @@ class SitesController < ApplicationController
       
  end
  
- def calculate_total
-    
-    begin
-    # Create a client and login using session   
+ def calculate_total   
+   begin
+     # Create a client and login using session   
      client = GData::Client::GBase.new
      client.authsub_token = session[:token] if session[:token]
      profile_id = params[:site_id]
@@ -240,41 +240,42 @@ class SitesController < ApplicationController
      @co2_server = @total_size * 9 * 0.501
      @co2_server = @co2_server /  1048576
    
-   #visitors = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'country', :metrics => 'timeOnSite', :aggregates => 'country'})
-   visitors = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:country&metrics=ga:timeOnSite&start-date='+@amonthago+'&end-date='+@today+'&aggregates=ga:country').to_xml
+     #visitors = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'country', :metrics => 'timeOnSite', :aggregates => 'country'})
+     visitors = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:country&metrics=ga:timeOnSite&start-date='+@amonthago+'&end-date='+@today+'&aggregates=ga:country').to_xml
               
-   # CALCULATE VISITORS IMPACT
-    # Parse the time on site by country 
-    @visitors_text = " "
-    @time = 0 
-    @co2_visitors = 0
-    @totalvisitors = 0
-    visitors.elements.each('entry') do |land|
-      # Parse country
-      name = land.elements["dxp:dimension name='ga:country'"].attribute("value").value
-      # Get carbon factor
-      factor = ""
-      # See if it exists in our database
-      if Country.find(:first,:conditions => [ "name = ?", name ]) then
+     # CALCULATE VISITORS IMPACT
+     # Parse the time on site by country 
+     @visitors_text = " "
+     @time = 0 
+     @co2_visitors = 0
+     @totalvisitors = 0
+     visitors.elements.each('entry') do |land|
+    
+     # Parse country
+     name = land.elements["dxp:dimension name='ga:country'"].attribute("value").value
+     # Get carbon factor
+     factor = ""
+     # See if it exists in our database
+     if Country.find(:first,:conditions => [ "name = ?", name ]) then
         factor=Country.find(:first,:conditions => [ "name = ?", name ]).factor
       else
-      if name then
-        h_name = name.gsub(" ", "%20")
-        begin
-        carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
-        # Parse the factor from Json string
-        factor = carma.to_s.split("intensity")[1]
-        factor = factor.to_s.split('present" : "')[1] 
-        factor = factor.to_s.split('",')[0]
-        rescue Exception => exc
-          factor = "0.501"
+        if name then
+          h_name = name.gsub(" ", "%20")
+          begin
+            carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
+            # Parse the factor from Json string
+            factor = carma.to_s.split("intensity")[1]
+            factor = factor.to_s.split('present" : "')[1] 
+            factor = factor.to_s.split('",')[0]
+          rescue Exception => exc
+            factor = "0.501"
+          end
         end
-      end
-      #Save in our database
-      c = Country.new()
-      c.name = name
-      c.factor = factor
-      c.save
+        #Save in our database
+        c = Country.new()
+        c.name = name
+        c.factor = factor
+        c.save
       end
       if factor == "" then
         factor = "0.501"
@@ -305,8 +306,8 @@ class SitesController < ApplicationController
    
    @grampervisitor = 0.00
    if totalvisits.to_i != 0
-    @grampervisitor = @total_co2.to_f / totalvisits.to_i
-    @grampervisitor = @grampervisitor*1000
+     @grampervisitor = @total_co2.to_f / totalvisits.to_i
+     @grampervisitor = @grampervisitor*1000
    end
    
    # CREATE PIE GRAPHIC
@@ -322,12 +323,11 @@ class SitesController < ApplicationController
    car = ActiveSupport::JSON.decode(car)
    @caramount = car["conversion"]["amount"]
     
-    rescue Exception => exc
+   rescue Exception => exc
        redirect_to :action => "select"
-     end
-     render(:partial => "calculate")
-end
- 
+   end
+   render(:partial => "calculate")
+ end
  
  
  # Gives back the page size of a URL
@@ -364,9 +364,132 @@ end
      total += open(scripturl).length
    end
    ensure
-   return total
+     return total
    end
  end
  
+ def calculate_year
+   day = 1
+   site = params[:id]
+   while day<366 do
+     date = Date.today-day
+     calculate_day(site,date)
+     day = day+1
+   end
+   render :nothing => true
+ end
+ 
+  def calculate_day (site_id, date)       
+       # Create a client and login using the stored information   
+        site = Site.find(site_id)
+        client = GData::Client::GBase.new
+        client.authsub_token = site.user.gtoken
+        profile_id = site.gid
+        
+        # Create a new emission
+        emission = site.emissions.new
+        
+        # GET DATA FROM GOOGLE ANALYTICS
+        today= date
+        emission.date_start = today
+        emission.date_end = today
+        today = today.strftime("%Y-%m-%d")
+         
+        # GET ADDRESS 
+        address = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:hostname&metrics=ga:pageviews&start-date='+today+'&end-date='+today+'&sort=-ga:pageviews&aggregates=ga:hostname').to_xml
+        address = address.to_s.split("dxp:dimension name='ga:hostname' value='")[1]
+        address = address.to_s.split("'")[0]
+        address = "http://"+address.to_s
 
+        # Get the pageview of all apges
+        allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&metrics=ga:visits&start-date='+today+'&end-date='+today).to_xml
+
+        # CALCULATE TOTAL TRAFFIC
+        # Initialiate variables
+        total_size = 0
+        totalvisits = 0
+        page_text = ""
+        # Iterate through the different pages
+      	pagesize = pageSize(address)/1024
+        totalvisits = allpages.elements["dxp:aggregates"].elements["dxp:metric name='ga:visits'"].attribute("value").value
+      	page_text += "<p> Pages size " + pagesize.to_s + " kB. " +totalvisits.to_s+ " visitors</p>"
+        total_size = pagesize*totalvisits.to_i 
+
+        # CALCULATE SERVER AND INFRA IMPACT
+        co2_server = 0
+        co2_server = total_size * 9 * 0.501
+        co2_server = co2_server /  1048576
+        # save in the db
+        emission.co2_server = co2_server
+        emission.co2_infra = 0
+        emission.text_server = page_text
+        emission.text_infra = ""
+        
+      # Get the visitor information from Google Analytics
+      visitors = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:country&metrics=ga:timeOnSite&start-date='+today+'&end-date='+today+'&aggregates=ga:country').to_xml
+
+      # CALCULATE VISITORS IMPACT
+      # Parse the time on site by country 
+      visitors_text = " "
+      time = 0 
+      co2_visitors = 0
+      totalvisitors = 0
+      visitors.elements.each('entry') do |land|
+      # Parse country
+      name = land.elements["dxp:dimension name='ga:country'"].attribute("value").value
+      # Get carbon factor
+      factor = ""
+      # See if it exists in our database
+      if Country.find(:first,:conditions => [ "name = ?", name ]) then
+           factor=Country.find(:first,:conditions => [ "name = ?", name ]).factor
+       else
+        if name then
+           h_name = name.gsub(" ", "%20")
+           begin
+             carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
+             # Parse the factor from Json string
+             factor = carma.to_s.split("intensity")[1]
+             factor = factor.to_s.split('present" : "')[1] 
+             factor = factor.to_s.split('",')[0]
+             rescue Exception => exc
+               factor = "0.501"
+            end
+         end
+         #Save in our database
+         c = Country.new()
+         c.name = name
+         c.factor = factor
+         c.save
+       end
+       if factor == "" then
+           factor = "0.501"
+       end
+         # Parse time  
+         time2 = land.elements["dxp:metric name=ga:'timeOnSite'"].attribute("value").value
+         time += time2.to_i
+
+         # Calculate the impact
+         carbonimpact = factor.to_f * time.to_i * 35.55 / 3600000
+         co2_visitors += carbonimpact
+
+         # Aggregate
+         time = (time.to_f/60).round(1)
+         grams = carbonimpact.round(2)
+         if grams != 0
+           text = "<b>" + name.to_s + "</b> " + time.to_s + " min "+ grams.to_s + " grams CO2. With a factor of "+factor.to_f.round(2).to_s+"<br/>"
+           visitors_text += text
+         end  
+
+      co2_visitors = co2_visitors/1000
+      time = time/60
+      
+      #Save in database
+      emission.co2_users = co2_visitors
+      emission.text_users = visitors_text
+      
+      emission.visitors = totalvisits.to_i
+      emission.time = time
+      emission.save
+    end
+  end
 end

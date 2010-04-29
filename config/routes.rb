@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :countries
 
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
@@ -7,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.about '/about', :controller => 'users', :action => 'about'
   map.about '/data', :controller => 'users', :action => 'data'
+  map.connect '/connect', :controller => 'users', :action => 'connect'
+  map.welcome '/welcome', :controller => 'users', :action => 'welcome'
   map.resources :users
 
   map.resource :session

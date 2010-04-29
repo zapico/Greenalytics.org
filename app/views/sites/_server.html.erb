@@ -1,0 +1,9 @@
+<h1><b>Server and infrastructure</b></h1>
+<p><i>Carbon impact from the electricity of the server and internet infrastructure.</i></p>
+
+<h2>Pages</h2>
+<%= @page_text %>
+<p>Only the frontpage is used for calculating the size due to performance issues.</p>
+<h2>Total </h2>
+<h3><%= @total_size %> kB.</h3>
+<h3><%= @co2_server.round(2) %> kg CO2</h3>
