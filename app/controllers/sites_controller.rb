@@ -326,7 +326,11 @@ class SitesController < ApplicationController
    rescue Exception => exc
        redirect_to :action => "select"
    end
-   render(:partial => "calculate")
+   render :update do |page|
+      page.hide "search-indicator"
+      page.hide "text"
+      page.replace_html 'calculate', :partial => 'calculate'
+    end
  end
  
  

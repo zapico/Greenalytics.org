@@ -2,9 +2,7 @@
 <% javascript_tag do %>
     <%= remote_function(
 	:url => { :action => "calculate_total", :site_id => params[:site_id], :address => @address },
-	:loading  => "Element.show('search-indicator'); Element.hide('calculate')",
-	:complete => "Element.hide('search-indicator'); Element.hide('text'); Element.show('calculate')",
-	:update => "calculate") %>
+	:loading  => "Element.show('search-indicator');") %>
 <% end %>
 <div id="text">
 	<p>Calculating the impact can take a while, please wait while we crunch the data!</p>
@@ -19,5 +17,5 @@
 	:style => 'display:none') %>
 
 <div id="calculate">
-	<%= render(:partial => 'calculate')%>		
+			
 </div>
