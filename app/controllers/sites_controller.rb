@@ -11,8 +11,8 @@ class SitesController < ApplicationController
      reset_session 
    end
    scope = 'https://www.google.com/analytics/feeds/'
-   next_url = 'http://localhost:3000/sites/select'
-   #next_url = 'http://greenalytics.org/sites/select'
+   #next_url = 'http://localhost:3000/sites/select'
+   next_url = 'http://greenalytics.org/sites/select'
    secure = false  # set secure = true for signed AuthSub requests
    sess = true
    @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
@@ -246,11 +246,18 @@ class SitesController < ApplicationController
      end
      
      # GET THE EMISSION OF THAT COUNTRY
+     if Country.find(:first,:conditions => [ "name = ?", country ]) then
+         serverfactor=Country.find(:first,:conditions => [ "name = ?", country ]).factor
+         serverfactorgr = serverfactor/1000
+       else
+         serverfactorgr=0.501
+     end
      
+     @server_text = "<p> The server is located in <b>" + country + "</b> where the carbon factor is " + serverfactor.to_s + " gram CO2 per kW/h"
      
      # CALCULATE SERVER AND INFRA IMPACT
      @co2_server = 0
-     @co2_server = @total_size * 9 * 0.501
+     @co2_server = @total_size * 9 * serverfactorgr
      @co2_server = @co2_server /  1048576
    
      #visitors = gs.get({:start_date => amonthago, :end_date => today, :dimensions => 'country', :metrics => 'timeOnSite', :aggregates => 'country'})
