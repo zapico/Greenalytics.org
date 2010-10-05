@@ -11,8 +11,8 @@ class SitesController < ApplicationController
      reset_session 
    end
    scope = 'https://www.google.com/analytics/feeds/'
-   #next_url = 'http://localhost:3000/sites/select'
-   next_url = 'http://greenalytics.org/sites/select'
+   next_url = 'http://localhost:3000/sites/select'
+   #next_url = 'http://greenalytics.org/sites/select'
    secure = false  # set secure = true for signed AuthSub requests
    sess = true
    @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
@@ -209,7 +209,6 @@ class SitesController < ApplicationController
  end
  
  def calculate_total   
-   begin
      # Create a client and login using session   
      client = GData::Client::GBase.new
      client.authsub_token = session[:token] if session[:token]
@@ -234,6 +233,20 @@ class SitesController < ApplicationController
      totalvisits = allpages.elements["dxp:aggregates"].elements["dxp:metric name='ga:visits'"].attribute("value").value
    	 @page_text += "<p> Pages size " + pagesize.to_s + " kB. " +totalvisits.to_s+ " visitors</p>"
      @total_size = pagesize*totalvisits.to_i 
+     
+     # GET COUNTRY WHERE THE SERVER IS LOCATED
+     address = params[:address].to_s.split("//")[1]
+     country = ""
+     # Grab the info from API
+     uri = "http://ipinfodb.com/ip_query2.php?ip=#{address}"
+     # Get the name using Hpricot
+     doc = Hpricot(open(uri))
+     (doc/'location').each do |el|
+       country = (el/'countryname').inner_html.to_s
+     end
+     
+     # GET THE EMISSION OF THAT COUNTRY
+     
      
      # CALCULATE SERVER AND INFRA IMPACT
      @co2_server = 0
@@ -323,9 +336,7 @@ class SitesController < ApplicationController
    car = ActiveSupport::JSON.decode(car)
    @caramount = car["conversion"]["amount"]
     
-   rescue Exception => exc
-       redirect_to :action => "select"
-   end
+
    render :update do |page|
       page.hide "search-indicator"
       page.hide "text"

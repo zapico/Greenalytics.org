@@ -30,5 +30,7 @@ require 'open-uri'
     return total
     end
   end
+  
+  
 
 end
