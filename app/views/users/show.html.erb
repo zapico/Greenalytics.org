@@ -6,7 +6,8 @@
 <% if current_user.gtoken != nil then %>
 	Your Google Analytics account is connected.
 <%else%>
-	<%= link_to "Connect your Google Analytics account", :action => "connect" %>
+	<p>To start using greenalytics you need a Google Analytics account:</p>
+	<%= link_to "Connect your Google Analytics to Greenalyics", :action => "connect" %>
 <%end%>
 </div>
 <div id="content_left">
