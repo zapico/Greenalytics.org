@@ -12,7 +12,7 @@ class SitesController < ApplicationController
    end
    scope = 'https://www.google.com/analytics/feeds/'
    #next_url = 'http://localhost:3000/sites/select'
-   next_url = 'http://greenalytics.org/sites/select'
+   next_url = 'http://greenalytics.heroku.com/sites/select'
    secure = false  # set secure = true for signed AuthSub requests
    sess = true
    @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
@@ -22,7 +22,7 @@ class SitesController < ApplicationController
    
    client = GData::Client::GBase.new
    if session[:token]
-     client.authsub_token = session[:token]
+      client.authsub_token = session[:token]
    else
      if params[:token]
        client.authsub_token = params[:token] # extract the single-use token from the URL query params
