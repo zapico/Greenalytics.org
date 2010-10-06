@@ -16,7 +16,11 @@ class SessionsController < ApplicationController
       self.current_user = user
       new_cookie_flag = (params[:remember_me] == "1")
       handle_remember_cookie! new_cookie_flag
-      redirect_back_or_default('/')
+      if user.gtoken
+        redirect_back_or_default('/users/show')
+      else
+        redirect_back_or_default('/connect')
+      end
       flash[:notice] = "Logged in successfully"
     else
       note_failed_signin
@@ -25,6 +29,8 @@ class SessionsController < ApplicationController
       render :action => 'new'
     end
   end
+  
+ 
 
   def destroy
     logout_killing_session!
