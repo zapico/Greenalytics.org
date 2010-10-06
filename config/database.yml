@@ -4,7 +4,7 @@ development:
   database: greenalytics
   username: greenaly_admin
   password: CpwPA4nFv9mV
-  host: 70.32.99.240
+  host: 79.99.1.46
  
 production:
   adapter: mysql
@@ -12,4 +12,4 @@ production:
   database: greenalytics
   username: greenaly_admin
   password: CpwPA4nFv9mV
-  host: 70.32.99.240
+  host: 79.99.1.46
