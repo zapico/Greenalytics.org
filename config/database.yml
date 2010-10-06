@@ -4,7 +4,7 @@ development:
   database: greenalytics
   username: greenaly_admin
   password: CpwPA4nFv9mV
-  host: 79.99.1.46
+  host: verdemedia.org
  
 production:
   adapter: mysql
@@ -12,4 +12,4 @@ production:
   database: greenalytics
   username: greenaly_admin
   password: CpwPA4nFv9mV
-  host: 79.99.1.46
+  host: verdemedia.org
