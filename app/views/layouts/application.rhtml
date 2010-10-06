@@ -12,17 +12,25 @@
 <body>
 <div id="wrapper">
 	<div id="header">
-		<a href="/"><img src="/images/logo.png" border='0' alt="our co2"/></a>
+		<a href="/"><img src="/images/logo.png" border='0' alt="greenalytics"/></a>
 		<div id="menu-wrapper">
 			<ul id="main-menu">
-				<% if session[:token] %>
-				<li><a href="/sites/select">Calculate</a></li>
-				<li><a href="/sites/login">Logout</a></li>     
+				<% if logged_in?() %>
+				<li><a href="/sites/select">My Sites</a></li>   
 			     <%else%>
-				<li><a href="/sites/login">Calculate</a></li>
+				<li><a href="/example">Example</a></li>
 			   <%end%>
 				<li><a href="/about">About</a></li>
 				<li><a href="/data">Data</a></li>
+			</ul>
+			<ul id="login-menu">
+				<% if logged_in?() %>
+				<li><a href="/users/show">My account</a></li>
+				<li><a href="/sessions/destroy">Logout</a></li> 
+				 <%else%>
+				 <li><a href="/sessions/new">Login</a></li>
+				 <li><a href="/users/new">Register</a></li>
+				 <%end%>
 			</ul>
 		</div>
 	</div>

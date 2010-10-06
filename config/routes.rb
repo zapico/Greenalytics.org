@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.about '/data', :controller => 'users', :action => 'data'
   map.connect '/connect', :controller => 'users', :action => 'connect'
   map.welcome '/welcome', :controller => 'users', :action => 'welcome'
+  map.welcome '/example', :controller => 'users', :action => 'example'
   map.resources :users
 
   map.resource :session

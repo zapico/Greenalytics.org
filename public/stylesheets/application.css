@@ -409,3 +409,38 @@ padding: 5px;
 color:white;
 background:#D9E021;
 }
+
+
+#header ul#login-menu {
+float:right;
+font-family:"Arial Rounded MT Bold",Arial,sans-serif;
+font-size:10px;
+font-weight:bold;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:10px 0 15px -60px;
+text-transform:uppercase;
+;
+}
+#header ul#login-menu li {
+float:left;
+letter-spacing:2px;
+margin-right: 20px;
+text-align:left;
+}
+#header ul#login-menu li a {
+color:#D9E021;
+display:block;
+padding: 5px;
+text-decoration:none
+}
+#header ul#login-menu li a:hover {
+-moz-border-radius-bottomleft:2px;
+-moz-border-radius-bottomright:2px;
+-moz-border-radius-topleft:2px;
+-moz-border-radius-topright:2px;
+padding: 5px;
+color:white;
+background:#D9E021;
+}

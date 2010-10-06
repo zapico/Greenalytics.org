@@ -18,7 +18,7 @@ class SitesController < ApplicationController
    @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
  end
  
- def select
+ def select_old
    
    client = GData::Client::GBase.new
    if session[:token]
@@ -34,6 +34,22 @@ class SitesController < ApplicationController
    end
    begin
      @feed = client.get('https://www.google.com/analytics/feeds/accounts/default').to_xml
+   rescue Exception => exc
+      logger.error("Message for the log file #{exc.message}")
+      flash[:notice] = "No google analytics connected to this account"
+      redirect_to :action => "login"
+   end
+   
+ end
+ 
+ 
+ def select
+   begin
+   client = GData::Client::GBase.new
+   # Grab the token from the db
+   client.authsub_token = current_user.gtoken
+   # Get the list with the site
+   @feed = client.get('https://www.google.com/analytics/feeds/accounts/default').to_xml
    rescue Exception => exc
       logger.error("Message for the log file #{exc.message}")
       flash[:notice] = "No google analytics connected to this account"
@@ -182,7 +198,7 @@ class SitesController < ApplicationController
     
      # Create a client and login using session   
      client = GData::Client::GBase.new
-     client.authsub_token = session[:token] if session[:token]
+     client.authsub_token = current_user.gtoken
      profile_id = params[:site_id]
      @today= DateTime.now-1.days
      @amonthago = @today-30.days
@@ -211,7 +227,7 @@ class SitesController < ApplicationController
  def calculate_total   
      # Create a client and login using session   
      client = GData::Client::GBase.new
-     client.authsub_token = session[:token] if session[:token]
+     client.authsub_token = current_user.gtoken
      profile_id = params[:site_id]
      
      # GET DATA FROM GOOGLE ANALYTICS
