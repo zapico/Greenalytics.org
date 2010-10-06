@@ -39,9 +39,6 @@ class UsersController < ApplicationController
 
     # Connect the user account with a Google Analytics account
     def connect
-      if session[:token]
-        reset_session 
-      end
       scope = 'https://www.google.com/analytics/feeds/'
       #next_url = 'http://localhost:3000/welcome'
       next_url = 'http://greenalytics.heroku.com/welcome'
