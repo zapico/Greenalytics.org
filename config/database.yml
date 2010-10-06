@@ -2,14 +2,14 @@ development:
   adapter: mysql
   encoding: utf8
   database: greenalytics
-  username: root
-  password: rip2maQ8
-  host: verdemedia.org
+  username: greenaly_admin
+  password: CpwPA4nFv9mV
+  host: 79.99.1.46
  
 production:
   adapter: mysql
   encoding: utf8
   database: greenalytics
-  username: root
-  password: rip2maQ8
-  host: verdemedia.org
+  username: greenaly_admin
+  password: CpwPA4nFv9mV
+  host: 79.99.1.46
