@@ -12,24 +12,24 @@
 <body>
 <div id="wrapper">
 	<div id="header">
-		<a href="http://greenalyics.org"><img src="/images/logo.png" border='0' alt="greenalytics"/></a>
+		<a href="http://greenalytics.org"><img src="/images/logo.png" border='0' alt="greenalytics"/></a>
 		<div id="menu-wrapper">
 			<ul id="main-menu">
 				<% if logged_in?() %>
-				<li><a href="http://greenalyics.org/sites/select">My Sites</a></li>   
+				<li><a href="http://greenalytics.org/sites/select">My Sites</a></li>   
 			     <%else%>
-				<li><a href="http://greenalyics.org/example">Example</a></li>
+				<li><a href="http://greenalytics.org/example">Example</a></li>
 			   <%end%>
-				<li><a href="http://greenalyics.org/about">About</a></li>
-				<li><a href="http://greenalyics.org/data">Data</a></li>
+				<li><a href="http://greenalytics.org/about">About</a></li>
+				<li><a href="http://greenalytics.org/data">Data</a></li>
 			</ul>
 			<ul id="login-menu">
 				<% if logged_in?() %>
-				<li><a href="http://greenalyics.org/users/show">My account</a></li>
-				<li><a href="http://greenalyics.org/sessions/destroy">Logout</a></li> 
+				<li><a href="http://greenalytics.org/users/show">My account</a></li>
+				<li><a href="http://greenalytics.org/sessions/destroy">Logout</a></li> 
 				 <%else%>
-				 <li><a href="http://greenalyics.org/sessions/new">Login</a></li>
-				 <li><a href="http://greenalyics.org/users/new">Register</a></li>
+				 <li><a href="http://greenalytics.org/sessions/new">Login</a></li>
+				 <li><a href="http://greenalytics.org/users/new">Register</a></li>
 				 <%end%>
 			</ul>
 		</div>
