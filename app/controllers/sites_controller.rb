@@ -53,7 +53,7 @@ class SitesController < ApplicationController
    rescue Exception => exc
       logger.error("Message for the log file #{exc.message}")
       flash[:notice] = "No google analytics connected to this account"
-      redirect_to :action => "login"
+      redirect_to :controller => "sessions", :action => "login"
    end
    
  end

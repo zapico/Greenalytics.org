@@ -3,7 +3,7 @@
 <p>Name: <%= current_user.name %></p>
 <p>Email: <%= current_user.email %></p>
 <p>
-<% if current_user.gtoken then %>
+<% if current_user.gtoken != nil then %>
 	Your Google Analytics account is connected.
 <%else%>
 	<%= link_to "Connect your Google Analytics account", :action => "connect" %>
