@@ -1,0 +1,15 @@
+<div id="content_left">
+<h1><%= @site.name %></h1>
+<p><%= link_to @site.address %></p>
+<% @site.emissions.each do |em|  %>
+	<p>Start: <%= em.date_start %></p>
+	<p>End: <%= em.date_end %></p>
+	<p>Server: <%= em.co2_server %></p>
+	<p>Visitors: <%= em.co2_users %></p>
+<% end %>
+</div>
+<div id="content_left">
+<h1>Admin</h1>
+<p>Edit wrong URL</p>
+<p>Calculate</p>
+</div>

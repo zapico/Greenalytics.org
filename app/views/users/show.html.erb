@@ -13,6 +13,6 @@
 <div id="content_left">
 <h1>Your sites</h1>
 <% current_user.sites.each do |si| %>
-	<p><%= si.name %></p>
+	<p><%= link_to si.name, :controller => "sites", :action => "show", :id => si.id %></p>
 <% end %>
 </div>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100422231804) do
+ActiveRecord::Schema.define(:version => 20101011155208) do
 
   create_table "countries", :force => true do |t|
     t.string   "name",       :limit => 40
@@ -32,19 +32,19 @@ ActiveRecord::Schema.define(:version => 20100422231804) do
   end
 
   create_table "emissions", :force => true do |t|
-    t.integer  "co2_server",  :limit => 10, :precision => 10, :scale => 0
-    t.integer  "co2_infra",   :limit => 10, :precision => 10, :scale => 0
-    t.integer  "co2_users",   :limit => 10, :precision => 10, :scale => 0
+    t.decimal  "co2_server",                    :precision => 10, :scale => 10
+    t.decimal  "co2_users",                     :precision => 10, :scale => 10
     t.integer  "site_id"
     t.date     "date_start"
     t.date     "date_end"
-    t.text     "text_server"
-    t.text     "text_infra"
     t.text     "text_users"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "visitors"
-    t.integer  "time",        :limit => 10, :precision => 10, :scale => 0
+    t.decimal  "time",                          :precision => 10, :scale => 10
+    t.integer  "traffic",         :limit => 10, :precision => 10, :scale => 0
+    t.string   "server_location"
+    t.integer  "factor",          :limit => 10, :precision => 10, :scale => 0
   end
 
   create_table "sites", :force => true do |t|
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20100422231804) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "address"
   end
 
   create_table "users", :force => true do |t|

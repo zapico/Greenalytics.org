@@ -69,6 +69,7 @@ class UsersController < ApplicationController
           newsite.gid = entry.elements["dxp:tableId"].text
           newsite.name = entry.elements["title"].text
           newsite.user_id = current_user.id
+          sites.get_address(newsite.id)
           newsite.save
         end       
     end
