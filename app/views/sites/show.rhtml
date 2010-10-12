@@ -41,6 +41,6 @@
 <h2>Visitors: </h2>
 <p><%= @emission.text_users %></p>
 <h2>Total: </h2>
-<h3><%= @emission.time %> minutes</h3>
+<h3><%= @emission.time.round(2) %> minutes</h3>
 <h3><%= @emission.co2_users.round(3) %> kg CO2</h3>
 </div>

@@ -1,3 +1,11 @@
+# GREENALYTICS
+# Users controller
+# Created by Jorge L. Zapico // jorge@zapi.co // http://jorgezapico.com
+# Created for the Center for Sustainable Communications More info at http://cesc.kth.se
+# 2010
+# Open Source License
+
+
 class UsersController < ApplicationController
   require 'gdata'
 

@@ -1,18 +1,22 @@
 <div id="content_left">
-<h1>Your account</h1>
-<p>Name: <%= current_user.name %></p>
-<p>Email: <%= current_user.email %></p>
-<p>
-<% if current_user.gtoken != nil then %>
-	Your Google Analytics account is connected.
-<%else%>
-	<p>To start using greenalytics you need a Google Analytics account:</p>
-	<p><a href="http://greenalytics.heroku.com/session/new">Connect your Google Analytics to Greenalyics</a></p>
-<%end%>
+	<h1>Your sites</h1>
+	<% current_user.sites.each do |si| %>
+		<p><b><%= si.name %></b> 
+		<%= link_to "This month", :controller => "sites", :action => "show", :id => si.id %> | 
+		<%= link_to "This year", :controller => "sites", :action => "show_year", :id => si.id %></p>
+	<% end %>
 </div>
-<div id="content_left">
-<h1>Your sites</h1>
-<% current_user.sites.each do |si| %>
-	<p><%= link_to si.name, :controller => "sites", :action => "show", :id => si.id %></p>
-<% end %>
+
+<div id="content_right">
+	<h1>Your account</h1>
+	<p>Name: <%= current_user.name %></p>
+	<p>Email: <%= current_user.email %></p>
+	<p>
+	<% if current_user.gtoken != nil then %>
+		Your Google Analytics account is connected.
+   	 <%else%>
+		<p>To start using greenalytics you need a Google Analytics account:</p>
+		<p><a href="http://greenalytics.heroku.com/session/new">Connect your Google Analytics to Greenalyics</a></p>
+	<%end%>
+	<p><%= link_to "Admin your sites", :controller => "sites", :action => "select" %></p>
 </div>

@@ -1,3 +1,13 @@
+# GREENALYTICS
+# Countries controller
+# It takes care of the database of carbon factors for different countries
+# Created by Jorge L. Zapico // jorge@zapi.co // http://jorgezapico.com
+# Created for the Center for Sustainable Communications More info at http://cesc.kth.se
+# 2010
+# Open Source License
+
+
+
 class CountriesController < ApplicationController
   # GET /countries
   # GET /countries.xml

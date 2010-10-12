@@ -1,3 +1,11 @@
+# GREENALYTICS
+# Application controller
+# Created by Jorge L. Zapico // jorge@zapi.co // http://jorgezapico.com
+# Created for the Center for Sustainable Communications More info at http://cesc.kth.se
+# 2010
+# Open Source License
+
+
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
