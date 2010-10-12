@@ -8,12 +8,85 @@ class SitesController < ApplicationController
  
  def show
    @site = Site.find(params[:id])
+   @emission =  @site.emissions.find(:first, :conditions => { :year => params[:year], :month => params[:month] })
+   
+   # CREATE PIE GRAPHIC
+   @total_co2 = @emission.co2_server + @emission.co2_users
+   per_visitors = @emission.co2_users*100/@total_co2
+   per_server = @emission.co2_server*100/@total_co2
+   @grafico="http://chart.apis.google.com/chart?chs=250x100&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
 
+   # TRANSLATE USING CARBON.TO
+   beer = Net::HTTP.get(URI.parse("http://carbon.to/beers.json?co2="+ @total_co2.round.to_s))
+   beer = ActiveSupport::JSON.decode(beer)
+   @beeramount = beer["conversion"]["amount"]
+   car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ @total_co2.round.to_s))
+   car = ActiveSupport::JSON.decode(car)
+   @caramount = car["conversion"]["amount"]
+   
+   # CALCULATE GRAM PER VISITOR
+   @grampervisitor = 0.00
+   if @emission.visitors.to_i != 0
+     @grampervisitor = @total_co2.to_f / @emission.visitors.to_i
+     @grampervisitor = @grampervisitor*1000
+   end
+   
    respond_to do |format|
      format.html # show.html.erb
      format.xml  { render :xml => @countries }
    end
  end
+ 
+ # Show the aggregate emissions for a year
+ def show_year
+   @site = Site.find(params[:id])
+   if params[:year]
+     @emissions =  @site.emissions.find(:all, :conditions => { :year => params[:year]})
+     @year = params[:year]
+    else
+       @emissions =  @site.emissions.find(:all, :conditions => { :year => DateTime.now.year.to_s})
+       @year = DateTime.now.year.to_s
+   end
+   # INITIALIZE
+   @total_co2 = 0
+   @server_co2 = 0
+   @users_co2 = 0
+   @visitors = 0
+   
+   # AGGREGATE
+   @emissions.each do |e| 
+     @total_co2 += e.co2_server + e.co2_users
+     @server_co2 += e.co2_server
+     @users_co2 += e.co2_users
+     @visitors += e.visitors.to_i
+   end
+   
+   # CREATE PIE GRAPHIC
+   per_visitors =  @users_co2*100/@total_co2
+   per_server = @server_co2*100/@total_co2
+   @grafico="http://chart.apis.google.com/chart?chs=250x100&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
+
+   # TRANSLATE USING CARBON.TO
+   beer = Net::HTTP.get(URI.parse("http://carbon.to/beers.json?co2="+ @total_co2.round.to_s))
+   beer = ActiveSupport::JSON.decode(beer)
+   @beeramount = beer["conversion"]["amount"]
+   car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ @total_co2.round.to_s))
+   car = ActiveSupport::JSON.decode(car)
+   @caramount = car["conversion"]["amount"]
+   
+   # CALCULATE GRAM PER VISITOR
+   @grampervisitor = 0.00
+   if @visitors.to_i != 0
+     @grampervisitor = @total_co2.to_f / @visitors.to_i
+     @grampervisitor = @grampervisitor*1000
+   end
+   
+   respond_to do |format|
+     format.html # show.html.erb
+     format.xml  { render :xml => @countries }
+   end
+ end
+ 
  
  def login
    if session[:token]
@@ -276,6 +349,24 @@ class SitesController < ApplicationController
    end
  end
  
+ def calculate_past
+   site_id = params[:id]
+   year = DateTime.now.year
+   month = DateTime.now.month
+   while year == 2010
+     date_start = Date.new(year, month, 1)
+     d = date_start
+     d += 42
+     date_end =  Date.new(d.year, d.month) - 1
+     puts date_end.to_s
+     puts date_start.to_s
+     calculate_month(site_id,date_start,date_end)
+     month -= 1
+     if month == 1 then year -= 1 end
+   end
+   render :nothing => true
+ end
+ 
  def calculate_this_month
    site_id = params[:id]
    date_end = DateTime.now
@@ -304,12 +395,20 @@ class SitesController < ApplicationController
         profile_id = site.gid
         
         # 2. Create a new emission
-        emission = site.emissions.new
-        emission.date_start = date_start
-        emission.date_end = date_end
-        day_start = emission.date_start.strftime("%Y-%m-%d")
-        day_end =  emission.date_start.strftime("%Y-%m-%d")
-
+        
+        if site.emissions.find(:first, :conditions => { :year => date_start.year(), :month => date_start.month() })
+          emission = site.emissions.find(:first, :conditions => { :year => date_start.year(), :month => date_start.month() })
+          puts "Overwrote emission"
+        else
+          emission = site.emissions.new
+          puts "Created a new emission"
+        end
+          
+        emission.year = date_start.year()
+        emission.month = date_start.month()
+        day_start = date_start.strftime("%Y-%m-%d")
+        day_end =  date_end.strftime("%Y-%m-%d")
+        
         # B. CALCULATE TOTAL TRAFFIC
         # 1. Get the pageview of all apges
         allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&start-date='+day_start+'&end-date='+day_end).to_xml
@@ -376,16 +475,16 @@ class SitesController < ApplicationController
       co2_visitors = 0
       totalvisitors = 0
       visitors.elements.each('entry') do |land|
-      # Parse country
-      name = land.elements["dxp:dimension name='ga:country'"].attribute("value").value
-      # Get carbon factor
-      factor = ""
-      # See if it exists in our database
-      if Country.find(:first,:conditions => [ "name = ?", name ]) then
+        # Parse country
+        name = land.elements["dxp:dimension name='ga:country'"].attribute("value").value
+        # Get carbon factor
+        factor = ""
+        # See if it exists in our database
+        if Country.find(:first,:conditions => [ "name = ?", name ]) then
            factor=Country.find(:first,:conditions => [ "name = ?", name ]).factor
-       else
+         else
          # If do not exist then we create it in database and retrieve info from CARMA
-        if name then
+         if name then
            h_name = name.gsub(" ", "%20")
            begin
              carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
@@ -396,31 +495,33 @@ class SitesController < ApplicationController
              rescue Exception => exc
                factor = "0.501"
             end
-         end
-         #Save in our database
-         c = Country.new()
-         c.name = name
-         c.factor = factor
-         c.save
-       end
-       if factor == "" then
+          end
+          #Save in our database
+          c = Country.new()
+          c.name = name
+          c.factor = factor
+          c.save
+        end
+        
+        if factor == "" then
            factor = "0.501"
-       end
+         end
          # Parse time  
          time2 = land.elements["dxp:metric name=ga:'timeOnSite'"].attribute("value").value
          time += time2.to_i
          # Calculate the impact
          carbonimpact = factor.to_f * time.to_i * 35.55 / 3600000
-         co2_visitors += carbonimpact
          # Aggregate
+         co2_visitors += carbonimpact
          time = (time.to_f/60).round(1)
          grams = carbonimpact.round(2)
          if grams != 0
            text = "<b>" + name.to_s + "</b> " + time.to_s + " min "+ grams.to_s + " grams CO2. With a factor of "+factor.to_f.round(2).to_s+"<br/>"
            visitors_text += text
          end  
+      end
       co2_visitors = co2_visitors/1000
-      time = time/60    
+      time = time/60
       #Save in database
       emission.co2_users = co2_visitors
       emission.text_users = visitors_text     
@@ -429,6 +530,6 @@ class SitesController < ApplicationController
       
       # AND SAVE
       emission.save
-    end
+
   end
 end

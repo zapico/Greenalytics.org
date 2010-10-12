@@ -1,0 +1,18 @@
+<div id="content_top">
+	<div id="content_top_left">
+		<h1><%= @site.name %></h1>
+		<p><%= link_to @site.address %></p>
+		<h2><co2><%= @total_co2.round(1) %></co2> kg CO<sub>2</sub> (or <%= @grampervisitor.round(2) %> gram per visitor)</h1>
+			<p>Emissions for: <%= @year %></p>
+		<p>The site emissions are equivalent to: <p/><h2><co2><%= @caramount %></co2> km driving a car</h2>
+		<h2>Or <co2><%= @beeramount %></co2> bottles of beer</h2>
+		<p>Conversions thanks to <a href="http://carbon.to">carbon.to</a></p>
+
+	</div>
+	<div id="content_top_right">
+		<p><b>Impact Distribution</b></p>
+		<%= image_tag @grafico, :alt => 'foo' %><br>
+		<h2>Server: <co2><%= @server_co2.round(1) %></co2> kg CO<sub>2</sub></h1>
+		<h2>Visitors: <co2><%= @users_co2.round(1) %></co2> kg CO<sub>2</sub> (for <%= @visitors %> a total of visitors)</h1>
+	</div>
+</div>

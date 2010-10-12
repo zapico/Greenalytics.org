@@ -1,15 +1,46 @@
-<div id="content_left">
-<h1><%= @site.name %></h1>
-<p><%= link_to @site.address %></p>
-<% @site.emissions.each do |em|  %>
-	<p>Start: <%= em.date_start %></p>
-	<p>End: <%= em.date_end %></p>
-	<p>Server: <%= em.co2_server %></p>
-	<p>Visitors: <%= em.co2_users %></p>
-<% end %>
+<div id="content_top">
+
+	<div id="content_top_left">
+		<h1><%= @site.name %></h1>
+		<p><%= link_to @site.address %></p>
+		<h2><co2><%= @total_co2.round(3) %></co2> kg CO<sub>2</sub> (or <%= @grampervisitor.round(2) %> gram per visitor)</h1>
+			<p>Emissions for: <%= monthname(@emission.month) %> <%= @emission.year %></p>
+		<p>The site emissions are equivalent to: <p/><h2><co2><%= @caramount %></co2> km driving a car</h2>
+		<h2>Or <co2><%= @beeramount %></co2> bottles of beer</h2>
+		<p>Conversions thanks to <a href="http://carbon.to">carbon.to</a></p>
+
+	</div>
+	<div id="content_top_right">
+		<p><b>Beta version</b></p>
+		<p>This application is still under development, the calculation shown is not accurate. The purpose of this number is to 
+			show that websites do have an impact in climate change, even if it's hidden to us. The calculation of this impact
+			is very challenging due to the distributed nature of internet. This application is a first effort towards
+			making calculating websites carbon footprint more accurate and available to the public.</p>
+		<p><b>Impact Distribution</b></p>
+		<%= image_tag @grafico, :alt => 'foo' %><br>
+	</div>
 </div>
 <div id="content_left">
-<h1>Admin</h1>
-<p>Edit wrong URL</p>
-<p>Calculate</p>
+<h1><b>Server and infrastructure</b></h1>
+<p><i>Carbon impact from the electricity of the server and internet infrastructure.</i></p>
+
+<h2>Pages</h2>
+<h2>Total traffic</h2>
+<p><%= @emission.visitors %> visitors, generating a traffic of <%= @emission.traffic %> kB.</p>
+<h2>Server location</h2>
+<p>The server is luocated in: <%= @emission.server_location %>. The electricity factor for this country has been used for calculate the carbon dioxide emissions.</p>
+<h2>Factor</h2>
+<p><%= @emission.factor %> kWh/Gb.</p>
+<h2>Emissions</h2>
+<h3><%= @emission.co2_server.round(3) %> kg CO2</h3>
+</div>
+
+<div id="content_right">
+<h1><b>Visitors</b></h1>
+<p><i>The impact from the electricity used by the visitors.</i></p>
+<h2>Visitors: </h2>
+<p><%= @emission.text_users %></p>
+<h2>Total: </h2>
+<h3><%= @emission.time %> minutes</h3>
+<h3><%= @emission.co2_users.round(3) %> kg CO2</h3>
 </div>
