@@ -262,7 +262,8 @@ class SitesController < ApplicationController
  end
 
  # SAVE ALL THE INFORMATION FOR THE EMISSIONS OF A MONTH
-  def calculate_month (site_id,date_start,date_end)       
+  
+  def calculate_month(site_id,date_start,date_end)       
        
        # A. LOGIN AND ALL THAT
        # 1. Create a client and login using the stored information   
