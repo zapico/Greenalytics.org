@@ -11,7 +11,7 @@ class CalculateSite
   
   def perform
     site = Site.find(site_id)
-    site.calculate_month(site_id,date_start,date_end)
+    Site.calculate_month(site_id,date_start,date_end)
     puts "Calculation completed"
   end 
  
