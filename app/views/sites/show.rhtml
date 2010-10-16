@@ -26,9 +26,9 @@
 
 <h2>Pages</h2>
 <h2>Total traffic</h2>
-<p><%= @emission.visitors %> visitors, generating a traffic of <%= @emission.traffic %> kB.</p>
+<p><%= @emission.visitors %> pages visited, generating a traffic of <%= @emission.traffic %> kB.</p>
 <h2>Server location</h2>
-<p>The server is luocated in: <%= @emission.server_location %>. The electricity factor for this country has been used for calculate the carbon dioxide emissions.</p>
+<p>The server is located in: <%= @emission.server_location %>. The electricity factor for this country has been used for calculate the carbon dioxide emissions.</p>
 <h2>Factor</h2>
 <p><%= @emission.factor %> kWh/Gb.</p>
 <h2>Emissions</h2>
@@ -41,6 +41,6 @@
 <h2>Visitors: </h2>
 <p><%= @emission.text_users %></p>
 <h2>Total: </h2>
-<h3><%= @emission.time.round(2) %> minutes</h3>
+<h3><%= @emission.time.to_i %> minutes</h3>
 <h3><%= @emission.co2_users.round(3) %> kg CO2</h3>
 </div>

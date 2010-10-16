@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101012092703) do
+ActiveRecord::Schema.define(:version => 20101016174455) do
 
   create_table "countries", :force => true do |t|
     t.string   "name",       :limit => 40
@@ -32,19 +32,19 @@ ActiveRecord::Schema.define(:version => 20101012092703) do
   end
 
   create_table "emissions", :force => true do |t|
-    t.decimal  "co2_server",                    :precision => 10, :scale => 10
-    t.decimal  "co2_users",                     :precision => 10, :scale => 10
     t.integer  "site_id"
     t.text     "text_users"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "visitors"
-    t.decimal  "time",                          :precision => 10, :scale => 10
-    t.integer  "traffic",         :limit => 10, :precision => 10, :scale => 0
     t.string   "server_location"
-    t.integer  "factor",          :limit => 10, :precision => 10, :scale => 0
     t.integer  "year"
     t.integer  "month"
+    t.integer  "traffic"
+    t.decimal  "co2_server",      :precision => 40, :scale => 5
+    t.decimal  "co2_users",       :precision => 40, :scale => 5
+    t.decimal  "time",            :precision => 20, :scale => 2
+    t.decimal  "factor",          :precision => 10, :scale => 5
   end
 
   create_table "sites", :force => true do |t|

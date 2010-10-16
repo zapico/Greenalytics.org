@@ -1,4 +1,12 @@
-# This controller handles the login/logout function of the site.  
+# GREENALYTICS
+# Session controller
+# This controller handles the login/logout function of the site. 
+# Created by Jorge L. Zapico // jorge@zapi.co // http://jorgezapico.com
+# Created for the Center for Sustainable Communications More info at http://cesc.kth.se
+# 2010
+# Open Source License
+
+ 
 class SessionsController < ApplicationController
 
   # render new.rhtml

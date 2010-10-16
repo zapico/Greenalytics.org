@@ -13,6 +13,9 @@ class SitesController < ApplicationController
  require 'hpricot'
  require 'open-uri'
  require 'gdata'
+ before_filter :authorize
+ before_filter :authorize_admin, :only => [:allsites]
+ 
  
  # IT SHOWS THE EMISSIONS FOR A SITE FOR A GIVE MONTH PARAMS: ?id=,year=,month=
  def show
@@ -239,7 +242,7 @@ class SitesController < ApplicationController
      date_end =  Date.new(d.year, d.month) - 1
      puts date_end.to_s
      puts date_start.to_s
-     calculate_month(site_id,date_start,date_end)
+     Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
      month -= 1
      if month == 1 then year -= 1 end
    end
@@ -253,7 +256,8 @@ class SitesController < ApplicationController
    nrday = date_end.day.to_i
    nrday -= 1
    date_start = DateTime.now-nrday.days
-   calculate_month(site_id,date_start,date_end)
+   Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
+   #calculate_month(site_id,date_start,date_end)  
    render :nothing => true
  end
 
@@ -292,7 +296,7 @@ class SitesController < ApplicationController
         if site.address then
           address = site.address
         else
-          address = get_adress(site.id)
+          address = get_address(site.id)
         end
         # 3. Iterate through the different pages
         
@@ -381,12 +385,12 @@ class SitesController < ApplicationController
          end
          # Parse time  
          time2 = land.elements["dxp:metric name=ga:'timeOnSite'"].attribute("value").value
-         time2 = (time2.to_f/60).round(1)
+         time2 = (time2.to_f/60).round(2)
          # Calculate the impact
-         carbonimpact = factor.to_f * time.to_i * 35.55 / 3600000
+         carbonimpact = factor.to_f * time2 * 35.55 / 3600000
          # Aggregate
          co2_visitors += carbonimpact
-         time += time2.to_f
+         time += time2
          grams = carbonimpact.round(2)
          if grams != 0
            text = "<b>" + name.to_s + "</b> " + time2.to_s + " min "+ grams.to_s + " grams CO2. With a factor of "+factor.to_f.round(2).to_s+"<br/>"
@@ -398,7 +402,9 @@ class SitesController < ApplicationController
       emission.co2_users = co2_visitors
       emission.text_users = visitors_text     
       emission.visitors = totalvisits.to_i
-      emission.time = time
+      emission.time = time.to_d
+      puts emission.time
+      puts time
       
       # AND SAVE
       emission.save

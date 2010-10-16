@@ -15,4 +15,20 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   include AuthenticatedSystem
+      
+  def authorize  
+     unless current_user
+          flash[:notice] = "Please log in"
+          redirect_to(:controller => "users", :action => "login")
+     end
+  end
+  
+  def authorize_admin
+     unless current_user.login == "zapico"
+          flash[:notice] = "Please log in"
+          redirect_to(:controller => "users", :action => "show")
+     end
+  end
+  
+  
 end
