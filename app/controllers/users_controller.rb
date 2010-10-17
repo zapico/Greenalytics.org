@@ -46,6 +46,8 @@ class UsersController < ApplicationController
   end
   def data
   end
+  def donate
+  end
 
   # Connect the user account with a Google Analytics account
   def connect

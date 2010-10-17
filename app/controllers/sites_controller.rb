@@ -188,6 +188,13 @@ class SitesController < ApplicationController
       @total += em.co2_users.to_i + em.co2_server.to_i
     end
    end
+   begin
+     car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total/1000).round.to_s))
+     car = ActiveSupport::JSON.decode(car)
+     @caramount = car["conversion"]["amount"]
+    rescue
+     @caramount = 0 
+   end
  end
  
 # GET THE ADDRESS
