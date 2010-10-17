@@ -34,18 +34,19 @@ class SitesController < ApplicationController
    @grafico="http://chart.apis.google.com/chart?chs=250x100&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
 
    # TRANSLATE USING CARBON.TO
-   beer = Net::HTTP.get(URI.parse("http://carbon.to/beers.json?co2="+ @total_co2.round.to_s))
-   beer = ActiveSupport::JSON.decode(beer)
-   @beeramount = beer["conversion"]["amount"]
-   car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ @total_co2.round.to_s))
+   light = Net::HTTP.get(URI.parse("http://carbon.to/lightbulb.json?co2="+ (@total_co2/1000).round.to_s))
+   light = ActiveSupport::JSON.decode(light)
+   @lightamount = light["conversion"]["amount"]
+   car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total_co2/1000).round.to_s))
    car = ActiveSupport::JSON.decode(car)
    @caramount = car["conversion"]["amount"]
+
    
    # CALCULATE GRAM PER VISITOR
    @grampervisitor = 0.00
    if @emission.visitors.to_i != 0
      @grampervisitor = @total_co2.to_f / @emission.visitors.to_i
-     @grampervisitor = @grampervisitor*1000
+
    end
    
    respond_to do |format|
@@ -85,6 +86,10 @@ class SitesController < ApplicationController
      @users_co2 += e.co2_users
      @visitors += e.visitors.to_i
    end
+   # CHANGE TO KG
+   @total_co2 /= 1000
+   @server_co2 /= 1000
+   @users_co2 /= 1000
    
    # CREATE PIE GRAPHIC
    per_visitors =  @users_co2*100/@total_co2
@@ -267,23 +272,6 @@ class SitesController < ApplicationController
  
  # TRIGGERS CALCULATION FOR THE CURRENT MONTH
  def calculate_this_month
-   site_id = params[:id]
-   date_end = DateTime.now
-   nrday = date_end.day.to_i
-   nrday -= 1
-   date_start = DateTime.now-nrday.days
-   Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
-   #calculate_month(site_id,date_start,date_end)  
-   render :nothing => true
- end
- 
- def change_to_grams
-   Emission.find(:all).each do |e|
-    e.co2_users = e.co2_users*1000
-    e.co2_server = e.co2_server*1000
-    e.save
-  end
- end
 
   # UPDATE ALL THE SITES, RUN AS CRONJOB
   def daily_update
