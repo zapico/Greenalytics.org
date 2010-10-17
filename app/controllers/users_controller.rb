@@ -93,6 +93,7 @@ class UsersController < ApplicationController
     def downgrade
       current_user.gtoken = nil
       current_user.save
+      redirect_to :action => "show"
     end
 
 
