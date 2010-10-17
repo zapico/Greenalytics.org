@@ -77,56 +77,7 @@ class UsersController < ApplicationController
        end  
        current_user.gtoken = session[:token] # save the token to the current user
        current_user.save
-       
-       # Get all the sites of the user and add them to greenalyics
-       @feed = client.get('https://www.google.com/analytics/feeds/accounts/default').to_xml
-       @feed.elements.each('entry') do |entry|    
-          newsite = current_user.sites.new
-          newsite.gid = entry.elements["dxp:tableId"].text
-          newsite.name = entry.elements["title"].text
-          newsite.user_id = current_user.id
-          get_address(newsite.id)
-          calculate_first_time(newsite.id)
-          newsite.save
-        end       
-    end
-    
-    def calculate_first_time(site_id)
-      year = DateTime.now.year
-      month = DateTime.now.month
-      while year == 2010
-        date_start = Date.new(year, month, 1)
-        d = date_start
-        d += 42
-        date_end =  Date.new(d.year, d.month) - 1
-        puts date_end.to_s
-        puts date_start.to_s
-        Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
-        month -= 1
-        if month == 1 then 
-          year -= 1 
-        end
-      end
-    end
-    
-    def get_address (siteid)
-      # Create a client and login using session   
-      client = GData::Client::GBase.new
-      site = Site.find(siteid)
-      client.authsub_token = site.user.gtoken
-      today= DateTime.now-1.days
-      amonthago = today-30.days
-      today = today.strftime("%Y-%m-%d")
-      amonthago = amonthago.strftime("%Y-%m-%d")
-      # Get address (Not as easy as it should be!)
-      address = client.get('https://www.google.com/analytics/feeds/data?ids='+site.gid+'&dimensions=ga:hostname&metrics=ga:pageviews&start-date='+amonthago+'&end-date='+today+'&sort=-ga:pageviews&aggregates=ga:hostname').to_xml
-      address = address.to_s.split("dxp:dimension name='ga:hostname' value='")[1]
-      address = address.to_s.split("'")[0]
-      address = "http://"+address.to_s   
-      # Save the address in the db
-      site.address = address
-      site.save
-      puts address
+       redirect_to :controller => "sites", :action => "select" 
     end
     
     # REMOVE GOOGLE ANALYTICS
