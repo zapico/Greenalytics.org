@@ -201,8 +201,8 @@ class SitesController < ApplicationController
  def get_address(siteid)
    # Create a client and login using session   
    client = GData::Client::GBase.new
-   client.authsub_token = current_user.gtoken
    site = Site.find(siteid)
+   client.authsub_token = site.user.gtoken
    today= DateTime.now-1.days
    amonthago = today-30.days
    today = today.strftime("%Y-%m-%d")
@@ -216,12 +216,6 @@ class SitesController < ApplicationController
    site.address = address
    site.save
    puts address
- end
- 
- def get_all_addresses
-   Site.find(:all).each do |si|
-    get_address(si.id)
-   end
  end
  
  # TRIGGERS CALCULATION FOR A WHOLE YEAR
