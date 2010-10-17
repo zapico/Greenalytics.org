@@ -244,18 +244,6 @@ class SitesController < ApplicationController
      render :nothing => true
    end
 
-  # UPDATE ALL THE SITES, RUN AS CRONJOB
-  def daily_update
-    sites = Site.find(:all)
-    date_end = DateTime.now
-    nrday = date_end.day.to_i
-    nrday -= 1
-    date_start = DateTime.now-nrday.days
-    sites.each do |si|  
-      calculate_month(si.id,date_start,date_end)
-    end
-  end
-
   # ERROR
   def error
   end

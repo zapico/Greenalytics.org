@@ -154,7 +154,7 @@ class CalculateSite
        time2 = land.elements["dxp:metric name=ga:'timeOnSite'"].attribute("value").value
        time2 = (time2.to_f/60).round(2)
        # Calculate the impact
-       carbonimpact = factor.to_f * time2 * 35.55 / 3600000
+       carbonimpact = factor.to_f * time2 * 35.55 / 60
        # Aggregate
        co2_visitors += carbonimpact
        time += time2
