@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/connect', :controller => 'users', :action => 'connect'
   map.welcome '/welcome', :controller => 'users', :action => 'welcome'
   map.welcome '/example', :controller => 'users', :action => 'example'
+   map.welcome '/my_sites', :controller => 'sites', :action => 'my_sites'
   map.resources :users
 
   map.resource :session

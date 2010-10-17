@@ -162,7 +162,7 @@ class SitesController < ApplicationController
    rescue Exception => exc
       logger.error("Message for the log file #{exc.message}")
       flash[:notice] = "No google analytics connected to this account"
-      redirect_to :controller => "sessions", :action => "new"
+      redirect_to :controller => "users", :action => "show"
    end
  end
  
@@ -171,6 +171,10 @@ class SitesController < ApplicationController
    @sites = Site.find(:all)
    @users = User.find(:all)
  end 
+ 
+ # SHOW ALL SITES
+ def my_sites
+ end
  
 # GET THE ADDRESS
  def get_address(siteid)

@@ -1,12 +1,15 @@
+<div id="content_left">
 <h1>Sites Administration</h1>
 <% @sites.each do |si| %>
 	<p><b><%= si.name %></b> owned by <%= si.user.name %><br/>
 	<%= link_to "Calculate this month", :controller => "sites", :action => "calculate_this_month", :id => si.id %> |
-	<%= link_to "Calculate this month", :controller => "sites", :action => "calculate_this_month_now", :id => si.id %> |
+	<%= link_to "Calculate now", :controller => "sites", :action => "calculate_this_month_now", :id => si.id %> |
 	<%= link_to "Calculate this year", :controller => "sites", :action => "calculate_past", :id => si.id %> | 
 	<%= link_to "This month", :controller => "sites", :action => "show", :id => si.id %> | 
 	<%= link_to "This year", :controller => "sites", :action => "show_year", :id => si.id %></p>
 <% end %>
+</div>
+<div id="content_right">
 <h1>Users Administration</h1>
 <% @users.each do |us| %>
 	<p><b><%= us.name %></b> <%= us.email%> <br/>
@@ -17,3 +20,4 @@
 	<%end%>
 	</p>
 <%end%>
+</div>

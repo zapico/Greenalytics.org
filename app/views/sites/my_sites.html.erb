@@ -1,0 +1,8 @@
+<div id="content_left">
+	<h1>Your sites</h1>
+	<% current_user.sites.each do |si| %>
+		<p><b><%= si.name %></b><br/> 
+		<%= link_to "Monthly emissions", :controller => "sites", :action => "show", :id => si.id %> | 
+		<%= link_to "Year emissions", :controller => "sites", :action => "show_year", :id => si.id %></p>
+	<% end %>
+</div>
