@@ -198,7 +198,7 @@ class SitesController < ApplicationController
  end
  
 # GET THE ADDRESS
- def get_address(siteid)
+ def get_address (siteid)
    # Create a client and login using session   
    client = GData::Client::GBase.new
    site = Site.find(siteid)
@@ -217,6 +217,27 @@ class SitesController < ApplicationController
    site.save
    puts address
  end
+ 
+ def get_address_admin
+   # Create a client and login using session   
+   client = GData::Client::GBase.new
+   site = Site.find(params[:site_id])
+   client.authsub_token = site.user.gtoken
+   today= DateTime.now-1.days
+   amonthago = today-30.days
+   today = today.strftime("%Y-%m-%d")
+   amonthago = amonthago.strftime("%Y-%m-%d")
+   # Get address (Not as easy as it should be!)
+   address = client.get('https://www.google.com/analytics/feeds/data?ids='+site.gid+'&dimensions=ga:hostname&metrics=ga:pageviews&start-date='+amonthago+'&end-date='+today+'&sort=-ga:pageviews&aggregates=ga:hostname').to_xml
+   address = address.to_s.split("dxp:dimension name='ga:hostname' value='")[1]
+   address = address.to_s.split("'")[0]
+   address = "http://"+address.to_s   
+   # Save the address in the db
+   site.address = address
+   site.save
+   puts address
+ end
+ 
  
  # TRIGGERS CALCULATION FOR A WHOLE YEAR
  def calculate_past
