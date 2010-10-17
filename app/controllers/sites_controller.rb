@@ -188,7 +188,7 @@ class SitesController < ApplicationController
  end
 
  def change_to_grams
-   Emission.find(:all).each to |e|
+   Emission.find(:all).each do |e|
     e.co2_users = e.co2_users*1000
     e.co2_server = e.co2_server*1000
     e.save
