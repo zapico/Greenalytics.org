@@ -91,7 +91,9 @@ class UsersController < ApplicationController
     end
     
     def downgrade
+      current_user.gtoken = ''
       current_user.gtoken = nil
+      puts current_user.gtoken
       current_user.save
       redirect_to :action => "show"
     end
