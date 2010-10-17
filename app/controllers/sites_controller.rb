@@ -218,6 +218,12 @@ class SitesController < ApplicationController
    puts address
  end
  
+ def get_all_addresses
+   Site.find(:all).each do |si|
+    get_address(si.id)
+   end
+ end
+ 
  # TRIGGERS CALCULATION FOR A WHOLE YEAR
  def calculate_past
    site_id = params[:id]

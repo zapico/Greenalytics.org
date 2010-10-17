@@ -294,6 +294,18 @@ text-align: center;
     background:#fff;
 	margin-bottom: 30px;
 }
+#content_right_centered {
+	position: relative;
+	height: auto;
+	width:230px;
+	margin-top: 8px;
+	float:right;
+	right: 0px;
+	text-align: center;
+    background:#fff;
+	margin-bottom: 30px;
+}
+
 #user_index {
 	float: left;
 	height: auto;

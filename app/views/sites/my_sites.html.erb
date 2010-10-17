@@ -6,9 +6,9 @@
 		<%= link_to "Year emissions", :controller => "sites", :action => "show_year", :id => si.id %></p>
 	<% end %>
 </div>
-<div id="column_three">
+<div id="content_right_centered">
 	<h2>Your sites have emitted a total of</h2>
 	<h2><co2><%= @total/1000 %></co2> Kg CO2.<h2>
 	<h2>The equivalent to <co2><%= @caramount %></co2> km traveling by car.<h2>
-	<h2><co2><%= @month %></co2> grams CO2 this month.</h2>
+	<h2>of which <co2><%= @month %></co2> grams CO2 were emitted this month.</h2>
 </div>
