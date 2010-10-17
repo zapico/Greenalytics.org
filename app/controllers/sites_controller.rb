@@ -141,6 +141,7 @@ class SitesController < ApplicationController
    newsite.user_id = current_user.id
    newsite.save
    get_address(newsite.id)
+   calculate_first_time(newsite.id)
    redirect_to :action => "select"
  end
  
@@ -242,6 +243,25 @@ class SitesController < ApplicationController
  # TRIGGERS CALCULATION FOR A WHOLE YEAR
  def calculate_past
    site_id = params[:id]
+   year = DateTime.now.year
+   month = DateTime.now.month
+   while year == 2010
+     date_start = Date.new(year, month, 1)
+     d = date_start
+     d += 42
+     date_end =  Date.new(d.year, d.month) - 1
+     puts date_end.to_s
+     puts date_start.to_s
+     Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
+     month -= 1
+     if month == 1 then 
+       year -= 1 
+     end
+   end
+   render :nothing => true
+ end
+ 
+ def calculate_first_time(site_id)
    year = DateTime.now.year
    month = DateTime.now.month
    while year == 2010
