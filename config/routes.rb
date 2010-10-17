@@ -10,9 +10,10 @@ ActionController::Routing::Routes.draw do |map|
   map.about '/data', :controller => 'users', :action => 'data'
   map.connect '/connect', :controller => 'users', :action => 'connect'
   map.welcome '/welcome', :controller => 'users', :action => 'welcome'
-  map.welcome '/example', :controller => 'users', :action => 'example'
-  map.welcome '/donate', :controller => 'users', :action => 'donate'
-   map.welcome '/my_sites', :controller => 'sites', :action => 'my_sites'
+  map.example '/example', :controller => 'users', :action => 'example'
+  map.donate '/donate', :controller => 'users', :action => 'donate'
+  map.my_sites '/my_sites', :controller => 'sites', :action => 'my_sites'
+  map.downgrade '/downgrade', :controller => 'users', :action => 'downgrade'
   map.resources :users
  
   map.resource :session
