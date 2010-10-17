@@ -89,6 +89,11 @@ class UsersController < ApplicationController
           newsite.save
         end       
     end
+    
+    def downgrade
+      current_user.gtoken = nil
+      current_user.save
+    end
 
 
 end
