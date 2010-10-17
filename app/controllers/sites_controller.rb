@@ -169,6 +169,7 @@ class SitesController < ApplicationController
  # ADMIN ALL SITES
  def allsites
    @sites = Site.find(:all)
+   @users = User.find(:all)
  end 
  
 # GET THE ADDRESS
@@ -258,6 +259,17 @@ class SitesController < ApplicationController
    date_start = DateTime.now-nrday.days
    Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
    #calculate_month(site_id,date_start,date_end)  
+   render :nothing => true
+ end
+ 
+ def calculate_this_month_now
+   site_id = params[:id]
+   date_end = DateTime.now
+   nrday = date_end.day.to_i
+   nrday -= 1
+   date_start = DateTime.now-nrday.days
+   #Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
+   calculate_month(site_id,date_start,date_end)  
    render :nothing => true
  end
 
