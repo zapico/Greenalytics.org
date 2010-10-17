@@ -105,8 +105,8 @@ class CalculateSite
       emission.factor = 9
       # 3.2 Calculate CO2
       co2_server = 0
-      co2_server = total_size * emission.factor * serverfactorgr
-      co2_server = co2_server /  1048576
+      co2_server = total_size * emission.factor * serverfactorgr # kB * (kWh/Gb) * kg 
+      co2_server = co2_server /  1025 #Adjusting for kB to Gb and Kg to grams
       # 3.3 Save in the db
       emission.co2_server = co2_server
       
@@ -164,7 +164,6 @@ class CalculateSite
          visitors_text += text
        end  
     end
-    co2_visitors = co2_visitors/1000
     #Save in database
     emission.co2_users = co2_visitors
     emission.text_users = visitors_text     

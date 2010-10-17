@@ -174,6 +174,25 @@ class SitesController < ApplicationController
  
  # SHOW ALL SITES
  def my_sites
+   user = current_user
+   @month = 0
+   @total = 0
+   user.sites.each do |si|
+     si.emissions.each do |em|
+     if em.month == DateTime.now.month
+       @month += em.co2_users.to_i  + em.co2_server.to_i
+     end
+     @total += em.co2_users.to_i + em.co2_server.to_i
+   end
+ end
+ end
+
+ def change_to_grams
+   Emission.find(all).each to |e|
+    e.co2_users = e.co2_users*1000
+    e.co2_server = e.co2_server*1000
+    e.save
+  end
  end
  
 # GET THE ADDRESS
@@ -255,178 +274,7 @@ class SitesController < ApplicationController
  end
  
  # TRIGGERS CALCULATION FOR THE CURRENT MONTH
- def calculate_this_month
-   site_id = params[:id]
-   date_end = DateTime.now
-   nrday = date_end.day.to_i
-   nrday -= 1
-   date_start = DateTime.now-nrday.days
-   Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
-   #calculate_month(site_id,date_start,date_end)  
-   render :nothing => true
- end
- 
- def calculate_this_month_now
-   site_id = params[:id]
-   date_end = DateTime.now
-   nrday = date_end.day.to_i
-   nrday -= 1
-   date_start = DateTime.now-nrday.days
-   #Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
-   calculate_month(site_id,date_start,date_end)  
-   render :nothing => true
- end
-
- # SAVE ALL THE INFORMATION FOR THE EMISSIONS OF A MONTH
-  
-  def calculate_month(site_id,date_start,date_end)       
-       
-       # A. LOGIN AND ALL THAT
-       # 1. Create a client and login using the stored information   
-        site = Site.find(site_id)
-        client = GData::Client::GBase.new
-        client.authsub_token = site.user.gtoken
-        profile_id = site.gid
-        
-        # 2. Create a new emission
-        
-        if site.emissions.find(:first, :conditions => { :year => date_start.year(), :month => date_start.month() })
-          emission = site.emissions.find(:first, :conditions => { :year => date_start.year(), :month => date_start.month() })
-          puts "Overwrote emission"
-        else
-          emission = site.emissions.new
-          puts "Created a new emission"
-        end
-          
-        emission.year = date_start.year()
-        emission.month = date_start.month()
-        day_start = date_start.strftime("%Y-%m-%d")
-        day_end =  date_end.strftime("%Y-%m-%d")
-        
-        # B. CALCULATE TOTAL TRAFFIC
-        # 1. Get the pageview of all apges
-        allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&start-date='+day_start+'&end-date='+day_end).to_xml
-        # 2. Initialiate variables
-        total_size = 0
-        totalvisits = 0
-        page_text = ""
-        if site.address then
-          address = site.address
-        else
-          address = get_address(site.id)
-        end
-        # 3. Iterate through the different pages
-        
-        allpages.elements.each('entry') do |point|
-          # 3.1 Get the URL
-          url = point.elements["dxp:dimension name='ga:pagePath'"].attribute("value").value
-          # 2. Get the number of visitors
-          visits = point.elements["dxp:metric name='ga:pageviews'"].attribute("value").value
-          # 3. Aggregate text
-          if visits.to_i > 1 then
-            pagesize = pageSize(address+url)/1024
-            totalvisits += visits.to_i
-            total_size += pagesize*visits.to_i
-          end
-         end
-         emission.traffic = total_size
-
-        # C. CALCULATE SERVER
-        #  1. Get the country where the server is located
-        address = params[:address].to_s.split("//")[1]
-        country = ""
-        #  1.1 Grab the info from API
-        uri = "http://ipinfodb.com/ip_query2.php?ip=#{address}"
-        #  1.2 Get the name using Hpricot
-        doc = Hpricot(open(uri))
-        (doc/'location').each do |el|
-          country = (el/'countryname').inner_html.to_s
-        end
-        # 2. Get the emission factor for that country
-        if Country.find(:first,:conditions => [ "name = ?", country ]) then
-            serverfactor=Country.find(:first,:conditions => [ "name = ?", country ]).factor
-            serverfactorgr = serverfactor/1000
-          else
-            serverfactorgr=0.501
-        end
-        emission.server_location = country
-        # 3. Calculate the CO2
-        # 3.1 Set the factor kWh per GB
-        emission.factor = 9
-        # 3.2 Calculate CO2
-        co2_server = 0
-        co2_server = total_size * emission.factor * serverfactorgr
-        co2_server = co2_server /  1048576
-        # 3.3 Save in the db
-        emission.co2_server = co2_server
-        
-      # D. CALCULATE VISITORS IMPACT
-      # Get the visitor information from Google Analytics
-      visitors = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:country&metrics=ga:timeOnSite&start-date='+day_start+'&end-date='+day_end+'&aggregates=ga:country').to_xml
-      # Parse the time on site by country 
-      visitors_text = " "
-      time = 0 
-      co2_visitors = 0
-      totalvisitors = 0
-      visitors.elements.each('entry') do |land|
-        # Parse country
-        name = land.elements["dxp:dimension name='ga:country'"].attribute("value").value
-        # Get carbon factor
-        factor = ""
-        # See if it exists in our database
-        if Country.find(:first,:conditions => [ "name = ?", name ]) then
-           factor=Country.find(:first,:conditions => [ "name = ?", name ]).factor
-         else
-         # If do not exist then we create it in database and retrieve info from CARMA
-         if name then
-           h_name = name.gsub(" ", "%20")
-           begin
-             carma = Net::HTTP.get(URI.parse("http://carma.org/api/1.1/searchLocations?region_type=2&name="+h_name+"&format=json"))
-             # Parse the factor from Json string
-             factor = carma.to_s.split("intensity")[1]
-             factor = factor.to_s.split('present" : "')[1] 
-             factor = factor.to_s.split('",')[0]
-             rescue Exception => exc
-               factor = "0.501"
-            end
-          end
-          #Save in our database
-          c = Country.new()
-          c.name = name
-          c.factor = factor
-          c.save
-        end
-        
-        if factor == "" then
-           factor = "0.501"
-         end
-         # Parse time  
-         time2 = land.elements["dxp:metric name=ga:'timeOnSite'"].attribute("value").value
-         time2 = (time2.to_f/60).round(2)
-         # Calculate the impact
-         carbonimpact = factor.to_f * time2 * 35.55 / 3600000
-         # Aggregate
-         co2_visitors += carbonimpact
-         time += time2
-         grams = carbonimpact.round(2)
-         if grams != 0
-           text = "<b>" + name.to_s + "</b> " + time2.to_s + " min "+ grams.to_s + " grams CO2. With a factor of "+factor.to_f.round(2).to_s+"<br/>"
-           visitors_text += text
-         end  
-      end
-      co2_visitors = co2_visitors/1000
-      #Save in database
-      emission.co2_users = co2_visitors
-      emission.text_users = visitors_text     
-      emission.visitors = totalvisits.to_i
-      emission.time = time.to_d
-      puts emission.time
-      puts time
-      
-      # AND SAVE
-      emission.save
-
-  end
+ def calculate_this_month 
 
   # UPDATE ALL THE SITES, RUN AS CRONJOB
   def daily_update

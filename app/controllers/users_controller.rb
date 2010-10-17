@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
- 
+  
   def create
     logout_keeping_session!
     @user = User.new(params[:user])
@@ -32,45 +32,50 @@ class UsersController < ApplicationController
     end
   end
   
+  # Show current user (My account)
   def show
     @user = current_user
   end
+  
+  # STATIC PAGES (INFO, ABOUT, EXAMPLE, DATA)
+  def info
+  end
+  def about
+  end
+  def example
+  end
+  def data
+  end
 
-    def info
-    end
-    def about
-    end
-    def example
-    end
-    def data
-    end
-
-    # Connect the user account with a Google Analytics account
-    def connect
+  # Connect the user account with a Google Analytics account
+  def connect
       scope = 'https://www.google.com/analytics/feeds/'
       #next_url = 'http://localhost:3000/welcome'
       next_url = 'http://greenalytics.heroku.com/welcome'
       secure = false  # set secure = true for signed AuthSub requests
       sess = true
       @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
-    end
+  end
 
-    def welcome
-       client = GData::Client::GBase.new
-       if session[:token]
+  # UPGRADE THE TOKEN AND SAVE IT IN THE DATABASE
+  def welcome      
+      client = GData::Client::GBase.new
+      # Get's the token
+      if session[:token]
          client.authsub_token = session[:token]
-       else
+      else
          if params[:token]
            client.authsub_token = params[:token] # extract the single-use token from the URL query params
-           session[:token] = client.auth_handler.upgrade()
-           client.authsub_token = session[:token] if session[:token]
+           session[:token] = client.auth_handler.upgrade() # upgrade the token
+           client.authsub_token = session[:token] if session[:token] 
          else
            redirect_to :action => "login"
          end
        end  
-       current_user.gtoken = session[:token]
+       current_user.gtoken = session[:token] # save the token to the current user
        current_user.save
        
+       # Get all the sites of the user and add them to greenalyics
        @feed = client.get('https://www.google.com/analytics/feeds/accounts/default').to_xml
        @feed.elements.each('entry') do |entry|    
           newsite = current_user.sites.new
@@ -83,6 +88,6 @@ class UsersController < ApplicationController
     end
 
 
-  end
+end
 
 
