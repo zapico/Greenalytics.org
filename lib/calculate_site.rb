@@ -137,7 +137,7 @@ class CalculateSite
            factor = factor.to_s.split('present" : "')[1] 
            factor = factor.to_s.split('",')[0]
            rescue Exception => exc
-             factor = "0.501"
+             factor = "501"
           end
         end
         #Save in our database
@@ -148,13 +148,13 @@ class CalculateSite
       end
       
       if factor == "" then
-         factor = "0.501"
+         factor = "501"
        end
        # Parse time  
        time2 = land.elements["dxp:metric name=ga:'timeOnSite'"].attribute("value").value
        time2 = (time2.to_f/60).round(2)
        # Calculate the impact
-       carbonimpact = factor.to_f * time2 * 35.55 / 60
+       carbonimpact = factor.to_f * time2 * 35.55 / 60000
        # Aggregate
        co2_visitors += carbonimpact
        time += time2
