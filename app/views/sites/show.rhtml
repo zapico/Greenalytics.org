@@ -3,10 +3,10 @@
 	<div id="content_top_left">
 		<h1><%= @site.name %></h1>
 		<p><%= link_to @site.address %></p>
-		<h2><co2><%= @total_co2.round() %></co2> grams CO<sub>2</sub> (or <%= @grampervisitor.round(2) %> gram per visitor)</h1>
+		<h2><co2><%= @total_co2.to_i %></co2> grams CO<sub>2</sub> (or <%= @grampervisitor.round(2) %> gram per visitor)</h1>
 			<p>Emissions for: <%= monthname(@emission.month) %> <%= @emission.year %></p>
 		<p>The site emissions are equivalent to: <p/><h2><co2><%= @caramount %></co2> km driving a car</h2>
-		<h2>Or <co2><%= @beeramount %></co2> bottles of beer</h2>
+		<h2>Or <co2><%= @lightamount %></co2> hours using a incandescent lightbulb.</h2>
 		<p>Conversions thanks to <a href="http://carbon.to">carbon.to</a></p>
 
 	</div>
@@ -32,7 +32,7 @@
 <h2>Factor</h2>
 <p><%= @emission.factor %> kWh/Gb.</p>
 <h2>Emissions</h2>
-<h3><%= @emission.co2_server.round() %> grams CO2</h3>
+<h3><%= @emission.co2_server.to_i %> grams CO2</h3>
 </div>
 
 <div id="content_right">
@@ -42,5 +42,5 @@
 <p><%= @emission.text_users %></p>
 <h2>Total: </h2>
 <h3><%= @emission.time.to_i %> minutes</h3>
-<h3><%= @emission.co2_users.round() %> grams CO2</h3>
+<h3><%= @emission.co2_users.to_i %> grams CO2</h3>
 </div>

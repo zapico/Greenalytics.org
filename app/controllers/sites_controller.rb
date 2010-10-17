@@ -46,7 +46,6 @@ class SitesController < ApplicationController
    @grampervisitor = 0.00
    if @emission.visitors.to_i != 0
      @grampervisitor = @total_co2.to_f / @emission.visitors.to_i
-
    end
    
    respond_to do |format|
@@ -58,8 +57,7 @@ class SitesController < ApplicationController
    rescue Exception => exc
      render :action => "error"
    end
-   
-   
+     
  end
  
  # SHOW THE AGGREGATES FOR A YEAR
@@ -213,44 +211,6 @@ class SitesController < ApplicationController
    puts address
  end
  
- # Gives back the page size of a URL
- def pageSize (url)
-    # Get HTML Size
-   total = 0
-   begin
-   total = open(url).length
-   
-   hp = Hpricot(open(url))
-   
-   # Get images size
-   hp.search("img").each do |p|
-     picurl = picurl = p.attributes['src'].to_s
-     if picurl[0..3] != "http"
-       picurl = url+picurl
-     end
-     total += open(picurl).length
-   end
-    # Get CSS size
-    hp.search("link").each do |p|
-      cssurl = p.attributes['href'].to_s
-      if cssurl[0..3] != "http"
-           cssurl = url+cssurl
-        end
-        total += open(cssurl).length
-   end
-   # Get script size
-     hp.search("html/head//script").each do |p|
-       scripturl = p.attributes['src'].to_s
-       if scripturl[0..3] != "http"
-             scripturl = url+scripturl
-         end
-     total += open(scripturl).length
-   end
-   ensure
-     return total
-   end
- end
- 
  # TRIGGERS CALCULATION FOR A WHOLE YEAR
  def calculate_past
    site_id = params[:id]
@@ -265,13 +225,24 @@ class SitesController < ApplicationController
      puts date_start.to_s
      Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
      month -= 1
-     if month == 1 then year -= 1 end
+     if month == 1 then 
+       year -= 1 
+     end
    end
    render :nothing => true
  end
  
  # TRIGGERS CALCULATION FOR THE CURRENT MONTH
  def calculate_this_month
+     site_id = params[:id]
+     date_end = DateTime.now
+     nrday = date_end.day.to_i
+     nrday -= 1
+     date_start = DateTime.now-nrday.days
+     Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
+     #calculate_month(site_id,date_start,date_end)
+     render :nothing => true
+   end
 
   # UPDATE ALL THE SITES, RUN AS CRONJOB
   def daily_update
