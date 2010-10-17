@@ -84,8 +84,8 @@ class UsersController < ApplicationController
           newsite.gid = entry.elements["dxp:tableId"].text
           newsite.name = entry.elements["title"].text
           newsite.user_id = current_user.id
-          sites.get_address(newsite.id)
-          sites.calculate_first_time(newsite.id)
+          newsite.get_address(newsite.id)
+          newsite.calculate_first_time(newsite.id)
           newsite.save
         end       
     end
