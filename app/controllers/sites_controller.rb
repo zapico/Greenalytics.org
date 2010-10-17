@@ -186,14 +186,6 @@ class SitesController < ApplicationController
    end
  end
  end
-
- def change_to_grams
-   Emission.find(:all).each do |e|
-    e.co2_users = e.co2_users*1000
-    e.co2_server = e.co2_server*1000
-    e.save
-  end
- end
  
 # GET THE ADDRESS
  def get_address(siteid)
@@ -274,7 +266,24 @@ class SitesController < ApplicationController
  end
  
  # TRIGGERS CALCULATION FOR THE CURRENT MONTH
- def calculate_this_month 
+ def calculate_this_month
+   site_id = params[:id]
+   date_end = DateTime.now
+   nrday = date_end.day.to_i
+   nrday -= 1
+   date_start = DateTime.now-nrday.days
+   Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
+   #calculate_month(site_id,date_start,date_end)  
+   render :nothing => true
+ end
+ 
+ def change_to_grams
+   Emission.find(:all).each do |e|
+    e.co2_users = e.co2_users*1000
+    e.co2_server = e.co2_server*1000
+    e.save
+  end
+ end
 
   # UPDATE ALL THE SITES, RUN AS CRONJOB
   def daily_update
