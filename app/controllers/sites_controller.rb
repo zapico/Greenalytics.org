@@ -142,7 +142,7 @@ class SitesController < ApplicationController
    newsite.save
    get_address(newsite.id)
    calculate_first_time(newsite.id)
-   redirect_to :action => "select"
+   render :nothing => true
  end
  
  # DELETE SITE
@@ -277,7 +277,7 @@ class SitesController < ApplicationController
        year -= 1 
      end
    end
-   render :nothing => true
+   redirect_to :action => "select"render :nothing => true
  end
  
  # TRIGGERS CALCULATION FOR THE CURRENT MONTH
