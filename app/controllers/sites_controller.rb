@@ -261,23 +261,6 @@ class SitesController < ApplicationController
    render :nothing => true
  end
  
- def calculate_first_time(site_id)
-   year = DateTime.now.year
-   month = DateTime.now.month
-   while year == 2010
-     date_start = Date.new(year, month, 1)
-     d = date_start
-     d += 42
-     date_end =  Date.new(d.year, d.month) - 1
-     puts date_end.to_s
-     puts date_start.to_s
-     Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
-     month -= 1
-     if month == 1 then 
-       year -= 1 
-     end
-   end
- end
  
  # TRIGGERS CALCULATION FOR THE CURRENT MONTH
  def calculate_this_month
