@@ -184,12 +184,12 @@ class SitesController < ApplicationController
    @total = 0
    user.sites.each do |si|
      si.emissions.each do |em|
-     if em.month == DateTime.now.month
-       @month += em.co2_users.to_i  + em.co2_server.to_i
-     end
-     @total += em.co2_users.to_i + em.co2_server.to_i
+       if em.month == DateTime.now.month
+         @month += em.co2_users.to_i  + em.co2_server.to_i
+       end
+      @total += em.co2_users.to_i + em.co2_server.to_i
+    end
    end
- end
  end
  
 # GET THE ADDRESS
@@ -284,7 +284,6 @@ class SitesController < ApplicationController
       calculate_month(si.id,date_start,date_end)
     end
   end
-
 
   # ERROR
   def error
