@@ -56,10 +56,33 @@ h1.big{
 	font-size: 2.5em;
 	margin:0;
 }
-h1.name{
-	font-size: 2.1em;
+.name{
+	font-size: 1.6em;
 	margin:0;
+	margin-bottom: 15px;
 	color: #D9E021;
+}
+
+#content .name a {
+color:#D9E021;
+padding: 4px;
+text-decoration:none;
+font-weight: bold;
+}
+#content .name a:visited {
+color:#D9E021;
+padding: 4px;
+text-decoration:none;
+font-weight: bold;
+}
+#content .name a:hover {
+-moz-border-radius-bottomleft:4px;
+-moz-border-radius-bottomright:4px;
+-moz-border-radius-topleft:4px;
+-moz-border-radius-topright:4px;
+padding: 4px;
+color:white;
+background:#D9E021;
 }
 h1.co2{
 	font-size: 2.5em;
@@ -231,8 +254,26 @@ text-align: center;
 	position:relative;
 	width:800px;
 	margin-top: 20px;
-	height: 50px;
+	height: 60px;
 	text-align: center;
+}
+#arrow_prev{
+	position:relative;
+	float:left;
+	left: 320px;
+	width:25px;
+}
+#arrow_next{
+	position:relative;
+	float:left;
+	left: 400px;
+	width:25px;
+}
+#month_text{
+	position:relative;
+	float:left;
+	left: 360px;
+	width:75px;
 }
 #content_top_right{
 	width:350px;
@@ -268,6 +309,7 @@ text-align: center;
 	text-align: left;
 	margin-bottom: 30px;
 	padding-top:15px;
+	margin-top:125px;
 }
 #column_one {
 	position: relative;
@@ -367,6 +409,9 @@ text-align: center;
 	top: 0px;
 }
 
+.orange {
+	color:#D9E021;
+}
 
 #content a {
 color:#998675;

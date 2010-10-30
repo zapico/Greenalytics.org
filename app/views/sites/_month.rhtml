@@ -1,0 +1,26 @@
+
+
+<div id="content_left">
+	<h1 class="name"><b>Total impact</b></h1>
+	<h3><%= formatco2(@thismonth.co2_server + @thismonth.co2_users)%></h3>
+	<br/>
+	<h1 class="orange"><b>a. Server and infrastructure</b></h1>
+	<p><i>Carbon impact from the electricity of the server and internet infrastructure.</i></p>
+	<h3><%= formatco2(@thismonth.co2_server) %></h3>
+	<h2 >Pages</h2>
+	<h2>Total traffic</h2>
+	<p><%= @thismonth.visitors %> pages visited, generating a traffic of <%= @thismonth.traffic %> kB.</p>
+	<h2>Server location</h2>
+	<p>The server is located in: <%= @thismonth.server_location %>. The electricity factor for this country has been used for calculate the carbon dioxide emissions.</p>
+	<h2>Factor</h2>
+	<p><%= @thismonth.factor %> kWh/Gb.</p>
+</div>
+
+<div id="content_right">
+	<h1 class="orange"><b>b. Visitors</b></h1>
+	<p><i>The impact from the electricity used by the visitors.</i></p>
+	<h3>Total time spent in the site: <%= formattime(@thismonth.time) %></h3>
+	<h3>Total emissions: <%= formatco2(@thismonth.co2_users) %></h3>
+	<h2>Details: </h2>
+	<p><%= @thismonth.text_users %></p>
+</div>

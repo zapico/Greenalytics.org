@@ -1,6 +1,6 @@
 <div id="content_top">
 	<div id="content_top_left">
-		<h1><%= @site.name %></h1>
+		<h1 class="name"><%= @site.name %></h1>
 		<p><%= link_to @site.address %></p>
 		<h2><%= formatco2(@total_co2) %> (or <%= @grampervisitor.round(2) %> gram per visitor)</h1>
 			<p>Emissions for: <%= @year %></p>
@@ -16,34 +16,14 @@
 		<h2>Visitors: <%= formatco2(@users_co2) %></co2> (for <%= @visitors %> a total of visitors)</h1>
 	</div>
 	
-</div>	
+</div>
 <div id="months">
-<h2>Details for <%= monthname(@thismonth.month) %></h2>
-
+	<div id="arrow_prev"><img src="/images/arrow_prev.png" height="35px" alt="next"/></div>	
+	<div id="month_text"><h2><%= monthname(@thismonth.month) %> <%= @thismonth.year %></h2></div>
+	<div id="arrow_next"><img src="/images/arrow_next.png" height="35px" alt="next"/>	</div>
+</div>	
+<div id="month_partial">
+<%= render :partial => "month", :object => @thismonth %>
 </div>
 
-	<div id="content_left">
-	<h1><b>Server and infrastructure</b></h1>
-	<p><i>Carbon impact from the electricity of the server and internet infrastructure.</i></p>
-
-	<h2>Pages</h2>
-	<h2>Total traffic</h2>
-	<p><%= @thismonth.visitors %> pages visited, generating a traffic of <%= @thismonth.traffic %> kB.</p>
-	<h2>Server location</h2>
-	<p>The server is located in: <%= @thismonth.server_location %>. The electricity factor for this country has been used for calculate the carbon dioxide emissions.</p>
-	<h2>Factor</h2>
-	<p><%= @thismonth.factor %> kWh/Gb.</p>
-	<h2>Emissions</h2>
-	<h3><%= formatco2(@thismonth.co2_server) %></h3>
-	</div>
-
-	<div id="content_right">
-	<h1><b>Visitors</b></h1>
-	<p><i>The impact from the electricity used by the visitors.</i></p>
-	<h2>Visitors: </h2>
-	<p><%= @thismonth.text_users %></p>
-	<h2>Total: </h2>
-	<h3><%= formattime(@thismonth.time) %></h3>
-	<h3><%= formatco2(@thismonth.co2_users) %></h3>
-	</div>
 	
