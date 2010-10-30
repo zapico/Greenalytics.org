@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   def authorize_admin
      unless current_user.login == "zapico"
           flash[:notice] = "Please log in"
-          redirect_to(:controller => "users", :action => "show")
+          redirect_to(:controller => "users", :action => "login")
      end
   end
   

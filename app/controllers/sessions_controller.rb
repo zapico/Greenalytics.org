@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
       new_cookie_flag = (params[:remember_me] == "1")
       handle_remember_cookie! new_cookie_flag
       if user.gtoken
-        redirect_back_or_default('/users/show')
+        redirect_back_or_default('/users/my_sites')
       else
         redirect_back_or_default('/connect')
       end

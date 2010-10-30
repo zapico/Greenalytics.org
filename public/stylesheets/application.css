@@ -211,7 +211,7 @@ text-align: center;
 	position:relative;
 	float: left;
 	left:0px;
-	width:800px;
+	width:810px;
 	height: auto;
 	padding-bottom: 10px;
 	top: 8px;
@@ -226,6 +226,13 @@ text-align: center;
 	height: 350px;
 	border-bottom: 1px solid #cccccc;
 	
+}
+#months{
+	position:relative;
+	width:800px;
+	margin-top: 20px;
+	height: 50px;
+	text-align: center;
 }
 #content_top_right{
 	width:350px;
@@ -255,7 +262,7 @@ text-align: center;
 	
 #content_right {
 	width:350px;
-	padding-right: 0px;
+	padding-right: 5px;
 	float:right;
 	background:#fff;
 	text-align: left;
@@ -302,6 +309,17 @@ text-align: center;
 	float:right;
 	right: 0px;
 	text-align: center;
+    background:#fff;
+	margin-bottom: 30px;
+}
+#content_right_sites {
+	position: relative;
+	height: auto;
+	width:230px;
+	margin-top: 8px;
+	float:right;
+	right: 0px;
+	text-align: right;
     background:#fff;
 	margin-bottom: 30px;
 }

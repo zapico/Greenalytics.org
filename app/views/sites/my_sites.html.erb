@@ -6,9 +6,23 @@
 		<%= link_to "Year emissions", :controller => "sites", :action => "show_year", :id => si.id %></p>
 	<% end %>
 </div>
-<div id="content_right_centered">
+<div id="content_right_sites">
+	<p><b><%= current_user.name %></b></p>
+	<p><%= current_user.email %></p>
+	<p>
+	<% if current_user.gtoken != nil then %>
+		Your Google Analytics account is connected. You have <%= current_user.sites.count %> sites in Greenalytics.
+	 <%else%>
+		<p>To start using greenalytics you need a Google Analytics account:</p>
+		<p><a href="http://greenalytics.heroku.com/session/new">Connect your Google Analytics to Greenalyics</a></p>
+	<%end%>
+	<p><%= link_to "Add or remove sites", :controller => "sites", :action => "select" %></p>
+	<br/><br/>
 	<h2>Your sites have emitted a total of</h2>
-	<h2><co2><%= @total/1000 %></co2> Kg CO2.<h2>
+	<h2><%= formatco2(@total) %><h2>
 	<h2>The equivalent to <co2><%= @caramount %></co2> km traveling by car.<h2>
-	<h2>of which <co2><%= @month %></co2> grams CO2 were emitted this month.</h2>
+	<h2>of which <%= formatco2(@month) %> were emitted this month.</h2>
+	
+	
+	
 </div>

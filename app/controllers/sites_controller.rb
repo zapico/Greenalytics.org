@@ -77,28 +77,25 @@ class SitesController < ApplicationController
    @users_co2 = 0
    @visitors = 0
    
+   @thismonth = @emissions.first
+   
    # AGGREGATE
    @emissions.each do |e| 
      @total_co2 += e.co2_server + e.co2_users
      @server_co2 += e.co2_server
      @users_co2 += e.co2_users
      @visitors += e.visitors.to_i
-   end
-   # CHANGE TO KG
-   @total_co2 /= 1000
-   @server_co2 /= 1000
-   @users_co2 /= 1000
-   
+   end   
    # CREATE PIE GRAPHIC
-   per_visitors =  @users_co2*100/@total_co2
-   per_server = @server_co2*100/@total_co2
+   per_visitors =  @users_co2/@total_co2
+   per_server = @server_co2/@total_co2
    @grafico="http://chart.apis.google.com/chart?chs=250x100&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
 
    # TRANSLATE USING CARBON.TO
-   beer = Net::HTTP.get(URI.parse("http://carbon.to/beers.json?co2="+ @total_co2.round.to_s))
+   beer = Net::HTTP.get(URI.parse("http://carbon.to/beers.json?co2="+ (@total_co2/1000).round.to_s))
    beer = ActiveSupport::JSON.decode(beer)
    @beeramount = beer["conversion"]["amount"]
-   car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ @total_co2.round.to_s))
+   car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total_co2/1000).round.to_s))
    car = ActiveSupport::JSON.decode(car)
    @caramount = car["conversion"]["amount"]
    
@@ -106,7 +103,6 @@ class SitesController < ApplicationController
    @grampervisitor = 0.00
    if @visitors.to_i != 0
      @grampervisitor = @total_co2.to_f / @visitors.to_i
-     @grampervisitor = @grampervisitor*1000
    end
    
    respond_to do |format|
