@@ -62,7 +62,7 @@ class SitesController < ApplicationController
  
  # SHOW THE AGGREGATES FOR A YEAR
  def show_year
-   begin
+  # begin
    @site = Site.find(params[:id])
    if params[:year]
      @emissions =  @site.emissions.find(:all, :conditions => { :year => params[:year]})
@@ -77,8 +77,12 @@ class SitesController < ApplicationController
    @users_co2 = 0
    @visitors = 0
    
-   @thismonth = @emissions.first
-   
+   @month = DateTime.now.month
+   @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year})
+   @nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
+   @prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
+   @id = @thismonth.id
+
    # AGGREGATE
    @emissions.each do |e| 
      @total_co2 += e.co2_server + e.co2_users
@@ -110,11 +114,39 @@ class SitesController < ApplicationController
      format.xml  { render :xml => @countries }
    end
    # Rescue error
-   rescue Exception => exc
-     render :action => "error"
-   end
+  #rescue Exception => exc
+   #  render :action => "error"
+   #end 
    
  end
+ 
+ def show_month
+   e = Emission.find(params[:id])
+   @id = params[:id]
+   @site = Site.find(e.site.id)
+   @year = e.year
+   @month = e.month.to_i - 1
+   @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year.to_s})
+   @nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
+   @prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
+   @id = @thismonth.id
+   render :partial => 'month'
+ end
+ 
+ def show_next_month
+   e = Emission.find(params[:id])
+   @id = params[:id]
+   @site = Site.find(e.site.id)
+   @year = e.year
+   @month = e.month.to_i + 1
+   @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year.to_s})
+   @nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
+   @prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
+   @id = @thismonth.id
+   render :partial => 'month'
+ end
+ 
+ 
  
  # CONNECT WITH GOOGLE ANALYTICS
  def login

@@ -257,6 +257,11 @@ text-align: center;
 	height: 60px;
 	text-align: center;
 }
+#months a:hover {
+	background-color:#fff;
+	text-decoration:none;
+}
+
 #arrow_prev{
 	position:relative;
 	float:left;

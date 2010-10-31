@@ -1,5 +1,25 @@
-
-
+<div id="this_month">
+<div id="months">
+	<div id="arrow_prev">
+	<% if @prevmonth %>	
+	<%= link_to_remote(image_tag("arrow_prev.png", :height => '35', :border => '0'),
+	:url => { :action => "show_month", :id => @id},
+	:loading  => "Element.show('search-indicator'); Element.hide('content_left') ;Element.hide('content_right')",
+    :complete => "Element.hide('search-indicator'); Element.show('content_left'); Element.hide('content_right')",
+	:update => "this_month") %>
+	<%end%>
+	</div>	
+	<div id="month_text"><h2><%= monthname(@month) %> <%= @year %></h2></div>
+	<div id="arrow_next">
+		<% if @nextmonth%>
+			 <%= link_to_remote(image_tag("arrow_next.png", :height => '35', :border => '0'), :update => "this_month", :url => { :action => "show_next_month", :id => @id}) %>
+			<%end%>
+	</div>
+</div>
+ <%= image_tag("indicator.gif",
+:id => 'search-indicator',
+:style => 'display:none') %>
+<% if @thismonth %>
 <div id="content_left">
 	<h1 class="name"><b>Total impact</b></h1>
 	<h3><%= formatco2(@thismonth.co2_server + @thismonth.co2_users)%></h3>
@@ -23,4 +43,8 @@
 	<h3>Total emissions: <%= formatco2(@thismonth.co2_users) %></h3>
 	<h2>Details: </h2>
 	<p><%= @thismonth.text_users %></p>
+</div>
+<% else %>
+<p>No info for this month</p>
+<%end%>
 </div>

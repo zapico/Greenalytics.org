@@ -17,13 +17,6 @@
 	</div>
 	
 </div>
-<div id="months">
-	<div id="arrow_prev"><img src="/images/arrow_prev.png" height="35px" alt="next"/></div>	
-	<div id="month_text"><h2><%= monthname(@thismonth.month) %> <%= @thismonth.year %></h2></div>
-	<div id="arrow_next"><img src="/images/arrow_next.png" height="35px" alt="next"/>	</div>
-</div>	
-<div id="month_partial">
 <%= render :partial => "month", :object => @thismonth %>
-</div>
 
 	
