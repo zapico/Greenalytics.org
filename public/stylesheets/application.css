@@ -257,10 +257,6 @@ text-align: center;
 	height: 60px;
 	text-align: center;
 }
-.arrow a:hover {
-	background-color:#fff;
-	text-decoration:none;
-}
 
 #arrow_prev{
 	position:relative;
@@ -438,6 +434,10 @@ font-weight: bold;
 padding: 2px;
 color:white;
 background:#998675;
+}
+
+#img a:hover {
+	background:white;
 }
 
 #column_two ul {
