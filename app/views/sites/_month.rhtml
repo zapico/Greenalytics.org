@@ -2,17 +2,21 @@
 <div id="months">
 	<div id="arrow_prev">
 	<% if @prevmonth %>	
-	<%= link_to_remote(image_tag("arrow_prev.png", :height => '35', :border => '0'),
+	<p class="arrow"><%= link_to_remote(image_tag("arrow_prev.png", :height => '35', :border => '0'),
 	:url => { :action => "show_month", :id => @id},
 	:loading  => "Element.show('search-indicator'); Element.hide('content_left') ;Element.hide('content_right')",
-    :complete => "Element.hide('search-indicator'); Element.show('content_left'); Element.hide('content_right')",
-	:update => "this_month") %>
+    :complete => "Element.hide('search-indicator'); Element.show('content_left'); Element.show('content_right')",
+	:update => "this_month") %></p>
 	<%end%>
 	</div>	
 	<div id="month_text"><h2><%= monthname(@month) %> <%= @year %></h2></div>
 	<div id="arrow_next">
 		<% if @nextmonth%>
-			 <%= link_to_remote(image_tag("arrow_next.png", :height => '35', :border => '0'), :update => "this_month", :url => { :action => "show_next_month", :id => @id}) %>
+		<p class="arrow"><%= link_to_remote(image_tag("arrow_prev.png", :height => '35', :border => '0'),
+		:url => { :action => "show_next_month", :id => @id},
+		:loading  => "Element.show('search-indicator'); Element.hide('content_left') ;Element.hide('content_right')",
+	    :complete => "Element.hide('search-indicator'); Element.show('content_left'); Element.show('content_right')",
+		:update => "this_month") %></p>
 			<%end%>
 	</div>
 </div>

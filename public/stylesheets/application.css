@@ -257,7 +257,7 @@ text-align: center;
 	height: 60px;
 	text-align: center;
 }
-#months a:hover {
+.arrow a:hover {
 	background-color:#fff;
 	text-decoration:none;
 }
