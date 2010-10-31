@@ -113,7 +113,7 @@ class SitesController < ApplicationController
      format.html # show.html.erb
      format.xml  { render :xml => @countries }
    end
-   Rescue error
+   #Rescue error
    rescue Exception => exc
      render :action => "error"
    end 
