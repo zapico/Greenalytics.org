@@ -1,3 +1,11 @@
+# GREENALYTICS
+# Sites controller
+# Contains the calculation functionality of the site
+# Created by Jorge L. Zapico // jorge@zapi.co // http://jorgezapico.com
+# Created for the Center for Sustainable Communications More info at http://cesc.kth.se
+# 2010
+# Open Source License
+
 class CalculateSite
   require 'rubygems'
   require 'whois'
@@ -15,6 +23,7 @@ class CalculateSite
     self.date_end = date_end
   end
   
+  # MAIN FUNCTION THAT CALCULATES FOR A GIVEN MONTH AND A GIVEN SITE
   def perform
     site = Site.find(site_id)
     # A. LOGIN AND ALL THAT
@@ -65,8 +74,10 @@ class CalculateSite
         # Save the address in the db
         site.address = address
       end
-      # 3. Iterate through the different pages
       
+      # 3. Iterate through the different pages
+      pagecounter = 0
+      averagesize = 0
       allpages.elements.each('entry') do |point|
         # 3.1 Get the URL
         url = point.elements["dxp:dimension name='ga:pagePath'"].attribute("value").value
@@ -74,9 +85,17 @@ class CalculateSite
         visits = point.elements["dxp:metric name='ga:pageviews'"].attribute("value").value
         # 3. Aggregate text
         if visits.to_i > 1 then
-          pagesize = pageSize(address+url)/1024
-          totalvisits += visits.to_i
-          total_size += pagesize*visits.to_i
+            if pagecounter < 20
+              pagesize = pageSize(address+url)/1024
+              # Calculate average size of the pages
+              averagesize += pagesize
+              pagecounter += 1
+            else
+              # After 20 times use the average size to not overload 
+              pagesize = averagesize/20
+            end
+            totalvisits += visits.to_i
+            total_size += pagesize*visits.to_i
         end
        end
        emission.traffic = total_size
@@ -176,12 +195,12 @@ class CalculateSite
     emission.save
   end 
  
+  # GIVES BACK THE PAGE SIZE OF AN URL
   def pageSize (url)
       # Get HTML Size
      total = 0
      begin
      total = open(url).length
-
      hp = Hpricot(open(url))
 
      # Get images size

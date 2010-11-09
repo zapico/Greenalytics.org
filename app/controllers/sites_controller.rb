@@ -1,6 +1,6 @@
 # GREENALYTICS
 # Sites controller
-# Contains the main functionality of the site
+# Contains the functions for showing the information for sites
 # Created by Jorge L. Zapico // jorge@zapi.co // http://jorgezapico.com
 # Created for the Center for Sustainable Communications More info at http://cesc.kth.se
 # 2010
@@ -17,6 +17,7 @@ class SitesController < ApplicationController
  before_filter :authorize_admin, :only => [:allsites]
  
  
+ # Depracated
  # IT SHOWS THE EMISSIONS FOR A SITE FOR A GIVE MONTH PARAMS: ?id=,year=,month=
  def show
    begin
@@ -120,6 +121,7 @@ class SitesController < ApplicationController
    
  end
  
+ # SHOW PREVIOUS MONTH WHEN IN YEAR VIEW
  def show_month
    e = Emission.find(params[:id])
    @id = params[:id]
@@ -133,6 +135,7 @@ class SitesController < ApplicationController
    render :partial => 'month'
  end
  
+ # SHOW NEXT MONTH WHEN IN YEAR VIEW
  def show_next_month
    e = Emission.find(params[:id])
    @id = params[:id]
@@ -145,8 +148,6 @@ class SitesController < ApplicationController
    @id = @thismonth.id
    render :partial => 'month'
  end
- 
- 
  
  # CONNECT WITH GOOGLE ANALYTICS
  def login
@@ -319,6 +320,7 @@ class SitesController < ApplicationController
        end
      end
    end
+  
   # ERROR
   def error
   end
