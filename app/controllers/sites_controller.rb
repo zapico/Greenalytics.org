@@ -14,7 +14,7 @@ class SitesController < ApplicationController
  require 'open-uri'
  require 'gdata'
  before_filter :authorize
- before_filter :authorize_admin, :only => [:allsites]
+ before_filter :authorize_admin, :only => [:allsites, :add_average_size]
  
  
  # Depracated
@@ -290,6 +290,13 @@ class SitesController < ApplicationController
    render :nothing => true
  end
  
+ def add_average_size
+   site = Site.find(params[:id])
+   site.avgsize = params[:size].to_i
+   site.save
+   render :nothing => true
+ end
+   
  
  # TRIGGERS CALCULATION FOR THE CURRENT MONTH
  def calculate_this_month
@@ -324,5 +331,6 @@ class SitesController < ApplicationController
   # ERROR
   def error
   end
+  
 
 end

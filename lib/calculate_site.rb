@@ -94,6 +94,9 @@ class CalculateSite
               # After 20 times use the average size to not overload 
               pagesize = averagesize/20
             end
+            if pagesize == 0 and site.avgsize != nil then
+              pagesize = site.avgsize
+            end
             totalvisits += visits.to_i
             total_size += pagesize*visits.to_i
         end
