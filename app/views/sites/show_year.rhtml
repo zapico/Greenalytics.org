@@ -4,8 +4,9 @@
 		<p><%= link_to @site.address %></p>
 		<h2><%= formatco2(@total_co2) %> (or <%= @grampervisitor.round(2) %> gram per visitor)</h1>
 			<p>Emissions for: <%= @year %></p>
-		<p>The site emissions are equivalent to: <p/><h2><co2><%= @caramount %></co2> km driving a car</h2>
-		<h2>Or <co2><%= @beeramount %></co2> bottles of beer</h2>
+		<h2>The site emissions are equivalent to: <b><%= @caramount %></b> km driving a car.</h2>
+		<h2>Or <b><%= @flightamount %></b> hours traveling in an airplane.</h2>
+
 		<p>Conversions thanks to <a href="http://carbon.to">carbon.to</a></p>
 
 	</div>

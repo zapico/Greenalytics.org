@@ -97,9 +97,9 @@ class SitesController < ApplicationController
    @grafico="http://chart.apis.google.com/chart?chs=250x100&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
 
    # TRANSLATE USING CARBON.TO
-   beer = Net::HTTP.get(URI.parse("http://carbon.to/beers.json?co2="+ (@total_co2/1000).round.to_s))
-   beer = ActiveSupport::JSON.decode(beer)
-   @beeramount = beer["conversion"]["amount"]
+   flight = Net::HTTP.get(URI.parse("http://carbon.to/flight.json?co2="+ (@total_co2/1000).round.to_s))
+   flight = ActiveSupport::JSON.decode(flight)
+   @flightamount = flight["conversion"]["amount"]
    car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total_co2/1000).round.to_s))
    car = ActiveSupport::JSON.decode(car)
    @caramount = car["conversion"]["amount"]
