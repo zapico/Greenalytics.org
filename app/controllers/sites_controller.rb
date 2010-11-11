@@ -327,6 +327,17 @@ class SitesController < ApplicationController
        end
      end
    end
+   
+   def calculate_older_all
+     Site.find(:all).each do |site|
+       date_start = Date.new(2010, 1, 1)
+       date_end =  Date.new(2010, 1, 31)
+       Delayed::Job.enqueue CalculateSite.new(site.id,date_start,date_end)
+       date_start = Date.new(2009, 12, 1)
+       date_end =  Date.new(2009, 12, 31)
+       Delayed::Job.enqueue CalculateSite.new(site.id,date_start,date_end)
+     end
+   end
   
   # ERROR
   def error
