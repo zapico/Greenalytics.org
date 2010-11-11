@@ -126,7 +126,11 @@ class SitesController < ApplicationController
    e = Emission.find(params[:id])
    @id = params[:id]
    @site = Site.find(e.site.id)
-   @year = e.year
+   if e.month == 1
+     @year = e.year -1
+   else
+     @year = e.year
+   end
    @month = e.month.to_i - 1
    @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year.to_s})
    @nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
@@ -140,7 +144,11 @@ class SitesController < ApplicationController
    e = Emission.find(params[:id])
    @id = params[:id]
    @site = Site.find(e.site.id)
-   @year = e.year
+   if e.month == 12
+     @year = e.year +1
+   else
+     @year = e.year
+   end
    @month = e.month.to_i + 1
    @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year.to_s})
    @nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})

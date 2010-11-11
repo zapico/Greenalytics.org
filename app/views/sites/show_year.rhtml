@@ -2,19 +2,22 @@
 	<div id="content_top_left">
 		<h1 class="name"><%= @site.name %></h1>
 		<p><%= link_to @site.address %></p>
-		<h2><%= formatco2(@total_co2) %> (or <%= @grampervisitor.round(2) %> gram per visitor)</h1>
-			<p>Emissions for: <%= @year %></p>
-		<h2>The site emissions are equivalent to: <b><%= @caramount %></b> km driving a car.</h2>
-		<h2>Or <b><%= @flightamount %></b> hours traveling in an airplane.</h2>
-
-		<p>Conversions thanks to <a href="http://carbon.to">carbon.to</a></p>
-
+		<br/>
+		<h2><%= formatco2(@total_co2) %> for the last 12 months</h2>
+		<h2>(<co2small><%= @grampervisitor.round(2) %></co2small> gram per visit for a total of <%= @visitors %> visits.)</h2>
+		<p><a href="/data">How exact is this number?</a></p>
+		<br/>
+		<h2>The equivalent to <co2small><%= @caramount %></co2small> km driving a car.</h2>
+		<% if @flightamount > 0 %>
+		<h2>Or <co2small><%= @flightamount %></co2small> hours traveling in an airplane.</h2>
+		<%end%>
+		
 	</div>
 	<div id="content_top_right">
 		<p><b>Impact Distribution</b></p>
 		<%= image_tag @grafico, :alt => 'foo' %><br>
 		<h2>Server: <%= formatco2(@server_co2) %></h1>
-		<h2>Visitors: <%= formatco2(@users_co2) %></co2> (for <%= @visitors %> a total of visitors)</h1>
+		<h2>Visitors: <%= formatco2(@users_co2) %></h1>
 	</div>
 	
 </div>
