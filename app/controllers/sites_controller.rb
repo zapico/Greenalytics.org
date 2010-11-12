@@ -13,7 +13,7 @@ class SitesController < ApplicationController
  require 'hpricot'
  require 'open-uri'
  require 'gdata'
- before_filter :authorize, :except => [:show]
+ before_filter :authorize, :except => [:show,:show_month,:show_next_month]
  before_filter :authorize_admin, :only => [:allsites, :add_average_size]
  
  
@@ -66,10 +66,10 @@ class SitesController < ApplicationController
      if @visitors.to_i != 0
        @grampervisitor = @total_co2.to_f / @visitors.to_i
      end
-     render 'sites/show_year'
-   end
+   else
    render :nothing => true
-     #Rescue error
+   end
+   #Rescue error
      rescue Exception => exc
        render :action => "error"
      end
