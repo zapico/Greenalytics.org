@@ -325,12 +325,12 @@ class SitesController < ApplicationController
  def makepublic
    site = Site.find(params[:id])
    if site.ispublic == true
-     site.ispublic == false
+     site.ispublic = false
    else
-     site.ispublic == true
+     site.ispublic = true
    end
    site.save
-   render :nothing => true
+   redirect_to :action => "select"
  end
  
  # TRIGGERS CALCULATION FOR THE CURRENT MONTH
