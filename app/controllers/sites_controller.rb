@@ -13,51 +13,66 @@ class SitesController < ApplicationController
  require 'hpricot'
  require 'open-uri'
  require 'gdata'
- before_filter :authorize
+ before_filter :authorize, :except => [:show]
  before_filter :authorize_admin, :only => [:allsites, :add_average_size]
  
  
- # Depracated
- # IT SHOWS THE EMISSIONS FOR A SITE FOR A GIVE MONTH PARAMS: ?id=,year=,month=
+ # PUBLIC FUNCTION FOR SHOWING THE YEAR
  def show
    begin
-   @site = Site.find(params[:id])
-   if params[:year] & params[:month]
-     @emission =  @site.emissions.find(:first, :conditions => { :year => params[:year], :month => params[:month]})
-    else
-      @emission =  @site.emissions.find(:first, :conditions => { :year => DateTime.now.year.to_s, :month => DateTime.now.month.to_s})
-   end
-   
-   # CREATE PIE GRAPHIC
-   @total_co2 = @emission.co2_server + @emission.co2_users
-   per_visitors = @emission.co2_users*100/@total_co2
-   per_server = @emission.co2_server*100/@total_co2
-   @grafico="http://chart.apis.google.com/chart?chs=250x100&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
+     @site = Site.find(params[:id])
+     if @site.ispublic then
+     if params[:year]
+       @emissions =  @site.emissions.find(:all, :conditions => { :year => params[:year]})
+       @year = params[:year]
+      else
+         @emissions =  @site.emissions.find(:all, :conditions => { :year => DateTime.now.year.to_s})
+         @year = DateTime.now.year.to_s
+     end
+     # INITIALIZE
+     @total_co2 = 0
+     @server_co2 = 0
+     @users_co2 = 0
+     @visitors = 0
 
-   # TRANSLATE USING CARBON.TO
-   light = Net::HTTP.get(URI.parse("http://carbon.to/lightbulb.json?co2="+ (@total_co2/1000).round.to_s))
-   light = ActiveSupport::JSON.decode(light)
-   @lightamount = light["conversion"]["amount"]
-   car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total_co2/1000).round.to_s))
-   car = ActiveSupport::JSON.decode(car)
-   @caramount = car["conversion"]["amount"]
+     @month = DateTime.now.month
+     @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year})
+     @nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
+     @prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
+     @id = @thismonth.id
 
-   
-   # CALCULATE GRAM PER VISITOR
-   @grampervisitor = 0.00
-   if @emission.visitors.to_i != 0
-     @grampervisitor = @total_co2.to_f / @emission.visitors.to_i
+     # AGGREGATE
+     @emissions.each do |e| 
+       @total_co2 += e.co2_server + e.co2_users
+       @server_co2 += e.co2_server
+       @users_co2 += e.co2_users
+       @visitors += e.visitors.to_i
+     end   
+     # CREATE PIE GRAPHIC
+     per_visitors =  @users_co2/@total_co2
+     per_server = @server_co2/@total_co2
+     @grafico="http://chart.apis.google.com/chart?chs=250x100&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
+
+     # TRANSLATE USING CARBON.TO
+     flight = Net::HTTP.get(URI.parse("http://carbon.to/flight.json?co2="+ (@total_co2/1000).round.to_s))
+     flight = ActiveSupport::JSON.decode(flight)
+     @flightamount = flight["conversion"]["amount"]
+     car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total_co2/1000).round.to_s))
+     car = ActiveSupport::JSON.decode(car)
+     @caramount = car["conversion"]["amount"]
+
+     # CALCULATE GRAM PER VISITOR
+     @grampervisitor = 0.00
+     if @visitors.to_i != 0
+       @grampervisitor = @total_co2.to_f / @visitors.to_i
+     end
+     render 'sites/show_year'
    end
-   
-   respond_to do |format|
-     format.html # show.html.erb
-     format.xml  { render :xml => @countries }
-   end
-   
-   # Rescue error
-   rescue Exception => exc
-     render :action => "error"
-   end
+   render :nothing => true
+     #Rescue error
+     rescue Exception => exc
+       render :action => "error"
+     end
      
  end
  
@@ -298,13 +313,25 @@ class SitesController < ApplicationController
    render :nothing => true
  end
  
+ # MANUAL WAY OF ADDING AVERAGE SIZE IN CASE CALCULATIONS FAIL
  def add_average_size
    site = Site.find(params[:id])
    site.avgsize = params[:size].to_i
    site.save
    render :nothing => true
  end
-   
+  
+ # IT CHANGES THE STATUS BETWEEN PUBLIC AND NOT PUBLIC 
+ def makepublic
+   site = Site.find(params[:id])
+   if site.ispublic == true
+     site.ispublic == false
+   else
+     site.ispublic == true
+   end
+   site.save
+   render :nothing => true
+ end
  
  # TRIGGERS CALCULATION FOR THE CURRENT MONTH
  def calculate_this_month
