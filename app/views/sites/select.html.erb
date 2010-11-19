@@ -14,8 +14,13 @@
 <br/>
 <h2>B. Remove sites</h2>
 <% current_user.sites.each do |si| %>
-	<p><%= si.name %>
+	<p><%= si.name %><br/>
 	<%= link_to "Remove this site", :controller => "sites", :action => "destroy", :id => si.id, :confirm => "Are you sure?" %></p>
+	<% if si.ispublic %>
+		<%= link_to "Make private", :controller => "sites", :action => "makepublic", :id => si.id, :confirm => "Are you sure?" %></p>
+	<% else %>
+		<%= link_to "Make public", :controller => "sites", :action => "makepublic", :id => si.id, :confirm => "Are you sure?" %></p>
+	<% end %>
 <% end %>
 </div>
 <div id="content_right_sites">

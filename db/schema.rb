@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101110213401) do
+ActiveRecord::Schema.define(:version => 20101112153531) do
 
   create_table "countries", :force => true do |t|
     t.string   "name",       :limit => 40
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20101110213401) do
     t.integer  "user_id"
     t.string   "address"
     t.integer  "avgsize"
+    t.boolean  "public"
   end
 
   create_table "users", :force => true do |t|
