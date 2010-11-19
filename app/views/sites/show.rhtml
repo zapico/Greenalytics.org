@@ -1,7 +1,7 @@
 <div id="content_top">
 	<div id="content_top_left">
 		<h1 class="name"><%= @site.name %></h1>
-		<p><%= link_to @site.address %></p>
+		<p><%= link_to @site.address :url => @site.address %></p>
 		<br/>
 		<h2><%= formatco2(@total_co2) %> for the last 12 months</h2>
 		<h2>(or <co2small><%= @grampervisitor.round(2) %></co2small> gram per visit for a total of <%= @visitors %> visits.)</h2>
