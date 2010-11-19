@@ -108,7 +108,7 @@ class CalculateSite
       address = site.address.to_s.split("//")[1]
       country = ""
       #  1.1 Grab the info from API
-      uri = "http://ipinfodb.com/ip_query2.php?ip=#{address}"
+      uri = "http://api.ipinfodb.com/v2/ip_query_country.php?key=f03ff18218a050bb05f6b501ce49c10a4f6f063eef9151109de17e299b3b0835&ip=#{address}"
       #  1.2 Get the name using Hpricot
       doc = Hpricot(open(uri))
       (doc/'location').each do |el|
