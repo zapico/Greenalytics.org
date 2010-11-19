@@ -18,6 +18,7 @@
 		<%else%>
 		It does not have google analytics connected
 	<%end%>
+	<%= link_to "Delete", :controller => "users", :action => "delete", :id => us.id %>
 	</p>
 <%end%>
 </div>

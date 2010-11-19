@@ -9,11 +9,17 @@
 class UsersController < ApplicationController
   require 'gdata'
   before_filter :authorize, :only => [:show, :downgrade]
-  #before_filter :authorize_admin, :only => [:allusers, :add_average_size]
+  before_filter :authorize_admin, :only => [:delete]
 
   # Create new user
   def new
     @user = User.new
+  end
+  
+  def delete
+    @user = User.new(params[:user])
+    @user.destroy
+    redirect_back_or_default('/sites/allsites')
   end
   
   def create
