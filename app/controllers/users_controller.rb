@@ -66,7 +66,7 @@ class UsersController < ApplicationController
   def connect
       scope = 'https://www.google.com/analytics/feeds/'
       #next_url = 'http://localhost:3000/welcome'
-      next_url = 'http://greenalytics.org/welcome'
+      next_url = 'http://greenalytics.heroku.com/welcome'
       secure = false  # set secure = true for signed AuthSub requests
       sess = true
       @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)
