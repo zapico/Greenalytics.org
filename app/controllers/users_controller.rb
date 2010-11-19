@@ -18,9 +18,9 @@ class UsersController < ApplicationController
   def create
     logout_keeping_session!
     if params[:user]["invitation"] == "greenmywebsite"
-    @user = User.new(params[:user])
-    success = @user && @user.save
-    if success && @user.errors.empty?
+      @user = User.new(params[:user])
+      success = @user && @user.save
+      if success && @user.errors.empty?
       # Protects against session fixation attacks, causes request forgery
       # protection if visitor resubmits an earlier form using back
       # button. Uncomment if you understand the tradeoffs.
@@ -28,13 +28,13 @@ class UsersController < ApplicationController
       self.current_user = @user # !! now logged in
       redirect_back_or_default('/connect')
       flash[:notice] = "Thanks for signing up!  We're sending you an email with your activation code."
+      else
+        flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+        redirect_back_or_default('/users/new')
+      end
     else
-      flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
-      render :action => 'new'
-    end
-    else
-      flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
-      render :action => 'new'
+      flash[:error]  = "You need an invitation, please contact us!"
+      redirect_back_or_default('/users/new')
     end
   end
   
