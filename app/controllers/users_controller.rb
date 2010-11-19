@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   
   def create
     logout_keeping_session!
-    if params[:user].invitation = "greenmywebsite"
+    if params[:user]["invitation"] = "greenmywebsite"
     @user = User.new(params[:user])
     success = @user && @user.save
     if success && @user.errors.empty?
