@@ -9,6 +9,7 @@
 class UsersController < ApplicationController
   require 'gdata'
   before_filter :authorize, :only => [:show, :downgrade]
+  #before_filter :authorize_admin, :only => [:allusers, :add_average_size]
 
   # Create new user
   def new
@@ -83,9 +84,8 @@ class UsersController < ApplicationController
     # REMOVE GOOGLE ANALYTICS
     def downgrade
       current_user.gtoken = nil
-      puts current_user.gtoken
       current_user.save
-      redirect_to :action => "show"
+      render :nothing => true
     end
 
 
