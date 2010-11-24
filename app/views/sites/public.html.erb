@@ -1,0 +1,31 @@
+<div id="content_left_big">
+<h1 class="welcome">Featured Sites</h1>
+<p>See the carbon footprint of selected websites:</p>
+	<div style="text-align:center;">
+	
+	<br/>
+	<p><img src="/images/tu.png" alt="tu"/></p>
+	<h2><%= link_to "TU.se Tidningsutgivarna", :controller => "sites", :action => "show", :id => 19 %></h2>
+	<br/>
+	<p><img src="/images/cesc.png" alt="cesc"/></p>
+	<h2><%= link_to "CESC.KTH.se: Centre for Sustainable Communications  ", :controller => "sites", :action => "show", :id => 13 %></h2>
+	<br/>
+	<p><img src="/images/carbon.png" alt="carbon.to"/></p>
+	<h2><%= link_to "Carbon.to", :controller => "sites", :action => "show", :id => 14 %></h2>
+	</div>
+</div>
+<div id="content_right_sites">
+
+	<h2>Greenalytics have accounted last year a total of</h2>
+	<h2><%= formatco2(@total) %><h2>
+	<h2>The equivalent to <co2><%= @caramount %></co2> km traveling by car.<h2>
+	<h2>of which <%= formatco2(@month) %> were emitted this month.</h2>
+	<br/>
+	<h2>All public sites:</h2>
+	<br/>
+	<% @sites.each do |si| %>
+		<p><%= link_to si.name, :controller => "sites", :action => "show", :id => si.id %></p>
+	<% end %>
+	
+	
+</div>
