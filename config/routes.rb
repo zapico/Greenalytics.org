@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.donate '/donate', :controller => 'users', :action => 'donate'
   map.my_sites '/my_sites', :controller => 'sites', :action => 'my_sites'
   map.downgrade '/downgrade', :controller => 'users', :action => 'downgrade'
+  map.downgrade '/sites', :controller => 'sites', :action => 'public'
   map.resources :users
  
   map.resource :session

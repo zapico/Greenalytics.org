@@ -13,7 +13,7 @@ class SitesController < ApplicationController
  require 'hpricot'
  require 'open-uri'
  require 'gdata'
- before_filter :authorize, :except => [:show,:show_month,:show_next_month]
+ before_filter :authorize, :except => [:show,:show_month,:show_next_month, :public]
  before_filter :authorize_admin, :only => [:allsites, :add_average_size]
  
  
@@ -74,6 +74,29 @@ class SitesController < ApplicationController
        render :action => "error"
      end
      
+ end
+ 
+ # SHOW ALL THE PUBLIC SITES
+ def public
+   @month = 0
+   @total = 0
+   @sites = Site.find(:all, :conditions => ["public = ?", true])
+   @sites.each do |si|
+     si.emissions.each do |em|
+       if em.month == DateTime.now.month
+         @month += em.co2_users.to_i  + em.co2_server.to_i
+       end
+      @total += em.co2_users.to_i + em.co2_server.to_i
+    end
+   end
+   begin
+     car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total/1000).round.to_s))
+     car = ActiveSupport::JSON.decode(car)
+     @caramount = car["conversion"]["amount"]
+    rescue
+     @caramount = 0 
+   end
+   
  end
  
  # SHOW THE AGGREGATES FOR A YEAR
@@ -228,7 +251,7 @@ class SitesController < ApplicationController
    @users = User.find(:all)
  end 
  
- # SHOW ALL SITES
+ # SHOW ALL SITES FOR THE LOGGED USER
  def my_sites
    user = current_user
    @month = 0
