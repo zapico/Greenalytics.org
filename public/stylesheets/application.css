@@ -317,6 +317,25 @@ text-align: center;
 	padding-top:15px;
 	margin-top:125px;
 }
+#content_left_big {
+	width:480px;
+	float:left;
+    background:#fff;
+    padding-left: 35px;
+	margin-bottom: 30px;
+	padding-top:15px;
+}
+	
+#content_right_small {
+	width:220px;
+	padding-right: 0px;
+	float:right;
+	background:#fff;
+	text-align: left;
+	margin-bottom: 30px;
+	padding-top:15px;
+
+}
 #column_one {
 	position: relative;
 	width:260px;

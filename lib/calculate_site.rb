@@ -126,7 +126,7 @@ class CalculateSite
       emission.server_location = country
       # 3. Calculate the CO2
       # 3.1 Set the factor kWh per GB
-      emission.factor = 8
+      emission.factor = 3.5
       # 3.2 Calculate CO2
       co2_server = 0
       co2_server = total_size * emission.factor * serverfactorgr # kB * (kWh/Gb) * kg 

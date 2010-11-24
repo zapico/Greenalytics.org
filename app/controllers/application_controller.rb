@@ -3,7 +3,7 @@
 # Created by Jorge L. Zapico // jorge@zapi.co // http://jorgezapico.com
 # Created for the Center for Sustainable Communications More info at http://cesc.kth.se
 # 2010
-# Open Source License
+# MIT License. Open Source
 
 
 # Filters added to this controller apply to all controllers in the application.
