@@ -81,7 +81,7 @@ class SitesController < ApplicationController
    @month = 0
    @total = 0
    @sites = Site.find(:all, :conditions => ["ispublic = true"])
-   Site.all do |si|
+   Site.find(:all).each do |si|
      si.emissions.each do |em|
        if em.month == DateTime.now.month
          @month += em.co2_users.to_i  + em.co2_server.to_i
