@@ -25,7 +25,7 @@
 :style => 'display:none') %>
 <% if @thismonth %>
 <div id="content_left">
-	<h1 class="name"><b>Total impact</b></h1>
+	<h1 class="name"><b>Total impact for <%= monthname(@month) %> <%= @year %></b></h1>
 	<h3><%= formatco2(@thismonth.co2_server + @thismonth.co2_users)%></h3>
 	<br/>
 	<h1 class="orange"><b>a. Server and infrastructure</b></h1>
