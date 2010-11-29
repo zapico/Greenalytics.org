@@ -239,7 +239,7 @@ text-align: center;
 	position:relative;
 	float: left;
 	left:0px;
-	width:825px;
+	width:835px;
 	height: auto;
 	padding-bottom: 10px;
 	top: 8px;
@@ -353,7 +353,7 @@ text-align: center;
 	margin-top: 8px;
 	float:left;
     background:#fff;
-    padding-left: 40px;
+    padding-left: 50px;
 	margin-bottom: 30px;
 	text-align:center;
 }
@@ -361,7 +361,7 @@ text-align: center;
 #column_three {
 	position: relative;
 	height: auto;
-	width:230px;
+	width:200px;
 	margin-top: 8px;
 	float:right;
 	right: 0px;
