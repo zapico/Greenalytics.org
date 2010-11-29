@@ -239,7 +239,7 @@ text-align: center;
 	position:relative;
 	float: left;
 	left:0px;
-	width:810px;
+	width:825px;
 	height: auto;
 	padding-bottom: 10px;
 	top: 8px;
@@ -257,7 +257,7 @@ text-align: center;
 }
 #months{
 	position:relative;
-	width:800px;
+	width:820px;
 	margin-top: 20px;
 	height: 60px;
 	text-align: center;
@@ -315,7 +315,7 @@ text-align: center;
 	text-align: left;
 	margin-bottom: 30px;
 	padding-top:15px;
-	margin-top:115px;
+	margin-top:110px;
 }
 #content_left_big {
 	width:480px;
