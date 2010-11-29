@@ -475,6 +475,10 @@ background:#998675;
  padding-bottom: 12px;
 }
 
+#column_three ul li {
+	padding-top:8px;
+}
+
 /* Main menu */
 
 #header #menu-wrapper {
