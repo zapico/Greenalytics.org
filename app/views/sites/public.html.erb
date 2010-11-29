@@ -20,11 +20,12 @@
 	</div>
 </div>
 <div id="content_right_sites">
-
+	<br/><br/>
 	<h2>Public sites:</h2>
 	<% @sites.each do |si| %>
 		<p><%= link_to si.name, :controller => "sites", :action => "show", :id => si.id %></p>
 	<% end %>
+	<br/>
 	<h2>Other sites using Greenalytics:</h2>
 		<p>Sourcemap.org</p>
 		<p>Tricorona.com</p>
