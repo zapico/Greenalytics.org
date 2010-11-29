@@ -79,7 +79,7 @@ class SitesController < ApplicationController
  # SHOW ALL THE PUBLIC SITES
  def public
    # Cache for 12 hours
-   response.headers['Cache-Control'] = 'public, max-age=43200'
+   
    
    @month = 0
    @total = 0
