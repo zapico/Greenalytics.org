@@ -50,12 +50,32 @@ class CalculateSite
       
       # B. CALCULATE TOTAL TRAFFIC
       # 1. Get the pageview of all apges
-      allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&sort=Ascending%3A%20ga%3Apageviews&start-date='+day_start+'&end-date='+day_end).to_xml
+      allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&sort=Ascending:ga:pageviews&start-date='+day_start+'&end-date='+day_end).to_xml
+
       # 2. Initialiate variables
       total_size = 0
       totalvisits = 0
       page_text = ""
       if site.address then
+        address = site.address
+      else
+        # Create a client and login using session   
+        client = GData::Client::GBase.new
+        client.authsub_token = site.user.gtoken
+        site = Site.find(site_id)
+        today= DateTime.now-1.days
+        amonthago = today-30.days
+        today = today.strftime("%Y-%m-%d")
+        amonthago = amonthago.strftime("%Y-%m-%d")
+        # Get address (Not as easy as it should be!)
+        address = client.get('https://www.google.com/analytics/feeds/data?ids='+site.gid+'&dimensions=ga:hostname&metrics=ga:pageviews&start-date='+amonthago+'&end-date='+today+'&sort=-ga:pageviews&aggregates=ga:hostname').to_xml
+        address = address.to_s.split("dxp:dimension name='ga:hostname' value='")[1]
+        address = address.to_s.split("'")[0]
+        address = "http://"+address.to_s   
+        # Save the address in the db
+        site.address = address
+      end
+      
       # 3. Iterate through the different pages
       pagecounter = 0
       averagesize = 0
@@ -64,6 +84,8 @@ class CalculateSite
         url = point.elements["dxp:dimension name='ga:pagePath'"].attribute("value").value
         # 2. Get the number of visitors
         visits = point.elements["dxp:metric name='ga:pageviews'"].attribute("value").value
+        puts url
+        puts visits
         # 3. Aggregate text
         if visits.to_i > 1 then
             if pagecounter < 20
@@ -81,6 +103,8 @@ class CalculateSite
             total_size += pagesize*visits.to_i
         end
         totalvisits += visits.to_i
+        puts "total"
+        puts totalvisits
        end
        emission.traffic = total_size
 
@@ -92,9 +116,11 @@ class CalculateSite
       uri = "http://api.ipinfodb.com/v2/ip_query_country.php?key=f03ff18218a050bb05f6b501ce49c10a4f6f063eef9151109de17e299b3b0835&ip=#{address}"
       #  1.2 Get the name using Hpricot
       doc = Hpricot(open(uri))
+      puts doc.to_s
       (doc/'response').each do |el|
         country = (el/'countryname').inner_html.to_s
       end
+      puts country
       # 2. Get the emission factor for that country
       if Country.find(:first,:conditions => [ "name = ?", country ]) then
           serverfactor=Country.find(:first,:conditions => [ "name = ?", country ]).factor
