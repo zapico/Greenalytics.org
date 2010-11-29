@@ -50,7 +50,7 @@ class CalculateSite
       
       # B. CALCULATE TOTAL TRAFFIC
       # 1. Get the pageview of all apges
-      allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&sort=Ascending:ga:pageviews&start-date='+day_start+'&end-date='+day_end).to_xml
+      allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&sort=-ga:pageviews&start-date='+day_start+'&end-date='+day_end).to_xml
 
       # 2. Initialiate variables
       total_size = 0
