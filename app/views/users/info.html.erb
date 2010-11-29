@@ -12,14 +12,11 @@
 
 <div id="column_two">
 <h1>Featured site</h1>
-<p><img src="/images/kth.png" width="225" alt="kth"/></p>
 <h2>KTH.se The Royal Institute of Technology</p>
 <br/>
 <p><%= formatco2(@total_co2) %> for the last 12 months</p>
 <p>This is equivalent to <co2small><%= @caramount %></co2small> km driving a car.</p>
 <%= image_tag @grafico, :alt => 'foo' %><br>
-<p>Server: <%= formatco2(@server_co2) %></p>
-<p>Visitors: <%= formatco2(@users_co2) %></p>
 <br/>
 <h2><%= link_to "More details", :controller => "sites", :action => "show", :id => 32 %></h2>
 <br/>

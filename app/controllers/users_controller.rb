@@ -79,12 +79,6 @@ class UsersController < ApplicationController
        car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total_co2/1000).round.to_s))
        car = ActiveSupport::JSON.decode(car)
        @caramount = car["conversion"]["amount"]
-
-       # CALCULATE GRAM PER VISITOR
-       @grampervisitor = 0.00
-       if @visitors.to_i != 0
-         @grampervisitor = @total_co2.to_f / @visitors.to_i
-       end
     end
   end
   def about
