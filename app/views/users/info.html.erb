@@ -2,22 +2,20 @@
 <h1 class="welcome">Unveiling the carbon footprint of the web</h1>
 <img src="/images/home.png" alt="co2">
 
-	<h3>Websites have an impact on the environment. This impact is mostly invisible for the users and web developers. Greenalytics tries to make it visible. Using Google Analytics data it estimates the carbon footprint of web, including server, infrastructure and final user.</h3>
+	<h3>Websites have an impact on the environment. This impact is mostly invisible for the users and web developers.<br/> Greenalytics tries to make it visible.<br/> Using Google Analytics data it estimates the carbon footprint of web, including server, infrastructure and final user.</h3>
 
 
 </div>
 
 <div id="column_two">
-<h1>Featured site</h1>
-<h2>KTH The Royal Institute of Technology</p>
+<h1>Featured site: www.kth.se</h1>
 <br/>
-<p><%= formatco2(@total_co2) %> for the last 12 months</p>
-<p>This is equivalent to <co2small><%= @caramount %></co2small> km driving a car.</p>
+<p>This site emitted <%= formatco2(@total_co2) %> the last 12 months</p>
+<p><a href="/data">How do we calculate?</a></p>
 <%= image_tag @grafico, :alt => 'foo' %><br>
 <br/>
 <h2><%= link_to "More details", :controller => "sites", :action => "show", :id => 32 %></h2>
 <br/>
-<p>Greenalytics is an application developed by the <a href="http://sustainablecommunications.org" target="_blank">Centre for Sustainable Communications</a> at KTH Stockholm.</p>
 <p>Greenalytics is currently a by invitation-only beta. If you want your site to be part of it contact us at:</p>
 <p><a href="mailto:info@greenalytics.org">Info at greenalytics dot org</a></p>
 </div>
