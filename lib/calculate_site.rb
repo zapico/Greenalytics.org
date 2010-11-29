@@ -83,6 +83,7 @@ class CalculateSite
         url = point.elements["dxp:dimension name='ga:pagePath'"].attribute("value").value
         # 2. Get the number of visitors
         visits = point.elements["dxp:metric name='ga:pageviews'"].attribute("value").value
+        puts url
         puts visits
         # 3. Aggregate text
         if visits.to_i > 1 then
@@ -101,6 +102,7 @@ class CalculateSite
             total_size += pagesize*visits.to_i
         end
         totalvisits += visits.to_i
+        puts "total"
         puts totalvisits
        end
        emission.traffic = total_size
