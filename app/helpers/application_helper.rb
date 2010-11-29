@@ -14,7 +14,7 @@ module ApplicationHelper
        if co2 > 1000  
           return "<co2> " + ((co2/1000).round(1)).to_s + "</co2> kg CO<sub>2</sub>"  
        else 
-         return "<co2> " + co2.to_s + "</co2> grams CO<sub>2</sub>" 
+         return "<co2> " + co2.round.to_s + "</co2> grams CO<sub>2</sub>" 
        end
  end
  
