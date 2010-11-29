@@ -52,6 +52,42 @@ class UsersController < ApplicationController
   
   # STATIC PAGES (INFO, ABOUT, EXAMPLE, DATA)
   def info
+    begin
+       @site = Site.find(32)
+       @emissions =  @site.emissions.find(:all, :conditions => { :year => DateTime.now.year.to_s})
+       @year = DateTime.now.year.to_s
+      
+       @total_co2 = 0
+       @server_co2 = 0
+       @users_co2 = 0
+       @visitors = 0
+
+       # AGGREGATE
+       @emissions.each do |e| 
+         @total_co2 += e.co2_server + e.co2_users
+         @server_co2 += e.co2_server
+         @users_co2 += e.co2_users
+         @visitors += e.visitors.to_i
+       end   
+       # CREATE PIE GRAPHIC
+       per_visitors =  @users_co2/@total_co2
+       per_server = @server_co2/@total_co2
+       @grafico="http://chart.apis.google.com/chart?chs=200x80&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
+
+       # TRANSLATE USING CARBON.TO
+       flight = Net::HTTP.get(URI.parse("http://carbon.to/flight.json?co2="+ (@total_co2/1000).round.to_s))
+       flight = ActiveSupport::JSON.decode(flight)
+       @flightamount = flight["conversion"]["amount"]
+       car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total_co2/1000).round.to_s))
+       car = ActiveSupport::JSON.decode(car)
+       @caramount = car["conversion"]["amount"]
+
+       # CALCULATE GRAM PER VISITOR
+       @grampervisitor = 0.00
+       if @visitors.to_i != 0
+         @grampervisitor = @total_co2.to_f / @visitors.to_i
+       end
+    end
   end
   def about
   end
