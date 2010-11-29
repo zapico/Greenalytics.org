@@ -13,16 +13,12 @@
 <div id="column_two">
 <h1>Featured site</h1>
 <p><img src="/images/kth.png" width="225" alt="kth"/></p>
-<h2>KTH.se The Royal Institute of Technology</h2>
+<h2>KTH.se The Royal Institute of Technology</p>
 <h2><%= formatco2(@total_co2) %> for the last 12 months</h2>
-<h2>(or <co2small><%= @grampervisitor.round(2) %></co2small> gram per visit for a total of <%= @visitors %> visits.)</h2>
-<h2>This is equivalent to <co2small><%= @caramount %></co2small> km driving a car.</h2>
-<% if @flightamount > 0 %>
-<h2>Or <co2small><%= @flightamount %></co2small> hours traveling in an airplane.</h2>
-<%end%>
+<p>This is equivalent to <co2small><%= @caramount %></co2small> km driving a car.</p>
 <%= image_tag @grafico, :alt => 'foo' %><br>
-<h2>Server: <%= formatco2(@server_co2) %></h1>
-<h2>Visitors: <%= formatco2(@users_co2) %></h1>
+<p>Server: <%= formatco2(@server_co2) %></p>
+<p>Visitors: <%= formatco2(@users_co2) %></p>
 <h2><%= link_to "Details", :controller => "sites", :action => "show", :id => 32 %></h2>
 <br/>
 </div>

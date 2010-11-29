@@ -21,14 +21,18 @@
 </div>
 <div id="content_right_sites">
 
-	<h2>Greenalytics have accounted last year a total of</h2>
-	<h2><%= formatco2(@total) %><h2>
-	<h2>The equivalent to <co2small><%= @caramount %></co2small> km traveling by car.<h2>
-	<h2>of which <%= formatco2(@month) %> were emitted this month.</h2>
-	<br/><br/>
-	<h2>All public sites:</h2>
+	<h2>Public sites:</h2>
 	<% @sites.each do |si| %>
 		<p><%= link_to si.name, :controller => "sites", :action => "show", :id => si.id %></p>
+	<% end %>
+	<h2>Other sites using Greenalytics:</h2>
+	<% @sites.each do |si| %>
+		<p>Sourcemap.org</p>
+		<p>Tricorona.com</p>
+		<p>Headshift.com</p>
+		<p>Baciatidalsole.it</p>
+		<p>Ruralcommunities.gov.uk</p>
+		<p>Enter.it</p>
 	<% end %>
 	
 	
