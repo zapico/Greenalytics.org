@@ -2,7 +2,12 @@
 <h1 class="welcome">Featured Sites</h1>
 <p>See the carbon footprint of selected websites:</p>
 	<div style="text-align:center;">
-	
+	<br/>
+	<p><img src="/images/kth.png" alt="kth"/></p>
+	<h2><%= link_to "KTH.se The Royal Institute of Technology", :controller => "sites", :action => "show", :id => 32 %></h2>
+	<br/>
+	<p><img src="/images/mp.png" alt="mp"/></p>
+	<h2><%= link_to "MP.se Milj&ouml; Partiet", :controller => "sites", :action => "show", :id => 39 %></h2>
 	<br/>
 	<p><img src="/images/tu.png" alt="tu"/></p>
 	<h2><%= link_to "TU.se Tidningsutgivarna", :controller => "sites", :action => "show", :id => 19 %></h2>
@@ -15,16 +20,18 @@
 	</div>
 </div>
 <div id="content_right_sites">
-
-	<h2>Greenalytics have accounted last year a total of</h2>
-	<h2><%= formatco2(@total) %><h2>
-	<h2>The equivalent to <co2small><%= @caramount %></co2small> km traveling by car.<h2>
-	<h2>of which <%= formatco2(@month) %> were emitted this month.</h2>
 	<br/><br/>
-	<h2>All public sites:</h2>
+	<h2>Public sites:</h2>
 	<% @sites.each do |si| %>
 		<p><%= link_to si.name, :controller => "sites", :action => "show", :id => si.id %></p>
 	<% end %>
-	
+	<br/>
+	<h2>Other sites using Greenalytics:</h2>
+		<p>Sourcemap.org</p>
+		<p>Tricorona.com</p>
+		<p>Headshift.com</p>
+		<p>Baciatidalsole.it</p>
+		<p>Ruralcommunities.gov.uk</p>
+		<p>Enter.it</p>
 	
 </div>

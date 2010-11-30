@@ -49,7 +49,7 @@ h1 {
 	padding: 0;
 }
 h1.welcome{
-	font-size: 2.6em;
+	font-size: 2.2em;
 	margin:0;
 }
 h1.big{
@@ -239,7 +239,7 @@ text-align: center;
 	position:relative;
 	float: left;
 	left:0px;
-	width:810px;
+	width:850px;
 	height: auto;
 	padding-bottom: 10px;
 	top: 8px;
@@ -257,7 +257,7 @@ text-align: center;
 }
 #months{
 	position:relative;
-	width:800px;
+	width:820px;
 	margin-top: 20px;
 	height: 60px;
 	text-align: center;
@@ -315,7 +315,7 @@ text-align: center;
 	text-align: left;
 	margin-bottom: 30px;
 	padding-top:15px;
-	margin-top:125px;
+	margin-top:110px;
 }
 #content_left_big {
 	width:480px;
@@ -353,14 +353,15 @@ text-align: center;
 	margin-top: 8px;
 	float:left;
     background:#fff;
-    padding-left: 40px;
+    padding-left: 50px;
 	margin-bottom: 30px;
+	text-align:center;
 }
 
 #column_three {
 	position: relative;
 	height: auto;
-	width:230px;
+	width:200px;
 	margin-top: 8px;
 	float:right;
 	right: 0px;
@@ -405,6 +406,9 @@ text-align: center;
   list-style: none;
   float: left;
   padding-right: 20px;
+}
+.column_centered {
+	text-align:center;
 }
 
 /* Divs for emissions */
@@ -472,6 +476,10 @@ background:#998675;
 #column_two li {
  right:0px;
  padding-bottom: 12px;
+}
+
+#column_three ul li {
+	padding-top:8px;
 }
 
 /* Main menu */

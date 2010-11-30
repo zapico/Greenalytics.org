@@ -50,7 +50,8 @@ class CalculateSite
       
       # B. CALCULATE TOTAL TRAFFIC
       # 1. Get the pageview of all apges
-      allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&start-date='+day_start+'&end-date='+day_end).to_xml
+      allpages = client.get('https://www.google.com/analytics/feeds/data?ids='+profile_id+'&dimensions=ga:pagePath&metrics=ga:pageviews&sort=-ga:pageviews&start-date='+day_start+'&end-date='+day_end).to_xml
+
       # 2. Initialiate variables
       total_size = 0
       totalvisits = 0
@@ -83,6 +84,8 @@ class CalculateSite
         url = point.elements["dxp:dimension name='ga:pagePath'"].attribute("value").value
         # 2. Get the number of visitors
         visits = point.elements["dxp:metric name='ga:pageviews'"].attribute("value").value
+        puts url
+        puts visits
         # 3. Aggregate text
         if visits.to_i > 1 then
             if pagecounter < 20
@@ -97,9 +100,11 @@ class CalculateSite
             if pagesize == 0 and site.avgsize != nil then
               pagesize = site.avgsize
             end
-            totalvisits += visits.to_i
             total_size += pagesize*visits.to_i
         end
+        totalvisits += visits.to_i
+        puts "total"
+        puts totalvisits
        end
        emission.traffic = total_size
 
@@ -193,8 +198,6 @@ class CalculateSite
     emission.text_users = visitors_text     
     emission.visitors = totalvisits.to_i
     emission.time = time.to_d
-    puts emission.time
-    puts time
     
     # AND SAVE
     emission.save

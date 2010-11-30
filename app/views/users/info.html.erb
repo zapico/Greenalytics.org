@@ -1,14 +1,22 @@
 <div id="column_one">
 <h1 class="welcome">Unveiling the carbon footprint of the web</h1>
 <img src="/images/home.png" alt="co2">
+<br/><br/>
+<h3>Websites have an impact on the environment. This impact is mostly invisible for the users and web developers.</h3><h3> Greenalytics tries to make it visible. Using Google Analytics data it estimates the carbon footprint of web, including server, infrastructure and final user.</h3>
 </div>
 
 <div id="column_two">
-	<h3>Websites have an impact on the environment. This impact is mostly invisible for the users and web developers. Greenalytics tries to make it visible. Using Google Analytics data it estimates the carbon footprint of web, including server, infrastructure and final user.</h3>
-	<p>Greenalytics is an application developed by the <a href="http://sustainablecommunications.org" target="_blank">Centre for Sustainable Communications</a> at KTH Stockholm.</p>
-	<p>Greenalytics is currently a by invitation-only beta. If you want more information contact us at:</p>
 
-	<p><a href="mailto:info@greenalytics.org">Info at greenalytics dot org</a></p>
+<h1>Featured site<br/>www.kth.se</h1>
+
+<p>This site emitted <%= formatco2(@total_co2) %> the last 12 months</p>
+<p><a href="/data">How do we calculate?</a></p>
+<%= image_tag @grafico, :alt => 'foo' %><br>
+<br/>
+<h2><%= link_to "More details", :controller => "sites", :action => "show", :id => 32 %></h2>
+<br/>
+<p>Greenalytics is currently a by invitation-only beta. If you want your site to be part of it contact us at:</p>
+<p><a href="mailto:info@greenalytics.org">Info at greenalytics dot org</a></p>
 </div>
 
 
@@ -20,8 +28,10 @@
 
 
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/greenalytics.json?callback=twitterCallback2&amp;count=8"></script>
-
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/greenalytics.json?callback=twitterCallback2&amp;count=5"></script>
+</div>
+<div class="column_centered">
+	<p>For more news follow our <a href="http://twitter.com/greenalytics" target="_blank">Twitter</a> account!</p>
 </div>
 </div>
 
