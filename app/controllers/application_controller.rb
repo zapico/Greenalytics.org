@@ -19,14 +19,14 @@ class ApplicationController < ActionController::Base
   def authorize  
      unless current_user
           flash[:notice] = "Please log in"
-          redirect_to(:controller => "users", :action => "login")
+          redirect_to(:controller => "sessions", :action => "new")
      end
   end
   
   def authorize_admin
      unless current_user.login == "zapico"
           flash[:notice] = "Please log in"
-          redirect_to(:controller => "users", :action => "login")
+          redirect_to(:controller => "sessions", :action => "new")
      end
   end
   
