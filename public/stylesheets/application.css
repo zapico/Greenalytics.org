@@ -408,6 +408,7 @@ text-align: center;
   padding-right: 20px;
 }
 .column_centered {
+	padding-left:10px;
 	text-align:center;
 }
 
