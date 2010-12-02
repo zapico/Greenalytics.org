@@ -4,7 +4,7 @@
 		<p><%= link_to @site.address, @site.address %></p>
 		<br/>
 		<h2><%= formatco2(@total_co2) %> for the last 12 months</h2>
-		<h2>(or <co2small><%= @grampervisitor.round(2) %></co2small> gram per visit for a total of <%= @visitors %> visits.)</h2>
+		<h2>(or <co2small><%= @grampervisitor.round(2) %></co2small> gram per visit.)</h2>
 		<p><a href="/data">How exact is this number?</a></p>
 		<br/>
 		<h2>This is equivalent to <co2small><%= @caramount %></co2small> km driving a car.</h2>
