@@ -91,7 +91,7 @@ class UsersController < ApplicationController
   # Connect the user account with a Google Analytics account
   def connect 
       scope = 'https://www.google.com/analytics/feeds/'
-      next_url = 'http://www.greenalytics.org/welcome'
+      next_url = 'http://www.greenalytics.org/retrievetoken'
       #next_url = 'http://localhost:3000/welcome'
       secure = false  # set secure = true for signed AuthSub requests
       sess = true
