@@ -33,8 +33,7 @@ class UsersController < ApplicationController
       # button. Uncomment if you understand the tradeoffs.
       # reset session
       self.current_user = @user # !! now logged in
-      redirect_back_or_default('/connect')
-      flash[:notice] = "Thanks for signing up!  We're sending you an email with your activation code."
+      redirect_back_or_default('/connect')  
       else
         flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
         redirect_back_or_default('/users/new')
@@ -52,7 +51,6 @@ class UsersController < ApplicationController
   
   # STATIC PAGES (INFO, ABOUT, EXAMPLE, DATA)
   def info
-    response.headers['Cache-Control'] = 'public, max-age=3200'
     begin
        @site = Site.find(32)
        @emissions =  @site.emissions.find(:all, :conditions => { :year => DateTime.now.year.to_s})
@@ -93,7 +91,6 @@ class UsersController < ApplicationController
   # Connect the user account with a Google Analytics account
   def connect 
       scope = 'https://www.google.com/analytics/feeds/'
-      #next_url = 'http://localhost:3000/welcome'
       next_url = 'http://www.greenalytics.org/welcome'
       secure = false  # set secure = true for signed AuthSub requests
       sess = true

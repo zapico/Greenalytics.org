@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.about '/about', :controller => 'users', :action => 'about'
   map.about '/data', :controller => 'users', :action => 'data'
   map.connect '/connect', :controller => 'users', :action => 'connect'
-  map.welcome '/welcome', :controller => 'users', :action => 'welcome'
+  map.welcome '/retrievetoken', :controller => 'users', :action => 'welcome'
   map.example '/example', :controller => 'users', :action => 'example'
   map.donate '/donate', :controller => 'users', :action => 'donate'
   map.my_sites '/my_sites', :controller => 'sites', :action => 'my_sites'
