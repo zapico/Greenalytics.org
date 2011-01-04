@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   def info
     begin
        @site = Site.find(32)
-       @emissions =  @site.emissions.find(:all, :conditions => { :year => DateTime.now.year.to_s})
+       @emissions =  @site.emissions.find(:all, :limit => 12)
        @year = DateTime.now.year.to_s
       
        @total_co2 = 0
