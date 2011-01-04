@@ -118,7 +118,7 @@ class SitesController < ApplicationController
    @month = DateTime.now.month
    @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year})
    @nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
-   if @month = 12
+   if @month == 12
 	@year -= 1
    	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
    else
