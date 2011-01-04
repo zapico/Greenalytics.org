@@ -124,12 +124,12 @@ class SitesController < ApplicationController
    @month = DateTime.now.month
    @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year})
    if @month == 12
-   	@nextmonth = @site.emissions.find(:first, :conditions => {:month => (1).to_s, :year => (@year+1).to_s})
+   	@nextmonth = @site.emissions.find(:first, :conditions => {:month => '1', :year => (@year+1).to_s})
    else
 	@nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
    end
    if @month == 1
-   	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (12).to_s, :year => (@year-1).to_s})
+   	@prevmonth = @site.emissions.find(:first, :conditions => {:month => '12', :year => (@year-1).to_s})
    else
    	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
    end
