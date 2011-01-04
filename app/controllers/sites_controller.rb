@@ -105,13 +105,10 @@ class SitesController < ApplicationController
  def show_year
   begin
    @site = Site.find(params[:id])
-   if params[:year]
-     @emissions =  @site.emissions.find(:all, :conditions => { :year => params[:year]})
-     @year = params[:year]
-    else
-       @emissions =  @site.emissions.find(:all, :conditions => { :year => DateTime.now.year.to_s})
-       @year = DateTime.now.year.to_s
-   end
+   
+
+   @emissions =  @site.emissions.find(:all, :limit => 12)
+   @year = DateTime.now.year.to_s
    # INITIALIZE
    @total_co2 = 0
    @server_co2 = 0
@@ -121,7 +118,12 @@ class SitesController < ApplicationController
    @month = DateTime.now.month
    @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year})
    @nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
-   @prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
+   if @month = 12
+	@year -= 1
+   	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
+   else
+   	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
+   end
    @id = @thismonth.id
 
    # AGGREGATE
