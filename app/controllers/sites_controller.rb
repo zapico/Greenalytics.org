@@ -98,7 +98,7 @@ class SitesController < ApplicationController
  
  # SHOW THE AGGREGATES FOR A YEAR
  def show_year
-  begin
+  #begin
    @site = Site.find(params[:id])  
    # Take the last emissions
    @emissions =  @site.emissions.find(:all, :limit => 12)
@@ -156,9 +156,9 @@ class SitesController < ApplicationController
      format.xml  { render :xml => @countries }
    end
    #Rescue error
-   rescue Exception => exc
-     render :action => "error"
-   end 
+   #rescue Exception => exc
+    # render :action => "error"
+   #end 
    
  end
  
