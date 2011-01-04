@@ -178,19 +178,19 @@ class SitesController < ApplicationController
    @id = params[:id]
    @site = Site.find(e.site.id)
    if e.month == 1
-     @year = e.year -1
+     @year = e.year.to_i -1
    else
-     @year = e.year
+     @year = e.year.to_i
    end
    @month = e.month.to_i - 1
    @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year})
    if @month == 12
-   	@nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => (@year.to_i+1).to_s})
+   	@nextmonth = @site.emissions.find(:first, :conditions => {:month => (1).to_s, :year => (@year+1).to_s})
    else
 	@nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
    end
    if @month == 1
-   	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => (@year.to_i-1).to_s})
+   	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (12).to_s, :year => (@year-1).to_s})
    else
    	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
    end
