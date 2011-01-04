@@ -28,9 +28,10 @@ class SitesController < ApplicationController
      @server_co2 = 0
      @users_co2 = 0
      @visitors = 0
-
+     
+     @year = DateTime.now.year
      @month = DateTime.now.month
-     @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year})
+     @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year.to_s})
      @nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
      @prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
      @id = @thismonth.id
@@ -110,16 +111,16 @@ class SitesController < ApplicationController
    @visitors = 0
    
    # Create the month navigation
-   @year = DateTime.now.year.to_s
+   @year = DateTime.now.year
    @month = DateTime.now.month
    @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year})
    if @month == 12
-   	@nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => (@year.to_i+1).to_s})
+   	@nextmonth = @site.emissions.find(:first, :conditions => {:month => (1).to_s, :year => (@year+1).to_s})
    else
 	@nextmonth = @site.emissions.find(:first, :conditions => {:month => (@month+1).to_s, :year => @year.to_s})
    end
    if @month == 1
-   	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => (@year.to_i-1).to_s})
+   	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (12).to_s, :year => (@year-1).to_s})
    else
    	@prevmonth = @site.emissions.find(:first, :conditions => {:month => (@month-1).to_s, :year => @year.to_s})
    end
