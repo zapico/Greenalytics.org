@@ -21,13 +21,8 @@ class SitesController < ApplicationController
    begin
      @site = Site.find(params[:id])
      if @site.ispublic then
-     if params[:year]
-       @emissions =  @site.emissions.find(:all, :conditions => { :year => params[:year]})
-       @year = params[:year]
-      else
-         @emissions =  @site.emissions.find(:all, :conditions => { :year => DateTime.now.year.to_s})
-         @year = DateTime.now.year.to_s
-     end
+     
+     @emissions =  @site.emissions.find(:all, :limit => 12)
      # INITIALIZE
      @total_co2 = 0
      @server_co2 = 0
@@ -107,13 +102,15 @@ class SitesController < ApplicationController
    @site = Site.find(params[:id])  
    # Take the last emissions
    @emissions =  @site.emissions.find(:all, :limit => 12)
-   @year = DateTime.now.year.to_s
+   
    # INITIALIZE
    @total_co2 = 0
    @server_co2 = 0
    @users_co2 = 0
    @visitors = 0
    
+   # Create the month navigation
+   @year = DateTime.now.year.to_s
    @month = DateTime.now.month
    @thismonth = @site.emissions.find(:first, :conditions => {:month => @month.to_s, :year => @year})
    if @month == 12
