@@ -350,7 +350,7 @@ class SitesController < ApplicationController
    site_id = params[:id]
    year = DateTime.now.year
    month = DateTime.now.month
-   while year == 2010
+   while year > 2009
      date_start = Date.new(year, month, 1)
      d = date_start
      d += 42
