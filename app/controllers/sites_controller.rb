@@ -354,7 +354,7 @@ class SitesController < ApplicationController
      month -= 1
      if month == 0 then 
        year -= 1
-       month == 12
+       month = 12
      end
      puts "Calculating"
      puts year
@@ -366,7 +366,6 @@ class SitesController < ApplicationController
      puts date_end.to_s
      puts date_start.to_s
      Delayed::Job.enqueue CalculateSite.new(site_id,date_start,date_end)
-
    end
    render :nothing => true
  end
