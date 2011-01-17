@@ -13,7 +13,7 @@ class SitesController < ApplicationController
  require 'open-uri'
  require 'gdata'
  before_filter :authorize, :except => [:show,:show_month,:show_next_month, :public]
- before_filter :authorize_admin, :only => [:allsites, :add_average_size]
+ before_filter :authorize_admin, :only => [:allsites, :add_average_size, :change_address]
  
  
  # PUBLIC FUNCTION FOR SHOWING THE YEAR
@@ -364,6 +364,14 @@ class SitesController < ApplicationController
        year -= 1 
      end
    end
+   render :nothing => true
+ end
+ 
+ # MANUAL WAY OF ADDING URL ADDRESS
+ def change_address
+   site = Site.find(params[:id])
+   site.address = params[:url]
+   site.save
    render :nothing => true
  end
  
