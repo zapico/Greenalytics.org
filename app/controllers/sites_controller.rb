@@ -165,7 +165,6 @@ class SitesController < ApplicationController
      format.html # show.html.erb
      format.xml  { render :xml => @countries }
    end
-   Rescue error
    rescue Exception => exc
      render :action => "error"
    end 
@@ -322,7 +321,7 @@ class SitesController < ApplicationController
    # Save the address in the db
    site.address = address
    site.save
-   puts address
+   render :nothing => true
  end
  
  def get_address_admin
@@ -342,7 +341,7 @@ class SitesController < ApplicationController
    # Save the address in the db
    site.address = address
    site.save
-   puts address
+   render :nothing => true
  end
  
  
