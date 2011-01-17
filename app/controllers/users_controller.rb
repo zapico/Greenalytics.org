@@ -51,7 +51,6 @@ class UsersController < ApplicationController
   
   # STATIC PAGES (INFO, ABOUT, EXAMPLE, DATA)
   def info
-    response.headers['Cache-Control'] = 'public, max-age=3200'
     begin
        @site = Site.find(32)
        @emissions =  @site.emissions.find(:all, :conditions => { :year => DateTime.now.year.to_s})
@@ -92,8 +91,8 @@ class UsersController < ApplicationController
   # Connect the user account with a Google Analytics account
   def connect 
       scope = 'https://www.google.com/analytics/feeds/'
+      next_url = 'http://www.greenalytics.org/retrievetoken'
       #next_url = 'http://localhost:3000/welcome'
-      next_url = 'http://greenalytics.org/retrievetoken'
       secure = false  # set secure = true for signed AuthSub requests
       sess = true
       @authsub_link = GData::Auth::AuthSub.get_url(next_url, scope, secure, sess)

@@ -8,7 +8,6 @@
 
 class CalculateSite
   require 'rubygems'
-  require 'whois'
   require 'garb'
   require 'hpricot'
   require 'open-uri'
