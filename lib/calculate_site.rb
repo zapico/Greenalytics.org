@@ -83,8 +83,6 @@ class CalculateSite
         url = point.elements["dxp:dimension name='ga:pagePath'"].attribute("value").value
         # 2. Get the number of visitors
         visits = point.elements["dxp:metric name='ga:pageviews'"].attribute("value").value
-        puts url
-        puts visits
         # 3. Aggregate text
         if visits.to_i > 1 then
             if pagecounter < 20
@@ -102,8 +100,6 @@ class CalculateSite
             total_size += pagesize*visits.to_i
         end
         totalvisits += visits.to_i
-        puts "total"
-        puts totalvisits
        end
        emission.traffic = total_size
 
@@ -115,11 +111,9 @@ class CalculateSite
       uri = "http://api.ipinfodb.com/v2/ip_query_country.php?key=f03ff18218a050bb05f6b501ce49c10a4f6f063eef9151109de17e299b3b0835&ip=#{address}"
       #  1.2 Get the name using Hpricot
       doc = Hpricot(open(uri))
-      puts doc.to_s
       (doc/'response').each do |el|
         country = (el/'countryname').inner_html.to_s
       end
-      puts country
       # 2. Get the emission factor for that country
       if Country.find(:first,:conditions => [ "name = ?", country ]) then
           serverfactor=Country.find(:first,:conditions => [ "name = ?", country ]).factor
