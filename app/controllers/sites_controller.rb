@@ -357,8 +357,7 @@ class SitesController < ApplicationController
        month = 12
      end
      puts "Calculating"
-     puts year
-     puts month
+     puts site_id
      date_start = Date.new(year, month, 1)
      d = date_start
      d += 42
