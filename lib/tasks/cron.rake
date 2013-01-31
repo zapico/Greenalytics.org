@@ -6,6 +6,6 @@ task :cron => :environment do
     nrday -= 1
     date_start = DateTime.now-nrday.days
     sites.each do |si|  
-      Delayed::Job.enqueue CalculateSite.new(si.id,date_start,date_end)
+      CalculateSite.new(si.id,date_start,date_end)
     end
 end
