@@ -74,9 +74,9 @@ class UsersController < ApplicationController
        @grafico="http://chart.apis.google.com/chart?chs=200x80&amp;chd=t:"+per_visitors.to_s+","+per_server.to_s+"&amp;cht=p3&amp;chl=Visitors|Server"
 
        # TRANSLATE USING CARBON.TO
-       car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total_co2/1000).round.to_s))
-       car = ActiveSupport::JSON.decode(car)
-       @caramount = car["conversion"]["amount"]
+      # car = Net::HTTP.get(URI.parse("http://carbon.to/car.json?co2="+ (@total_co2/1000).round.to_s))
+      # car = ActiveSupport::JSON.decode(car)
+      #: @caramount = car["conversion"]["amount"]
     end
   end
   def about
